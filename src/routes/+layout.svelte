@@ -1,6 +1,6 @@
 <script>
 	import Header from './Header.svelte';
-	import Menu from './Menu.svelte';
+	import ToggleMenu from './ToggleMenu.svelte';
 	import './styles.css';
 </script>
 
@@ -9,7 +9,7 @@
 <div class="app">
 	<div id="interface">
 		<Header />
-		<Menu />
+		<ToggleMenu />
 	</div>
 
 	<!-- add menu here-->
