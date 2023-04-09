@@ -10,9 +10,8 @@
 	</button>
 	<div id="title">
 		<span id="Abbreviation">MOVE</span>
-		<span id="full">Montreal's OpenStreetMap Virtual Environment</span>
+		<span id="full">Montreal's OSM Virtual Environment</span>
 	</div>
-
 </header>
 
 
@@ -22,17 +21,16 @@
 		--header_bg: linear-gradient(to bottom, rgba(132,21,38,1), rgba(132,21,38,1))
 	}
 	header {
-		width: 100%;
 		height: var(--header_height);
 		background: var(--header_bg);
 		color: var(--brand_white);
-		position: absolute;
-		top: 0;
-		right: 0;
-		z-index: 100;
+		padding: 0.75rem;
+		margin: 0.5rem;
+		border-radius: 20px;
 		display: flex;
 		flex-direction: row;
 		user-select: none;
+		box-shadow: 1px 6px 32px -9px rgba(0,0,0,0.5);
 	}
 	#menu_btn {
 		background: none;
@@ -45,7 +43,7 @@
 		height: var(--header_height);
 	}
 	#Abbreviation {
-		font-size: 2.5rem;
+		font-size: 2rem;
 		line-height: 2.125rem;
 		font-family: "Poppins", sans-serif;
 		font-weight: 700;
@@ -56,5 +54,6 @@
 		flex-direction: column;
 		justify-content: center;
 		font-family: "Poppins", sans-serif;
+		font-size: 0.75rem;
 	}
 </style>

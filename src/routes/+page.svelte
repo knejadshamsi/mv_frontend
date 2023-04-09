@@ -3,7 +3,7 @@
 	// OpenLayers
     import  Map  from 'ol/Map';
     import TileLayer from 'ol/layer/Tile';
-
+    import {defaults} from 'ol/control/defaults';
     // Svelte
     import View from 'ol/View';
     import OSM from 'ol/source/OSM';
@@ -22,6 +22,11 @@
             source: new OSM()
         })
         map = new Map({
+            controls: defaults({
+                attribution:false,
+                rotate:false,
+                zoom:true
+            }),
             target: node.id,
             layers: [
                 osmLayer,
@@ -33,10 +38,10 @@
             })
         });
 		// @ts-ignore
-		let header_timeline = gsap.timeline({duration:0.2,paused:true})
-		header_timeline.to("header",{ background: "linear-gradient(to bottom, rgba(132,21,38,0.4) 40%, rgba(132,21,38,0)", duration:0.5,ease:"power4.out"},'ha')
+		let header_timeline = gsap.timeline({duration:0.2,paused:true, ease:"power4.out"})
+		header_timeline.to("header",{ background: "linear-gradient(to bottom, rgba(132,21,38,0.4) , rgba(132,21,38,0)"},'ha')
 		.to("#full", {opacity:0.3},'ha')
-		.to(["#Abbreviation","#menu_btn"], {opacity:0.7}, 'ha')
+		.to("#Abbreviation", {textShadow:"-2px 3px 0px var(--brand_main)"}, 'ha')
 		map.on('movestart', ()=>{header_timeline.play()});
 		map.on('moveend', ()=>{header_timeline.reverse()});
         return {
@@ -49,6 +54,7 @@
             }
         }
     }
+
 </script>
 
 <svelte:head>
@@ -59,7 +65,7 @@
 
 <section id={mapId} class="map" use:setupMap >
 </section>
-
+<div id="map_control"></div>
 <style>
 	section {
 		width: auto;
