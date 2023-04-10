@@ -6,29 +6,52 @@
     import bicycle_stations from "$lib/images/bicycle_stations.svg"
     import "@fontsource/poppins"
     import "@fontsource/poppins/600.css";
+
+    let toggles = {
+        "busstop": false,
+        "busroute": false,
+        "metrostation": false,
+        "metroline": false,
+        "bicyclestations":false
+    }
+    // @ts-ignore
+    function dataDisplay(data) {
+        // @ts-ignore
+        console.log(toggles)
+    }
 </script>
 
 <div id="info_toggle_con">
-    <button class="info_toggle_btn">
+    <input class="it_btn_check" id="bus_stop_check" type="checkbox" bind:checked={toggles.busstop} on:change={()=> {dataDisplay("busstop")}} />
+    <label class="info_toggle_btn" for="bus_stop_check" >
         <img class="it_btn_img" src="{bus_stops}" alt="">
         <span class="it_btn_text">Bus stops</span>
-    </button>
-    <button class="info_toggle_btn">
+    </label>
+    
+    <input class="it_btn_check" type="checkbox" id="bus_route_check" bind:checked={toggles.busroute} on:change={()=> {dataDisplay("busroute")}} />
+    <label class="info_toggle_btn" for="bus_route_check" >
         <img class="it_btn_img" src="{bus_routes}" alt="">
         <span class="it_btn_text">Bus routes</span>
-    </button>
-    <button class="info_toggle_btn">
+    </label>
+        
+    <input class="it_btn_check" type="checkbox" id="metro_stations_check" bind:checked={toggles.metrostation} on:change={()=> {dataDisplay("metrostation")}} />
+    <label class="info_toggle_btn" for="metro_stations_check" >
         <img class="it_btn_img" src="{metro_stations}" alt="">
         <span class="it_btn_text">Metro stations</span>
-    </button>
-    <button class="info_toggle_btn">
+    </label>
+
+    <input class="it_btn_check" type="checkbox" id="metro_lines_check" bind:checked={toggles.metroline} on:change={()=> {dataDisplay("metroline")}} />
+    <label class="info_toggle_btn" for="metro_lines_check" >
         <img class="it_btn_img" src="{metro_lines}" alt="">
         <span class="it_btn_text">Metro routes</span>
-    </button>
-    <button class="info_toggle_btn">
+    </label>
+
+    <input class="it_btn_check" type="checkbox" id="bicycle_stations_check" bind:checked={toggles.bicyclestations} on:change={()=> {dataDisplay("bicyclestations")}} />
+    <label class="info_toggle_btn" for="bicycle_stations_check" >
         <img class="it_btn_img" src="{bicycle_stations}" alt="">
         <span class="it_btn_text">Bicycle stations</span>
-    </button>
+    </label>
+
 </div>
 
 <style>
@@ -43,13 +66,20 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    transition: all 0.2s ease-in;
+}
+.it_btn_check {
+    opacity: 0;
+    position: absolute;
+}
+.it_btn_check:checked + label{
+    background: darkgray;
 }
 .info_toggle_btn {
     height: var(--btn_height);
     border: 1.5px solid darkgray;
     border-radius: 20px;
     background: lightgray;
-    padding: 0.25rem;
     margin-inline: 0.125rem;
     margin-block: 0.5rem;
     user-select: none;
