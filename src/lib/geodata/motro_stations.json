@@ -1,0 +1,797 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.603118,45.446466 ]
+     },
+     "properties": {
+     "station_code":10118,
+     "station_name":"Station Angrignon"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.593242,45.451158 ]
+     },
+     "properties": {
+     "station_code":10120,
+     "station_name":"Station Monk"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.581691,45.45701 ]
+     },
+     "properties": {
+     "station_code":10122,
+     "station_name":"Station Jolicoeur"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.572021,45.459441 ]
+     },
+     "properties": {
+     "station_code":10124,
+     "station_name":"Station Verdun"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.567074,45.461894 ]
+     },
+     "properties": {
+     "station_code":10126,
+     "station_name":"Station De l'Église"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.566267,45.471063 ]
+     },
+     "properties": {
+     "station_code":10128,
+     "station_name":"Station LaSalle"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.569336,45.478465 ]
+     },
+     "properties": {
+     "station_code":10130,
+     "station_name":"Station Charlevoix"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.58018,45.482509 ]
+     },
+     "properties": {
+     "station_code":10132,
+     "station_name":"Station Lionel-Groulx"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.585812,45.490068 ]
+     },
+     "properties": {
+     "station_code":10134,
+     "station_name":"Station Atwater"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.57931,45.49557 ]
+     },
+     "properties": {
+     "station_code":10136,
+     "station_name":"Station Guy-Concordia"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.574715,45.500879 ]
+     },
+     "properties": {
+     "station_code":10138,
+     "station_name":"Station Peel"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.571586,45.504064 ]
+     },
+     "properties": {
+     "station_code":10140,
+     "station_name":"Station McGill"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.568433,45.50822 ]
+     },
+     "properties": {
+     "station_code":10142,
+     "station_name":"Station Place-des-Arts"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.564899,45.511033 ]
+     },
+     "properties": {
+     "station_code":10144,
+     "station_name":"Station Saint-Laurent"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.561082,45.515226 ]
+     },
+     "properties": {
+     "station_code":10146,
+     "station_name":"Station Berri-UQAM 1"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.561051,45.515212 ]
+     },
+     "properties": {
+     "station_code":10146,
+     "station_name":"Station Berri-UQAM 2"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.561013,45.515191 ]
+     },
+     "properties": {
+     "station_code":10146,
+     "station_name":"Station Berri-UQAM 4"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.555837,45.518831 ]
+     },
+     "properties": {
+     "station_code":10148,
+     "station_name":"Station Beaudry"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.552703,45.523988 ]
+     },
+     "properties": {
+     "station_code":10150,
+     "station_name":"Station Papineau"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.552196,45.533504 ]
+     },
+     "properties": {
+     "station_code":10152,
+     "station_name":"Station Frontenac"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.554192,45.541717 ]
+     },
+     "properties": {
+     "station_code":10154,
+     "station_name":"Station Préfontaine"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.551391,45.546832 ]
+     },
+     "properties": {
+     "station_code":10156,
+     "station_name":"Station Joliette"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.551757,45.553688 ]
+     },
+     "properties": {
+     "station_code":10158,
+     "station_name":"Station Pie-IX"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.54753,45.560687 ]
+     },
+     "properties": {
+     "station_code":10160,
+     "station_name":"Station Viau"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.547336,45.569285 ]
+     },
+     "properties": {
+     "station_code":10162,
+     "station_name":"Station Assomption"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.54671,45.576843 ]
+     },
+     "properties": {
+     "station_code":10164,
+     "station_name":"Station Cadillac"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.543133,45.582736 ]
+     },
+     "properties": {
+     "station_code":10166,
+     "station_name":"Station Langelier"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.539269,45.589431 ]
+     },
+     "properties": {
+     "station_code":10168,
+     "station_name":"Station Radisson"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.535376,45.596572 ]
+     },
+     "properties": {
+     "station_code":10170,
+     "station_name":"Station Honoré-Beaugrand"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.682757,45.514237 ]
+     },
+     "properties": {
+     "station_code":10222,
+     "station_name":"Station Côte-Vertu"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.674796,45.509258 ]
+     },
+     "properties": {
+     "station_code":10224,
+     "station_name":"Station Du Collège"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.661538,45.500051 ]
+     },
+     "properties": {
+     "station_code":10228,
+     "station_name":"Station De la Savane"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.652828,45.494643 ]
+     },
+     "properties": {
+     "station_code":10230,
+     "station_name":"Station Namur"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.63826,45.494644 ]
+     },
+     "properties": {
+     "station_code":10232,
+     "station_name":"Station Plamondon"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.6331,45.492356 ]
+     },
+     "properties": {
+     "station_code":10234,
+     "station_name":"Station Côte-Sainte-Catherine"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.62773,45.485433 ]
+     },
+     "properties": {
+     "station_code":10236,
+     "station_name":"Station Snowdon 2"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.627757,45.485403 ]
+     },
+     "properties": {
+     "station_code":10236,
+     "station_name":"Station Snowdon 5"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.619821,45.479709 ]
+     },
+     "properties": {
+     "station_code":10238,
+     "station_name":"Station Villa-Maria"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.603706,45.474101 ]
+     },
+     "properties": {
+     "station_code":10242,
+     "station_name":"Station Vendôme"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.586629,45.47732 ]
+     },
+     "properties": {
+     "station_code":10244,
+     "station_name":"Station Place-Saint-Henri"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.576852,45.488897 ]
+     },
+     "properties": {
+     "station_code":10248,
+     "station_name":"Station Georges-Vanier"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.571074,45.494745 ]
+     },
+     "properties": {
+     "station_code":10250,
+     "station_name":"Station Lucien-L'Allier"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.567235,45.498086 ]
+     },
+     "properties": {
+     "station_code":10252,
+     "station_name":"Station Bonaventure"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.563118,45.501937 ]
+     },
+     "properties": {
+     "station_code":10254,
+     "station_name":"Station Square-Victoria–OACI"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.559548,45.506348 ]
+     },
+     "properties": {
+     "station_code":10256,
+     "station_name":"Station Place-d'Armes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.556596,45.510047 ]
+     },
+     "properties": {
+     "station_code":10258,
+     "station_name":"Station Champ-de-Mars"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.569217,45.51906 ]
+     },
+     "properties": {
+     "station_code":10262,
+     "station_name":"Station Sherbrooke"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.581959,45.524931 ]
+     },
+     "properties": {
+     "station_code":10264,
+     "station_name":"Station Mont-Royal"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.586907,45.527399 ]
+     },
+     "properties": {
+     "station_code":10266,
+     "station_name":"Station Laurier"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.59778,45.531733 ]
+     },
+     "properties": {
+     "station_code":10268,
+     "station_name":"Station Rosemont"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.604688,45.535354 ]
+     },
+     "properties": {
+     "station_code":10270,
+     "station_name":"Station Beaubien"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.613902,45.539056 ]
+     },
+     "properties": {
+     "station_code":10272,
+     "station_name":"Station Jean-Talon 2"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.613856,45.539152 ]
+     },
+     "properties": {
+     "station_code":10272,
+     "station_name":"Station Jean-Talon 5"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.628765,45.543191 ]
+     },
+     "properties": {
+     "station_code":10274,
+     "station_name":"Station Jarry"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.639052,45.546082 ]
+     },
+     "properties": {
+     "station_code":10276,
+     "station_name":"Station Crémazie"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.656017,45.550757 ]
+     },
+     "properties": {
+     "station_code":10278,
+     "station_name":"Station Sauvé"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.668172,45.555277 ]
+     },
+     "properties": {
+     "station_code":10280,
+     "station_name":"Station Henri-Bourassa"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.68231,45.559997 ]
+     },
+     "properties": {
+     "station_code":10282,
+     "station_name":"Station Cartier (zone B)"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.709389,45.560698 ]
+     },
+     "properties": {
+     "station_code":10286,
+     "station_name":"Station De la Concorde (zone B)"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.722459,45.558436 ]
+     },
+     "properties": {
+     "station_code":10288,
+     "station_name":"Station Montmorency (zone B)"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.533127,45.512429 ]
+     },
+     "properties": {
+     "station_code":10452,
+     "station_name":"Station Jean-Drapeau"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.522098,45.52489 ]
+     },
+     "properties": {
+     "station_code":10454,
+     "station_name":"Station Longueuil-Université de Sherbrooke(zone B)"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.623386,45.496846 ]
+     },
+     "properties": {
+     "station_code":10534,
+     "station_name":"Station Côte-des-Neiges"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.617699,45.503188 ]
+     },
+     "properties": {
+     "station_code":10536,
+     "station_name":"Station Université-de-Montréal"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.612858,45.50992 ]
+     },
+     "properties": {
+     "station_code":10538,
+     "station_name":"Station Édouard-Montpetit"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.614976,45.52037 ]
+     },
+     "properties": {
+     "station_code":10540,
+     "station_name":"Station Outremont"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.623257,45.523458 ]
+     },
+     "properties": {
+     "station_code":10542,
+     "station_name":"Station Acadie"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.624559,45.530177 ]
+     },
+     "properties": {
+     "station_code":10544,
+     "station_name":"Station Parc"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.619873,45.535437 ]
+     },
+     "properties": {
+     "station_code":10546,
+     "station_name":"Station De Castelnau"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.608106,45.546753 ]
+     },
+     "properties": {
+     "station_code":10552,
+     "station_name":"Station Fabre"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.601988,45.553618 ]
+     },
+     "properties": {
+     "station_code":10554,
+     "station_name":"Station D'Iberville"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -73.600002,45.55956 ]
+     },
+     "properties": {
+     "station_code":10556,
+     "station_name":"Station Saint-Michel"
+     }
+   }
+ ]
+ }

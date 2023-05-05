@@ -1,0 +1,73 @@
+station_code,station_name,station_lat,station_lon
+10118,Station Angrignon,45.446466,-73.603118
+10120,Station Monk,45.451158,-73.593242
+10122,Station Jolicoeur,45.45701,-73.581691
+10124,Station Verdun,45.459441,-73.572021
+10126,Station De l'Église,45.461894,-73.567074
+10128,Station LaSalle,45.471063,-73.566267
+10130,Station Charlevoix,45.478465,-73.569336
+10132,Station Lionel-Groulx,45.482509,-73.58018
+10134,Station Atwater,45.490068,-73.585812
+10136,Station Guy-Concordia,45.49557,-73.57931
+10138,Station Peel,45.500879,-73.574715
+10140,Station McGill,45.504064,-73.571586
+10142,Station Place-des-Arts,45.50822,-73.568433
+10144,Station Saint-Laurent,45.511033,-73.564899
+10146,Station Berri-UQAM 1,45.515226,-73.561082
+10146,Station Berri-UQAM 2,45.515212,-73.561051
+10146,Station Berri-UQAM 4,45.515191,-73.561013
+10148,Station Beaudry,45.518831,-73.555837
+10150,Station Papineau,45.523988,-73.552703
+10152,Station Frontenac,45.533504,-73.552196
+10154,Station Préfontaine,45.541717,-73.554192
+10156,Station Joliette,45.546832,-73.551391
+10158,Station Pie-IX,45.553688,-73.551757
+10160,Station Viau,45.560687,-73.54753
+10162,Station Assomption,45.569285,-73.547336
+10164,Station Cadillac,45.576843,-73.54671
+10166,Station Langelier,45.582736,-73.543133
+10168,Station Radisson,45.589431,-73.539269
+10170,Station Honoré-Beaugrand,45.596572,-73.535376
+10222,Station Côte-Vertu,45.514237,-73.682757
+10224,Station Du Collège,45.509258,-73.674796
+10228,Station De la Savane,45.500051,-73.661538
+10230,Station Namur,45.494643,-73.652828
+10232,Station Plamondon,45.494644,-73.63826
+10234,Station Côte-Sainte-Catherine,45.492356,-73.6331
+10236,Station Snowdon 2,45.485433,-73.62773
+10236,Station Snowdon 5,45.485403,-73.627757
+10238,Station Villa-Maria,45.479709,-73.619821
+10242,Station Vendôme,45.474101,-73.603706
+10244,Station Place-Saint-Henri,45.47732,-73.586629
+10248,Station Georges-Vanier,45.488897,-73.576852
+10250,Station Lucien-L'Allier,45.494745,-73.571074
+10252,Station Bonaventure,45.498086,-73.567235
+10254,Station Square-Victoria–OACI,45.501937,-73.563118
+10256,Station Place-d'Armes,45.506348,-73.559548
+10258,Station Champ-de-Mars,45.510047,-73.556596
+10262,Station Sherbrooke,45.51906,-73.569217
+10264,Station Mont-Royal,45.524931,-73.581959
+10266,Station Laurier,45.527399,-73.586907
+10268,Station Rosemont,45.531733,-73.59778
+10270,Station Beaubien,45.535354,-73.604688
+10272,Station Jean-Talon 2,45.539056,-73.613902
+10272,Station Jean-Talon 5,45.539152,-73.613856
+10274,Station Jarry,45.543191,-73.628765
+10276,Station Crémazie,45.546082,-73.639052
+10278,Station Sauvé,45.550757,-73.656017
+10280,Station Henri-Bourassa,45.555277,-73.668172
+10282,Station Cartier (zone B),45.559997,-73.68231
+10286,Station De la Concorde (zone B),45.560698,-73.709389
+10288,Station Montmorency (zone B),45.558436,-73.722459
+10452,Station Jean-Drapeau,45.512429,-73.533127
+10454,Station Longueuil-Université de Sherbrooke(zone B),45.52489,-73.522098
+10534,Station Côte-des-Neiges,45.496846,-73.623386
+10536,Station Université-de-Montréal,45.503188,-73.617699
+10538,Station Édouard-Montpetit,45.50992,-73.612858
+10540,Station Outremont,45.52037,-73.614976
+10542,Station Acadie,45.523458,-73.623257
+10544,Station Parc,45.530177,-73.624559
+10546,Station De Castelnau,45.535437,-73.619873
+10552,Station Fabre,45.546753,-73.608106
+10554,Station D'Iberville,45.553618,-73.601988
+10556,Station Saint-Michel,45.55956,-73.600002

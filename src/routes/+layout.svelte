@@ -1,7 +1,14 @@
 <script>
 	import Header from './Header.svelte';
 	import ToggleMenu from './ToggleMenu.svelte';
+	import BRMenu from './BRMenu.svelte';
+	import {interface_logic} from './stores'
 	import './styles.css';
+	let layouttoggle = {}
+	interface_logic.subscribe((value)=> {
+		layouttoggle = value
+	})
+
 </script>
 
 
@@ -10,6 +17,9 @@
 	<div id="interface">
 		<Header />
 		<ToggleMenu />
+		{#if (layouttoggle.br == true)}
+		<BRMenu />
+		{/if}
 	</div>
 
 	<!-- add menu here-->

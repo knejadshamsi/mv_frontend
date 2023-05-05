@@ -1,0 +1,618 @@
+stop_id,stop_name,stop_latitude,stop_longitude
+58565,Sainte-Anne / Lalonde,45.4051159,-73.9499048
+58577,Sainte-Anne / Terminus Macdonald,45.4036897,-73.9407050
+58524,Gare Baie-D'Urfé,45.4183578,-73.9170886
+58526,Gare Baie-D'Urfé,45.4190415,-73.9164568
+58256,Parc-nature du Cap-Saint-Jacques,45.4615982,-73.9205453
+58306,Gouin / Pilon,45.4617832,-73.9184088
+58085,Gouin / du Cap-Saint-Jacques,45.4612778,-73.9197848
+58323,Gouin / du Cap-Saint-Jacques,45.4612028,-73.9195450
+58320,Gouin / Pilon,45.4616000,-73.9186201
+57619,Bord-du-Lac / Pointe-Claire,45.4287943,-73.8308508
+58504,Lakeshore / Morgan,45.4084193,-73.9158658
+58502,Lakeshore / Morgan,45.4087431,-73.9152515
+58388,de l'Anse-à-l'Orme / Timberlea-Trail,45.4375699,-73.9011394
+58420,de l'Anse-à-l'Orme / Timberlea-Trail,45.4374021,-73.9012537
+61250,de l'Anse-à-l'Orme / Timberlea-Trail,45.4374956,-73.9009718
+58334,de l'Anse-à-l'Orme / Sainte-Marie,45.4367438,-73.8989103
+57832,Sommerset / de Salaberry,45.4661908,-73.8493174
+57663,Hymus / Hastings,45.4615993,-73.8172860
+58406,Brunswick / Nelligan,45.4506693,-73.8736714
+60583,Gouin / du Palomino,45.4604350,-73.9050430
+57742,Gare Valois (Donegani / de la Baie-de-Valois),45.4499066,-73.7913923
+60255,Montrose / Windermere,45.4384997,-73.8740623
+57729,Broadview / Belmont,45.4525220,-73.7963210
+58221,Antoine-Faucon / Henri-Daoust,45.4570803,-73.8730714
+57803,Bord-du-Lac / Sainte-Anne,45.4289380,-73.8257780
+58555,Sainte-Anne / Marguerite-Bourgeoys,45.4049858,-73.9561798
+57618,Bord-du-Lac / Pointe-Claire,45.4288918,-73.8307890
+58358,Hymus / de la Caravelle,45.4498780,-73.8504608
+57676,Lakeview / Saint-Jean,45.4381464,-73.8131748
+60800,Sainte-Marie / No 19925,45.4348650,-73.9031952
+60698,du Collège / Christie,45.4057840,-73.9527152
+57752,Belmont / Chester,45.4564110,-73.7865930
+58507,Lakeshore / Normandy,45.4120940,-73.9058860
+57821,Terminus Fairview,45.4651621,-73.8310657
+58568,Maple / Sainte-Anne,45.4032573,-73.9445066
+57627,Brunswick / Revcon,45.4683829,-73.8278632
+58367,De Salaberry / Berkshire,45.4643324,-73.8511231
+58297,du Château-Pierrefonds / Oka,45.4632773,-73.8952827
+58459,Sherbrooke / Castle,45.4384050,-73.8537810
+58089,de Pierrefonds / Nanterre,45.4650201,-73.8812200
+57693,Hymus / Nordic,45.4659565,-73.8082727
+58430,Sherbrooke / Montrose,45.4378850,-73.8758000
+57765,Donegani / des Sources,45.4500659,-73.7812998
+58517,Lakeshore / No 20713,45.4053351,-73.9282946
+58243,des Cageux / Legault,45.4632508,-73.8847747
+61725,Sainte-Anne / Perrault,45.4027104,-73.9453164
+58380,Henri-Daoust / Dragon,45.4550610,-73.8713964
+58315,Gouin / No 20752,45.4572660,-73.9298370
+58473,Beaconsfield / Saint-Charles,45.4309730,-73.8460314
+58102,Saint-Charles / Saint-Denis,45.4657550,-73.8735319
+57706,Delmar / Hearne,45.4670080,-73.8034120
+58444,Sherbrooke / Westcroft,45.4366758,-73.8649572
+58535,Firing / Clark-Graham,45.4245410,-73.9093960
+61374,du Château-Pierrefonds / Oka,45.4631278,-73.8954295
+58259,du Château-Pierrefonds / du Manoir,45.4613454,-73.8942592
+57657,Hymus / Carlisle,45.4600560,-73.8198209
+58400,Jean-Yves / Cinéma,45.4409200,-73.8876580
+60414,de Pierrefonds / du Château-Pierrefonds,45.4597368,-73.8919650
+58482,Gare Beaconsfield,45.4356815,-73.8476888
+57715,Bord-du-Lac / Lakeside,45.4435916,-73.8015948
+57795,Terminus Fairview,45.4655527,-73.8312747
+60673,Clark-Graham / No 19700,45.4231956,-73.9134891
+58344,Brunswick / Shannon,45.4539575,-73.8668083
+61309,Saint-Jean / Brunswick,45.4680372,-73.8299676
+57670,Transcanadienne / Doyon,45.4683090,-73.8162390
+58413,Sainte-Marie / Morgan,45.4296600,-73.9170560
+57381,Herron / Strathmore,45.4489313,-73.7765754
+57745,Belmont / King,45.4553060,-73.7900040
+60148,Beaconsfield / Beaconsfield Court,45.4260940,-73.8602760
+57728,Broadview / John-Fisher,45.4555390,-73.7976660
+58220,Antoine-Faucon / Henri-Daoust,45.4573025,-73.8728821
+57807,Saint-Jean / Autoroute 20 (nord),45.4427589,-73.8151503
+58562,Sainte-Anne / Garden City,45.4111508,-73.9517997
+57621,Brunswick / Saint-Jean,45.4672826,-73.8295536
+58361,Hymus / Châteauneuf,45.4498555,-73.8467802
+57679,Maywood / Viburnum,45.4490730,-73.8129646
+60198,Michaud / Sainte-Anne,45.4093037,-73.9533140
+57390,Bord-du-Lac / Thrush,45.4424399,-73.7746761
+57759,des Sources / Belmont,45.4568730,-73.7821248
+58510,Lakeshore / Apple Hill,45.4127930,-73.9019020
+58573,Sainte-Marie / Daoust,45.4276745,-73.9205919
+57634,Inglewood / Douglas-Shand,45.4457370,-73.8259090
+58374,Brunswick / Jonquille,45.4568008,-73.8552797
+58458,Sherbrooke / Castle,45.4385310,-73.8535360
+58096,de Pierrefonds / Saint-Charles,45.4691653,-73.8749050
+57692,Hymus / Nordic,45.4661951,-73.8081426
+58429,Beaconsfield / Saint-Louis,45.4198770,-73.8794980
+57403,Parkfield / Wright,45.4531940,-73.7707100
+58529,Lee / Cruickshank,45.4289673,-73.9027029
+60651,Hymus / No 300,45.4545185,-73.8331021
+57643,Lanthier / Cartier,45.4308630,-73.8243100
+58383,De Salaberry / Acres,45.4605229,-73.8516788
+58314,Gouin / Rose-Marie,45.4554772,-73.9346430
+58476,Beaconsfield / Claude,45.4310379,-73.8409260
+58105,Antoine-Faucon / Biroleau,45.4583271,-73.8706082
+57709,Gare Pointe-Claire (Donegani / Ashgrove),45.4477707,-73.8022764
+58447,Beaconsfield / Shore,45.4254190,-73.8627360
+57842,Transcanadienne / Alston,45.4601188,-73.8323991
+58538,Clark-Graham / Pirie,45.4172813,-73.9275601
+58338,Sainte-Marie / du Ruisseau,45.4405760,-73.8815330
+57656,Hymus / Carlisle,45.4604128,-73.8196414
+58398,Transcanadienne / Houde,45.4448188,-73.8755214
+57366,des Sources / No 1733,45.4621283,-73.7828455
+58489,Gare Beaurepaire (sortie 45 / Woodland),45.4267127,-73.8855785
+57722,Donegani / Windcrest,45.4486291,-73.7988977
+57799,Terminus Fairview,45.4662869,-73.8302068
+58551,Morgan / face à Prestige,45.4258348,-73.9155595
+57605,Stillview / Hymus,45.4534471,-73.8364949
+58347,Brunswick / du Merlot,45.4564560,-73.8615375
+57673,Hymus / Hilary,45.4633689,-73.8137611
+58416,Sainte-Marie / No 18111,45.4427714,-73.8796826
+57744,Bord-du-Lac / de la Baie-de-Valois,45.4482632,-73.7911936
+58496,Lakeshore / Saint-Andrew's,45.4053542,-73.9308314
+57731,Donegani / Broadview,45.4495461,-73.7950278
+58223,Antoine-Faucon / des Cageux,45.4537375,-73.8802799
+57814,Brunswick / Plymouth,45.4630488,-73.8382528
+57620,Saint-Jean / Brunswick,45.4677197,-73.8296485
+58360,Hymus / de Châteauneuf,45.4499764,-73.8463664
+57686,Hymus / Winthrop,45.4649011,-73.8103737
+57597,des Sources / Avro,45.4667270,-73.7877352
+58423,Beaconsfield / Lakeview,45.4178741,-73.8896164
+60987,Institut national de santé (Ste-Marie/No 20045),45.4333033,-73.9069875
+57397,Parkfield / Avila-Legault,45.4528900,-73.7724340
+57762,des Sources / Chanteclerc,45.4544420,-73.7823981
+58509,Lakeshore / Apple Hill,45.4128560,-73.9018900
+57823,Brunswick / Terminus Fairview,45.4666826,-73.8307138
+58581,Sainte-Marie / No 21025,45.4253180,-73.9275260
+57637,Hymus / Paprican,45.4586336,-73.8253516
+58377,Brunswick / Dubonnet,45.4560362,-73.8584520
+58461,Saint-Charles / Creswell,45.4433166,-73.8508368
+57695,Lakeview / Lansdowne Gardens,45.4400057,-73.8083559
+58432,Beaconsfield / Legault,45.4205720,-73.8760880
+58532,Clark-Graham / Morgan,45.4218368,-73.9172371
+58255,Gouin / No 18923,45.4608291,-73.9021625
+60535,Donegani / Maywood,45.4451546,-73.8111638
+57650,Douglas-Shand / Oakridge,45.4475580,-73.8220430
+58391,Saint-Charles / No 2768,45.4459407,-73.8525522
+58317,Gouin / No 20392,45.4595586,-73.9241260
+58475,Beaconsfield / Saint-Charles,45.4309803,-73.8464617
+58112,Antoine-Faucon / Saint-Charles,45.4599496,-73.8669700
+57708,Gare Pointe-Claire (Donegani / Ashgrove),45.4478303,-73.8025965
+58446,Beaconsfield / Shore,45.4255410,-73.8625730
+57849,Sommerset / Roosevelt,45.4676016,-73.8504995
+57784,Douglas-Shand / Maywood,45.4510452,-73.8137189
+58545,Clark-Graham / No 20275,45.4209497,-73.9200293
+58341,Henri-Daoust / Harmony,45.4549477,-73.8714802
+60888,Auto Plaza / Brunswick,45.4662939,-73.8325150
+57659,Saint-Jean / Douglas-Shand,45.4495133,-73.8182502
+58402,Brunswick / de Salaberry,45.4582153,-73.8498479
+57738,de la Baie-de-Valois / Mount-Pleasant,45.4513910,-73.7919360
+58493,Gare Beaconsfield,45.4352109,-73.8480886
+57725,Broadview / John-Fisher,45.4573170,-73.7982330
+57798,Terminus Fairview,45.4654234,-73.8311437
+57614,Hymus / No 285,45.4547183,-73.8330493
+58354,Saint-Charles / Kirkland,45.4476571,-73.8537666
+58415,Brunswick / du Syrah,45.4600414,-73.8452116
+58593,Sainte-Anne / Autoroute 20,45.4043294,-73.9540947
+57383,Bord-du-Lac / Lake,45.4445201,-73.7771821
+57747,Donegani / Queen,45.4502656,-73.7894738
+58503,Morgan / Lakeshore,45.4088770,-73.9157289
+58230,du Château-Pierrefonds / Meloche,45.4566656,-73.8895694
+57817,Donegani / Gateway,45.4469818,-73.8048814
+58564,Gare Ste-Anne-de-Bellevue (Garden City/Pacifique),45.4077282,-73.9516705
+57623,Hymus / Alston,45.4566703,-73.8288794
+58363,Hymus / Eaton,45.4501680,-73.8428739
+58455,Beaconsfield / Gables,45.4268470,-73.8570900
+58083,de Pierrefonds / Nanterre,45.4645651,-73.8815044
+57689,Saint-Louis / Cavell,45.4543440,-73.8090000
+57604,Hymus / Stillview,45.4529011,-73.8363086
+58426,Beaconsfield / Woodland,45.4194840,-73.8830390
+57400,Neptune / Bord-du-Lac,45.4408710,-73.7717530
+57761,des Sources / Chanteclerc,45.4543349,-73.7820807
+58512,Lakeshore / Wilson,45.4135860,-73.8988220
+58239,de Pierrefonds / Prével,45.4610455,-73.8885709
+57831,Brunswick / Hermitage,45.4617495,-73.8407651
+58584,du Pacifique / de l'Église,45.4068050,-73.9533860
+57636,Hymus / Paprican,45.4583929,-73.8254998
+58376,Brunswick / Jonquille,45.4562290,-73.8579950
+58311,Gouin / Lauzon,45.4521668,-73.9360525
+58468,Beaconsfield / Kenwood,45.4299373,-73.8492024
+58098,Saint-Charles / Claude,45.4678729,-73.8750901
+57702,Delmar / Hymus,45.4691391,-73.8045299
+58440,Beaconsfield / Harrow,45.4235550,-73.8671840
+57778,École John-Rennie (Douglas-Shand / Saint-Jean),45.4496260,-73.8168972
+58531,Morgan / Clark-Graham,45.4220508,-73.9172288
+61257,de Pierrefonds / du Palomino,45.4553097,-73.9038129
+58254,Gouin / No 18923,45.4606260,-73.9026880
+60705,Transcanadienne / No 5500,45.4698969,-73.8130906
+57653,Saint-Jean / Sedgefield,45.4552940,-73.8206748
+58395,Transcanadienne / Mountain View,45.4501276,-73.8628352
+61578,Fairview / Brunswick,45.4626687,-73.8373878
+58478,Beaconsfield / Hyde Park,45.4293270,-73.8389250
+57711,Braebrook / Broadview,45.4618200,-73.8015430
+58449,Sherbrooke / Hollis,45.4369080,-73.8630410
+57791,des Sources / No 1733,45.4620845,-73.7831892
+58548,Clark-Graham / Firing,45.4243083,-73.9095357
+58340,Sainte-Marie / Saint-Tropez,45.4409200,-73.8794831
+57666,Hastings / Newton,45.4606180,-73.8161240
+60582,Gouin / du Palomino,45.4604161,-73.9055191
+57741,Gare Valois (Donegani / de la Baie-de-Valois),45.4497593,-73.7917988
+58491,Gare Beaconsfield,45.4351657,-73.8477860
+57724,Bord-du-Lac / Water's Edge,45.4466380,-73.7987200
+57802,Bord-du-Lac / Sainte-Anne,45.4290540,-73.8256030
+58558,Sainte-Anne / Saint-Charles,45.4071857,-73.9557224
+57617,Rothbury / Stillview,45.4490650,-73.8306940
+58357,Hymus / de la Caravelle,45.4500038,-73.8501665
+57675,Saint-Louis / Maywood,45.4520890,-73.8134610
+58393,Sainte-Marie / Transcanadienne,45.4406904,-73.8820634
+58592,Hôpital Sainte-Anne (Anciens-Combattants/No 305),45.4125295,-73.9497510
+57755,des Sources / Saint-Louis,45.4647801,-73.7858020
+58506,Lakeshore / Sunny Acres,45.4101926,-73.9114630
+58233,du Château-Pierrefonds / de Pierrefonds,45.4597049,-73.8930037
+57816,Donegani / Gateway,45.4470591,-73.8049857
+58567,Sainte-Anne / Maple,45.4027423,-73.9441980
+57630,École Félix-Leclerc (Inglewood / Ashington),45.4488010,-73.8276020
+58370,De Salaberry / Brunswick,45.4585727,-73.8499166
+58296,du Château-Pierrefonds / Oka,45.4630746,-73.8954057
+58454,Beaconsfield / Gables,45.4269700,-73.8570310
+57688,Hastings / Braebrook,45.4574050,-73.8099890
+58425,Beaconsfield / Madsen,45.4187840,-73.8860470
+57399,Bord-du-Lac / Neptune,45.4408050,-73.7714770
+57764,Bord-du-Lac / Lakebreeze,45.4468498,-73.7823247
+58522,Morgan / Surrey,45.4174495,-73.9166977
+60461,Transcanadienne / No 7600,45.4588973,-73.8348140
+58583,Sainte-Anne / Perrault,45.4026631,-73.9461909
+58379,Saint-Charles / Sainte-Marie,45.4504257,-73.8565751
+58472,Saint-Charles / Beaconsfield,45.4312480,-73.8460913
+58101,Saint-Charles / Duval,45.4655244,-73.8729598
+57705,Delmar / Hearne,45.4665970,-73.8029920
+58443,Sherbrooke / Brighton,45.4366120,-73.8666570
+58534,Clark-Graham / No 20425,45.4191640,-73.9242860
+58258,Gouin / De La Morandière,45.4604380,-73.9097900
+57652,Saint-Jean / Cardiff,45.4551474,-73.8202032
+58394,Transcanadienne / Daniel,45.4469118,-73.8693853
+58485,Gare Beaconsfield,45.4347335,-73.8487073
+57718,Braebrook / Delmar,45.4627270,-73.7995250
+57794,Terminus Fairview,45.4656863,-73.8315910
+58547,Clark-Graham / Weco,45.4226793,-73.9152103
+58343,Brunswick / Henri-Daoust,45.4528256,-73.8688495
+61262,Saint-Jean / Autoroute 20,45.4413526,-73.8148272
+60402,Cardinal / Strathmore,45.4500975,-73.7769161
+58412,Houde / Transcanadienne,45.4450947,-73.8754250
+61256,de Pierrefonds / Winnie-Wakefield,45.4591514,-73.8941201
+57379,Cardinal / Strathmore,45.4500307,-73.7773253
+57740,Gare Valois (Donegani / de la Baie-de-Valois),45.4500494,-73.7915532
+58495,Montrose / Northcliff,45.4404480,-73.8747120
+57727,Broadview / No 105,45.4562550,-73.7978080
+57810,Transcanadienne / No 5701,45.4689488,-73.8167970
+58356,Hymus / No 16889,45.4500233,-73.8530893
+57682,Maywood / Drake,45.4469338,-73.8119573
+58419,de l'Anse-à-l'Orme / Timberlea-Trail,45.4376474,-73.9008444
+58595,Sainte-Marie / Industriel,45.4277037,-73.9208115
+57393,Neptune / Cardinal,45.4501359,-73.7744932
+57758,Belmont / Vincennes,45.4570154,-73.7836516
+58505,Lakeshore / Sunny Acres,45.4102668,-73.9114810
+58232,de Pierrefonds / du Château-Pierrefonds,45.4597939,-73.8923600
+57819,Fairview / Réno Dépot,45.4621935,-73.8366354
+58576,Sainte-Anne / Lalonde,45.4032549,-73.9501899
+57633,Douglas-Shand / Heather,45.4458900,-73.8253590
+58373,Brunswick / Argyle,45.4570821,-73.8534970
+58457,Sherbrooke / Bermuda,45.4379790,-73.8563470
+58095,de Pierrefonds / Saint-Charles,45.4685494,-73.8757884
+58428,Beaconsfield / Saint-Louis,45.4199790,-73.8792000
+57402,Parkfield / Avila-Legault,45.4529060,-73.7719120
+57771,Cartier / de Val-Soleil,45.4371839,-73.8265804
+58527,Lee / Transcanadienne,45.4330698,-73.9038306
+57498,Carson / Neptune,45.4443660,-73.7726410
+60415,Terminus Fairview / Brunswick,45.4659824,-73.8318640
+57646,Saint-Jean / Hymus,45.4590735,-73.8218577
+58387,Sainte-Marie / Transcanadienne,45.4391237,-73.8896656
+58313,Gouin / Rose-Marie,45.4553408,-73.9348050
+58471,Saint-Charles / Prairie,45.4318220,-73.8463426
+58108,Saint-Charles / Oakwood,45.4621929,-73.8683872
+57704,Lakeview / Hillcrest,45.4413970,-73.8038940
+61396,Sainte-Anne / Sainte-Marie,45.4027447,-73.9474719
+58442,Sherbrooke / Brighton,45.4367320,-73.8667490
+57780,Stillview / Transcanadienne,45.4566690,-73.8396873
+58541,Clark-Graham / Styrochem,45.4253226,-73.9053064
+58337,Sainte-Marie / Meaney,45.4376048,-73.8948199
+57655,Transcanadienne / Ellingham,45.4677043,-73.8192572
+58397,Houde / Transcanadienne,45.4455129,-73.8756296
+58488,Gare Beaurepaire (sortie 45 / Woodland),45.4272249,-73.8852742
+57721,Donegani / Windcrest,45.4487610,-73.7986973
+57793,Transcanadienne / Hôtel Journeys's End,45.4656741,-73.8214339
+58550,Lee / Clark-Graham,45.4272200,-73.9021970
+57608,Labrosse / Grandview,45.4683630,-73.8336820
+58350,Saint-Charles / Sainte-Marie,45.4511058,-73.8577461
+57837,De Salaberry / Sommerset,45.4662252,-73.8489569
+57668,Saint-Jean / Springdale,45.4453622,-73.8165292
+58411,Houde / Elkas,45.4468636,-73.8769870
+57378,Bord-du-Lac / de l'Église,45.4463998,-73.7805983
+57743,Bord-du-Lac / de la Baie-de-Valois,45.4483692,-73.7908949
+58499,Lakeshore / Churchill,45.4053329,-73.9237911
+57734,Bord-du-Lac / Broadview,45.4480036,-73.7946147
+58226,Antoine-Faucon / Grilli,45.4557540,-73.8757885
+57813,Brunswick / Fairview,45.4627156,-73.8383332
+58359,Transcanadienne / No 16751,45.4557302,-73.8477318
+57685,Lakeview / Longmore,45.4387209,-73.8114636
+58422,Beaconsfield / Lakeview,45.4180330,-73.8893690
+57396,Herron / Neptune,45.4488900,-73.7745159
+57757,Bord-du-Lac / No 24,45.4479562,-73.7860760
+58508,Lakeshore / Normandy,45.4119380,-73.9061650
+57827,Brunswick / Auto Plaza,45.4661550,-73.8321930
+58580,Collège John Abbott,45.4069875,-73.9406942
+57632,Bord-du-Lac / Saint-Jean-Baptiste,45.4286550,-73.8273930
+58372,Brunswick / Argyle,45.4574325,-73.8532568
+58464,Sherbrooke / Cadillac,45.4391556,-73.8505829
+58094,Saint-Charles / de Pierrefonds,45.4688862,-73.8757917
+57698,Hornell / Saint-Louis,45.4556780,-73.8066640
+58436,Beaconsfield / Neveu,45.4222430,-73.8725910
+57774,École Pointe-Claire,45.4505796,-73.8150078
+58525,Morgan / Victoria,45.4148483,-73.9164042
+57497,Carson / Neptune,45.4443250,-73.7723590
+58250,des Cageux / Gouin,45.4659565,-73.8877729
+60534,Maywood / Donegani,45.4451729,-73.8114620
+57649,Hymus / Saint-Jean,45.4590663,-73.8236171
+58390,Saint-Charles / No 2755,45.4458390,-73.8520584
+58474,Saint-Charles / Beaconsfield,45.4315282,-73.8459543
+58111,Saint-Charles / Antoine-Faucon,45.4604589,-73.8665536
+57707,Lakeview / Lakeshore,45.4412861,-73.8036142
+58445,Sherbrooke / Westcroft,45.4365642,-73.8651162
+57787,Saint-Jean / Autoroute 20 (sud),45.4411645,-73.8145202
+58544,Clark-Graham / Pirie,45.4170730,-73.9285074
+58336,Sainte-Marie / Meaney,45.4374150,-73.8950822
+57662,Hastings / Hymus,45.4613140,-73.8170970
+58405,Brunswick / Berne,45.4509176,-73.8728450
+57737,Belmont / de la Baie-de-Valois,45.4540420,-73.7925230
+58487,Montrose / Sainte-Marie,45.4418208,-73.8750401
+57720,Broadview / Saint-Louis,45.4593320,-73.7992390
+57797,Terminus Fairview,45.4656888,-73.8314083
+58554,Maple / Autoroute 20,45.4081672,-73.9454559
+57613,Stillview / Frobisher,45.4501130,-73.8328310
+58353,Transcanadienne / No 16821,45.4546064,-73.8530861
+57671,École John-Rennie (Douglas-Shand / St-Jean),45.4496365,-73.8165506
+58414,Brunswick / Valérie,45.4554367,-73.8633953
+61601,Transcanadienne / No 18101,45.4464740,-73.8721250
+58587,Zoo Écomuseum,45.4238015,-73.9325499
+57382,Bord-du-Lac / Lake,45.4447316,-73.7773437
+57751,Donegani / Lucerne,45.4502654,-73.7869251
+58229,du Château-Pierrefonds / Meloche,45.4564783,-73.8891919
+58563,Sainte-Anne / Garden City,45.4103651,-73.9525991
+57626,Inglewood / Rothbury,45.4498790,-73.8285480
+58366,Hymus / André-Brunet,45.4510588,-73.8399251
+58292,Gouin / No 19688,45.4612727,-73.9155764
+58088,Gouin / Coursol,45.4653819,-73.8905837
+57684,Lakeview / Longmore,45.4389678,-73.8111787
+57603,Hymus / Stillview,45.4532146,-73.8359972
+58421,Beaconsfield / Brentwood,45.4168210,-73.8932830
+57395,Neptune / Cardinal,45.4503190,-73.7744230
+57760,des Sources / Belmont,45.4572023,-73.7824965
+58516,Lakeshore / No 20846,45.4051090,-73.9335687
+58242,des Cageux / de Pierrefonds,45.4628941,-73.8846827
+57830,Brunswick / Hermitage,45.4613713,-73.8408503
+58578,Pine / Sainte-Marie,45.4225426,-73.9358282
+57635,Cartier / No 117,45.4346525,-73.8255410
+58375,Brunswick / Jonquille,45.4564687,-73.8554743
+58305,Gouin / No 19688,45.4613667,-73.9156007
+58466,Saint-Charles / Sherbrooke,45.4395313,-73.8496175
+58097,Saint-Charles / de Pierrefonds,45.4692649,-73.8757421
+57701,Lakeview / Fifth,45.4409777,-73.8057938
+58439,Sherbrooke / Fleet,45.4368360,-73.8696680
+57773,Stillview / Canvin,45.4508450,-73.8339290
+58530,Clark-Graham / Morgan,45.4220942,-73.9168615
+61321,de Pierrefonds / Winnie-Wakefield,45.4588489,-73.8942750
+58253,Gouin / No 18465,45.4625720,-73.8983061
+57648,Hymus / Saint-Jean,45.4589468,-73.8234899
+58389,Transcanadienne / Saint-Charles,45.4537770,-73.8598250
+58481,Gare Beaconsfield (St-Charles / Amherst),45.4358855,-73.8473852
+57714,Bord-du-Lac / Lakeside,45.4438495,-73.8013367
+58452,Sherbrooke / Allancroft,45.4377378,-73.8583756
+57790,Gare Pointe-Claire,45.4467135,-73.8023726
+58543,Cruickshank / Lee,45.4290937,-73.9042781
+58339,Sainte-Marie / Saint-Tropez,45.4412124,-73.8786458
+57665,Saint-Jean / Drake,45.4458261,-73.8163393
+58408,Brunswick / Rougemont,45.4488248,-73.8775260
+57736,Belmont / de la Baie-de-Valois,45.4541240,-73.7926800
+58490,Beaconsfield / Hyde Park,45.4293973,-73.8388500
+57723,Bord-du-Lac / Water's Edge,45.4467021,-73.7983632
+57805,Hastings / Dieppe,45.4570120,-73.8097460
+58557,Sainte-Anne / Saint-Charles,45.4070458,-73.9557981
+57610,Stillview / Canvin,45.4509730,-73.8342070
+58352,Saint-Charles / Hymus,45.4495092,-73.8561063
+58286,Usine de filtration de Pierrefonds,45.4650677,-73.8917481
+57678,Maywood / Viburnum,45.4488558,-73.8126982
+61234,Sainte-Marie / de l'Anse-à-l'Orme,45.4362683,-73.8984918
+57389,Parkfield / Neptune,45.4524300,-73.7750510
+57754,Donegani / de la Baie-de-Valois,45.4499550,-73.7921918
+58501,Lakeshore / No 20578,45.4054044,-73.9217038
+58228,du Château-Pierrefonds / Antoine-Faucon,45.4526290,-73.8864800
+57815,Terminus Fairview,45.4654271,-73.8313294
+58571,Lakeshore / No 20846,45.4050386,-73.9336583
+57629,École Félix-Leclerc (Inglewood / Ashington),45.4486610,-73.8273470
+58369,Brunswick / de Salaberry,45.4585908,-73.8495177
+58453,Sherbrooke / Allancroft,45.4376166,-73.8586093
+57687,Hymus / Gun,45.4653634,-73.8097967
+57602,Stillview / Hymus,45.4529064,-73.8359582
+58424,Beaconsfield / Madsen,45.4189230,-73.8858130
+57398,Neptune / Nightingale,45.4470645,-73.7737886
+57767,Revcon / Place Frontenac,45.4688604,-73.8286699
+58521,Morgan / Westchester,45.4107401,-73.9159326
+57829,Selkirk / Transcanadienne,45.4670984,-73.8214318
+58582,Gare Sainte-Anne-de-Bellevue,45.4077684,-73.9519385
+57642,Cartier / Lanthier,45.4311736,-73.8240492
+58382,Saint-Charles / du Barry,45.4578901,-73.8642724
+58467,Saint-Charles / Sherbrooke,45.4392574,-73.8491385
+57700,Lakeview / Fifth,45.4411348,-73.8055589
+58438,Sherbrooke / Fleet,45.4369600,-73.8693670
+58537,Rond-point Clark-Graham,45.4166750,-73.9309020
+58333,Sainte-Marie / de l'Anse-à-l'Orme,45.4364041,-73.8982815
+58261,de Pierrefonds / Louis-Fréchette,45.4669293,-73.8781104
+57651,Douglas-Shand / Oakridge,45.4472840,-73.8223690
+58392,Transcanadienne / Montrose,45.4436393,-73.8760515
+58484,Gare Beaconsfield,45.4352656,-73.8478829
+58113,Antoine-Faucon / Saint-Charles,45.4600060,-73.8672063
+57717,Delmar / Braebrook,45.4629830,-73.7996120
+57850,Sommerset / Roosevelt,45.4676516,-73.8507739
+58546,Cruickshank / Firing,45.4270350,-73.9098520
+57664,Hymus / Hastings,45.4612710,-73.8174100
+58407,Brunswick / Nelligan,45.4504265,-73.8738602
+61254,de Pierrefonds / du Château-Pierrefonds,45.4593852,-73.8928602
+57739,de la Baie-de-Valois / Mount-Pleasant,45.4515630,-73.7921310
+60256,Sherbrooke / Robin,45.4363000,-73.8727330
+57730,Broadview / Belmont,45.4527750,-73.7965640
+58222,Henri-Daoust / Antoine-Faucon,45.4568858,-73.8727789
+57809,Terminus Fairview,45.4652939,-73.8311943
+58556,Sainte-Anne / de l'Église,45.4048947,-73.9562101
+57615,Hôpital général Lakeshore (Stillview/Sedgefield),45.4494300,-73.8321790
+58355,Saint-Charles / Kirkland,45.4479577,-73.8545343
+58285,Gouin / de Baubigny,45.4647847,-73.8921405
+57681,Hastings / Westcliffe,45.4598530,-73.8127990
+57596,des Sources / de l'Aviation,45.4693785,-73.7902506
+58417,Beaconsfield / Beaconsfield Court,45.4261620,-73.8595830
+57392,Cardinal / Neptune,45.4500453,-73.7741777
+57753,Belmont / Chester,45.4558800,-73.7867950
+58231,du Château-Pierrefonds / Rousson,45.4591282,-73.8923256
+57822,Brunswick / Terminus Fairview,45.4665712,-73.8309269
+58575,Sainte-Marie / Meloche,45.4261551,-73.9247692
+57628,Brunswick / Revcon,45.4680552,-73.8279580
+58368,De Salaberry / Médoc,45.4639466,-73.8511728
+58460,Beaconsfield / Fieldsend,45.4286870,-73.8529180
+58090,de Pierrefonds / Louis-Fréchette,45.4672352,-73.8780463
+57694,Lakeview / Hampton Gardens,45.4402390,-73.8080880
+58431,Beaconsfield / Legault,45.4207220,-73.8759210
+57770,Cartier / de Val-Soleil,45.4373634,-73.8265112
+58520,Lakeshore / No 20551,45.4065453,-73.9203485
+60234,Hôpital général Lakeshore (Sedgefield/Stillview),45.4495150,-73.8317450
+58386,Hymus / No 16889,45.4498826,-73.8533679
+58316,Gouin / No 20392,45.4593780,-73.9243950
+58469,Beaconsfield / Kenwood,45.4297590,-73.8494270
+58107,Saint-Charles / Maher,45.4622906,-73.8692375
+57703,Hymus / Delmar,45.4690958,-73.8048526
+58441,Beaconsfield / Harrow,45.4234260,-73.8673780
+58540,Clark-Graham / Weco,45.4223819,-73.9155893
+61395,de Pierrefonds / Winnie-Wakefield,45.4593607,-73.8935637
+57658,Saint-Jean / Douglas-Shand,45.4492216,-73.8177443
+58401,Jean-Yves / Transcanadienne,45.4404728,-73.8860335
+58483,Gare Beaconsfield,45.4351170,-73.8479596
+57792,Saint-Jean / Complexe Pointe-Claire,45.4667455,-73.8280928
+60674,Clark-Graham / No 19701,45.4232190,-73.9136840
+57607,Labrosse / No 1000,45.4689550,-73.8322140
+58349,Brunswick / du Merlot,45.4562874,-73.8610997
+57667,Hastings / Newton,45.4606410,-73.8165870
+57377,Bord-du-Lac / de l'Église,45.4463774,-73.7803140
+57746,Belmont / King,45.4546780,-73.7906600
+58498,Lakeshore / Case,45.4052362,-73.9273643
+57733,Donegani / Broadview,45.4494160,-73.7953191
+58225,Antoine-Faucon / Grilli,45.4559815,-73.8756377
+57808,Saint-Jean / Holiday,45.4612167,-73.8227981
+58559,Michaud / Garden City,45.4090104,-73.9527132
+57622,Hymus / Alston,45.4569811,-73.8286190
+58362,Transcanadienne / No 16711,45.4564297,-73.8444520
+57680,Hastings / Westcliffe,45.4597310,-73.8123500
+61340,Transcanadienne / Edmond,45.4555345,-73.8449609
+57391,Bord-du-Lac / Thrush,45.4423717,-73.7747820
+57756,des Sources / Reverchon,45.4651293,-73.7856700
+58511,Lakeshore / Willowdale,45.4135940,-73.8990290
+58238,de Pierrefonds / de Riva-Bella,45.4613510,-73.8883156
+57825,Autoroute 20 / Cartier,45.4394164,-73.8273683
+58574,Sainte-Marie / Meloche,45.4264647,-73.9240315
+57631,Bord-du-Lac / Saint-Jean-Baptiste,45.4287350,-73.8273500
+58371,Brunswick / De Salaberry,45.4580044,-73.8505309
+58463,Beaconsfield / East Gables,45.4282350,-73.8538780
+58093,de Pierrefonds / Saint-Charles,45.4690505,-73.8754420
+57697,Donegani / Terra Cotta,45.4460423,-73.8079660
+58434,Sherbrooke / Robin,45.4364280,-73.8724080
+58249,des Cageux / Gouin,45.4661730,-73.8877640
+60652,Hymus / No 300,45.4542379,-73.8339925
+58384,De Salaberry / Acres,45.4606916,-73.8519670
+58477,Beaconsfield / Claude,45.4310768,-73.8413287
+58106,Antoine-Faucon / Biroleau,45.4581051,-73.8707617
+57710,Broadview / Braebrook,45.4616600,-73.8014540
+58448,Sherbrooke / Forest,45.4371450,-73.8620250
+57786,Bord-du-Lac / No 24,45.4481252,-73.7864036
+58539,Clark-Graham / No 20500,45.4190220,-73.9243156
+58335,Institut national de santé (Ste-Marie/No 20045),45.4333560,-73.9070330
+57661,Douglas-Shand / Saint-Jean,45.4491399,-73.8189437
+58404,Brunswick / Berne,45.4511691,-73.8726327
+58486,Beaconsfield / Redfern,45.4167790,-73.8932180
+57719,Broadview / Saint-Louis,45.4592210,-73.7989950
+57800,Terminus Fairview,45.4651633,-73.8308777
+58553,Sainte-Marie / des Pins,45.4224851,-73.9360939
+57606,Stillview / Hymus,45.4525390,-73.8357600
+58348,Brunswick / Saint-Charles,45.4558496,-73.8625321
+57674,Hymus / Hilary,45.4631091,-73.8139375
+60124,Transcanadienne / No 16800,45.4541982,-73.8511130
+58586,Poultry Cottages / des Pins,45.4137844,-73.9395369
+57750,Donegani / Lucerne,45.4504452,-73.7871059
+58497,Lakeshore / Saint-Andrew's,45.4052135,-73.9310722
+57732,Broadview / Donegani,45.4495785,-73.7953016
+58224,Antoine-Faucon / des Cageux,45.4535087,-73.8804481
+57811,Autoroute 20 Ouest / Saint-Jean,45.4428042,-73.8156971
+58566,Sainte-Anne / Terminus Macdonald,45.4030183,-73.9429342
+57625,Rothbury / Inglewood,45.4499040,-73.8288530
+58365,Hymus / André-Brunet,45.4513117,-73.8397179
+58087,Gouin / Coursol,45.4655280,-73.8904860
+57683,Maywood / Drake,45.4471860,-73.8121898
+57598,des Sources / Avro,45.4672374,-73.7876669
+61121,des Anciens-Combattants / No 305,45.4113537,-73.9492219
+57394,Cardinal / Neptune,45.4499778,-73.7746099
+57763,Bord-du-Lac / Lakebreeze,45.4468716,-73.7817583
+58514,Lakeshore / Magnolia,45.4147210,-73.8962120
+58241,de Pierrefonds / des Cageux,45.4626077,-73.8846031
+57824,Autoroute 20 / Cartier,45.4400441,-73.8272170
+57979,De Salaberry / Walworth,45.4673644,-73.8465516
+58378,Saint-Charles / Hymus,45.4489568,-73.8555493
+58462,Saint-Charles / Creswell,45.4435127,-73.8513004
+58100,Henri-Daoust / Antoine-Faucon,45.4571237,-73.8728145
+57696,Donegani / Terra Cotta,45.4462369,-73.8076306
+58433,Montrose / Arlington,45.4414010,-73.8750530
+57772,Autoroute 20 / Saint-Jean,45.4411643,-73.8148536
+58533,Lee / Clark-Graham,45.4275140,-73.9022880
+61312,de Pierrefonds / Winnie-Wakefield,45.4591198,-73.8935677
+58257,Gouin / De La Morandière,45.4605265,-73.9093604
+57647,Saint-Jean / Hymus,45.4595126,-73.8224543
+58318,Gouin / No 20752,45.4573266,-73.9298847
+58480,Beaconsfield / Lakeshore,45.4281175,-73.8343258
+57713,Delmar / des Canots,45.4650290,-73.8015220
+58451,Sherbrooke / Woodside,45.4373150,-73.8605010
+57785,Cartier / No 117,45.4345881,-73.8253437
+58542,Lee / Cruickshank,45.4293410,-73.9028093
+58342,Brunswick / Henri-Daoust,45.4528410,-73.8691370
+60889,Brunswick / Terminus Fairview,45.4664122,-73.8312359
+57660,Douglas-Shand / Saint-Jean,45.4492759,-73.8182334
+58403,Brunswick / du Syrah,45.4596342,-73.8456831
+57735,Bord-du-Lac / Broadview,45.4478348,-73.7947415
+58494,Montrose / Northcliff,45.4402610,-73.8745330
+57726,Broadview / John-Fisher,45.4575420,-73.7984660
+57804,Donegani / King,45.4504762,-73.7881890
+58552,Sainte-Marie / No 21025,45.4254714,-73.9272821
+57609,Labrosse / No 1000,45.4691333,-73.8322526
+58351,Saint-Charles / Hymus,45.4492767,-73.8554167
+57838,De Salaberry / Walworth,45.4671457,-73.8466754
+57677,Lakeview / Saint-Jean,45.4381043,-73.8129620
+60799,Sainte-Marie / No 19925,45.4347326,-73.9033102
+58594,Sainte-Anne / Autoroute 20,45.4044453,-73.9544439
+57388,Parkfield / Neptune,45.4524460,-73.7745330
+57748,Bord-du-Lac / Milroy,45.4479679,-73.7883528
+58500,Lakeshore / Churchill,45.4053061,-73.9241294
+58227,Antoine-Faucon /du Château-Pierrefonds,45.4525452,-73.8860368
+57818,Fairview / Brunswick,45.4630257,-73.8374998
+57624,Transcanadienne / Holiday,45.4620591,-73.8285579
+58364,Hymus / Eaton,45.4499716,-73.8432968
+58298,du Château-Pierrefonds / Oka,45.4629161,-73.8953256
+58456,Sherbrooke / Bermuda,45.4380850,-73.8561440
+57690,Saint-Louis / Cavell,45.4541340,-73.8091970
+58427,Beaconsfield / Woodland,45.4193570,-73.8834020
+58596,Gouin / No 18465,45.4626460,-73.8983720
+57401,Bord-du-Lac / Neptune,45.4407510,-73.7713500
+57766,Hymus / No 285,45.4549322,-73.8322871
+58513,Lakeshore / Magnolia,45.4149830,-73.8960010
+58240,de Pierrefonds / des Cageux,45.4629331,-73.8843880
+57828,Belmont / Vincennes,45.4571794,-73.7834145
+58585,Poultry Cottages / des Pins,45.4140149,-73.9397541
+57641,de Lourdes / Bord-du-Lac,45.4295750,-73.8248380
+57978,De Salaberry / Sommerset,45.4659374,-73.8492407
+58381,Saint-Charles / du Barry,45.4577128,-73.8636841
+58312,Gouin / Lauzon,45.4520029,-73.9361087
+58465,Sherbrooke / de Cadillac,45.4390348,-73.8507837
+57699,Saint-Louis / Hornell,45.4552610,-73.8069290
+58437,Beaconsfield / Neveu,45.4224180,-73.8723720
+57779,Donegani / des Sources,45.4501767,-73.7811693
+58536,Clark-Graham / Firing,45.4243440,-73.9092020
+61258,de Pierrefonds / du Palomino,45.4555161,-73.9035282
+58260,du Château-Pierrefonds / Joseph-Wilson,45.4605922,-73.8934493
+58396,Transcanadienne / Berne,45.4478515,-73.8693428
+57364,Neptune / Carson,45.4445420,-73.7729320
+58479,Lakeshore / Beaconsfield,45.4282340,-73.8340620
+57712,Delmar / des Canots,45.4650710,-73.8017380
+58450,Sherbrooke / Woodside,45.4374240,-73.8603010
+57788,Saint-Jean / Autoroute 20,45.4429005,-73.8154916
+58549,Clark-Graham / Rafna,45.4251802,-73.9056994
+58345,Brunswick / Shannon,45.4537205,-73.8669808
+72454,rue Poultry Cottages / face à la Ferme Macdonald,45.4137627,-73.9395301
+72453,John Abbott College,45.4069161,-73.9409192
+72452,rue Poultry Cottages / face à la Ferme Macdonald,45.4139939,-73.9397512
+72451,rue du Collège / rue St-Pierre,45.4063525,-73.9510755
+72450,rue St-Pierre / passage piétonnier,45.4057922,-73.9508548
+72448,Terminus Mcdonald (taxis),45.4036932,-73.9396435
+72281,boul. Brunswick / rue Auto Plaza,45.4665492,-73.8330386
+72280,boul. Brunswick / rue Auto Plaza,45.4666905,-73.8331825
+58329,Plage Cap St-Jacques,45.4563501,-73.9337299
+58588,Zoo Écomuseum,45.4238697,-73.9326962
+58410,Houde / Elkas,45.4470487,-73.8773542
+58409,Brunswick / Rougemont,45.4485978,-73.8776769
+58346,Brunswick / Valérie,45.4556949,-73.8631762
+60704,Bibliothèque Sainte-Anne-de-Bellevue,45.4055722,-73.9508070
+58560,Sainte-Anne / Saint-Jean-Baptiste,45.4035757,-73.9522274
+58561,Sainte-Anne / Christie,45.4038893,-73.9526436
+72447,boul. Ste-Anne / rue Lalonde,45.4031713,-73.9500957
+58570,Sainte-Anne / Terminus Macdonald,45.4034311,-73.9411996
+72449,Terminus Mcdonald,45.4035037,-73.9411506
+58590,Sainte-Anne / Terminus Macdonald,45.4037283,-73.9409437
+58591,Sainte-Anne / Terminus Macdonald,45.4036742,-73.9404361
+61253,Sainte-Anne / Terminus Macdonald,45.4037652,-73.9402134
+61125,des Sources / Cardinal,45.4503379,-73.7803692
+57769,Cartier / Salisbury,45.4386847,-73.8271070
+57789,Gare Pointe-Claire,45.4462468,-73.8023534

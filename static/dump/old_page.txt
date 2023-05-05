@@ -1,0 +1,45 @@
+///page:header
+import  Map  from 'ol/Map';
+    import TileLayer from 'ol/layer/Tile';
+    import View from 'ol/View';
+    import OSM from 'ol/source/OSM';
+    import {fromLonLat} from 'ol/proj';
+    import gsap from 'gsap'
+    const osmLayer = new TileLayer({source: new OSM()})
+    let mymap = new Map({layers: [osmLayer],view: new View({center: fromLonLat([-73.683333, 45.5529323]),zoom: 11})})
+    mymap.setTarget("map")
+
+    mymap.on('movestart', ()=>{header_timeline.play()});
+    mymap.on('moveend', ()=>{header_timeline.reverse()});
+
+/////ToogleMenu:header
+import Feature from "ol/Feature";
+    import Point from 'ol/geom/Point';
+    import {fromLonLat} from 'ol/proj';
+    import VectorSource from 'ol/source/Vector';
+    import {Vector as VectorLayer} from 'ol/layer';
+    import Style from "ol/style/Style";
+    import Icon from "ol/style/Icon";
+
+function dataDisplay(data) {
+        
+            let marker = new VectorLayer({
+                source: new VectorSource({
+                    features: [
+                        new Feature({
+                            geometry: new Point(fromLonLat([-73.5786, 45.4956 ])),
+                            name: 'Test'
+                        })
+                    ]
+                }),
+                style: new Style({
+                    image: new Icon({
+                        anchor: [0.5,1],
+                        src: 'https://docs.maptiler.com/openlayers/default-marker/marker-icon.png'
+                    })
+                })
+            })
+            map.addLayer(marker)
+}
+
+<input class="it_btn_check" id="bus_stop_check" type="checkbox" bind:checked={toggles.busstop} on:change={()=> {dataDisplay("busstop")}} />
