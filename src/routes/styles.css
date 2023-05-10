@@ -168,3 +168,15 @@ button:focus:not(:focus-visible) {
 .metrostation svg g path{
 	fill: white;
 }
+.testing_movement {
+	aspect-ratio: 1/1;
+	background-color: #ff3e00;
+	border: 2px solid white;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	padding: 0.125rem;
+}
+.testing_movement svg path {
+	fill: white;
+}

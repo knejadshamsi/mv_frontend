@@ -1,9 +1,6 @@
-<script lang="ts">
-    import { gsap } from "gsap";
-    import { onMount } from 'svelte';
-    import type {Feature} from "geojson"
+<script>
     import MapLibre from '$lib/maps/MapLibre.svelte'
-    import {brtogstore,interface_logic} from './stores'
+    import {brtogstore,interface_logic,movesim} from './stores'
     import  Marker  from "$lib/maps/Marker.svelte";
     import GeoJSON from "$lib/maps/GeoJSON.svelte";
     import LineLayer from "$lib/maps/LineLayer.svelte";
@@ -11,14 +8,19 @@
     import busStops from "$lib/geodata/bus_stops.json"
     import busRoute from "$lib/geodata/bus_routes_coord.json"
     import metroStations from "$lib/geodata/motro_stations.json"
+    import metroLines from "$lib/geodata/metro_lines_coord.json"
+    import expRoute from "$lib/geodata/route_output.json"
+    import GeoJson from "$lib/maps/GeoJSON.svelte";
+   
     
 
-    onMount(()=> {
-        let header_timeline = gsap.timeline({duration:0.2,paused:true, ease:"power4.out"})
-        header_timeline.to("header",{ background: "linear-gradient(to bottom, rgba(132,21,38,0.4) , rgba(132,21,38,0)"},'ha')
-        .to("#full", {opacity:0.3},'ha')
-        .to("#Abbreviation", {textShadow:"-2px 3px 0px var(--brand_main)"}, 'ha')
-    })
+    //onMount(()=> {
+         //gsap.registerPlugin(AttrPlugin)
+        //let header_timeline = gsap.timeline({duration:0.2,paused:true, ease:"power4.out"})
+        //header_timeline.to("header",{ background: "linear-gradient(to bottom, rgba(132,21,38,0.4) , rgba(132,21,38,0)"},'ha')
+        //.to("#full", {opacity:0.3},'ha')
+        //.to("#Abbreviation", {textShadow:"-2px 3px 0px var(--brand_main)"}, 'ha')
+    //})
     // @ts-ignore
     let layertoggle = {};
     interface_logic.subscribe((value)=> {
@@ -29,7 +31,73 @@
     brtogstore.subscribe((value)=> {
         brToggle = value
     })
-    //console.log(busRoute.features[2])
+
+    let sim_panel_toggle;
+
+    movesim.subscribe((value)=> {
+      sim_panel_toggle = value
+    })
+    
+    //let testlocation = [-73.58019957334444,45.49629458176709]
+    //let testlocation2 = { lon: -73.58019957334444, lat: 45.496294581768}
+
+    let steps = 500
+    let coords = expRoute.features[0].geometry.coordinates
+    let i =0
+    let counter = 0 
+    let freq = 3
+    let location = [-73.579374, 45.495724]
+    let anime;
+    let speed_toggle = false
+    let start_protection = false
+    const speed = {
+      "1": "fastest",
+      "2": "faster",
+      "3": "normal",
+      "4": "slower",
+      "5": "slowest"
+    }
+    function AnimeStart() {
+      return new Promise((resolve,reject)=>{
+        Animation();
+        resolve();
+      })
+    }
+    
+    function Animation() {
+        counter++
+        if (counter%freq==0) {
+          i++
+          location = coords[i]
+        }
+        if (i < (steps-1)) {
+          anime = requestAnimationFrame(Animation)
+        }
+      }
+    function AnimationReset() {
+      cancelAnimationFrame(anime)
+      i=0;
+      counter=0;
+      location = [-73.579374, 45.495724]
+      freq=3
+      start_protection = false
+    }
+    function AnimationPause(){
+      cancelAnimationFrame(anime)
+      start_protection = false
+    }
+    function AnimationSlowDown() {
+      if (freq < 5){
+        freq++
+      }
+    }
+    function AnimationSpeedUP() {
+      if (freq > 1) {
+        freq = freq - 1
+      }
+      
+    }
+
 </script>
 
 <svelte:head>
@@ -82,13 +150,81 @@
     {/if}
   </GeoJSON>
   {/each}
+  <GeoJson id="ml-test" data={metroLines}>
+    {#if ( layertoggle.ml === true)}
+    <LineLayer
+        layout={{ 'line-cap': 'round', 'line-join': 'round' }}
+        paint={{
+          'line-width': 5,
+          'line-color': metroLines.features[0].properties.color,
+          'line-opacity': 0.8,
+        }}
+      />
+    {/if}
+  </GeoJson>
+  <!--
+  {#each metroLines.features as data (data.properties.id)}
+    <GeoJSON id="ml_{data.properties.id}" data={data}>
+      {#if layertoggle.ml === true}
+        <LineLayer
+          layout={{ 'line-cap': 'round', 'line-join': 'round' }}
+          paint={{
+            'line-width': 5,
+            'line-color': data.properties.color,
+            'line-opacity': 0.8,
+          }}
+        />
+      {/if}
+    </GeoJSON>
+  {/each}--->
+  <!---{#if (layertoggle.bis == true)}
+  <Marker lngLat={location} class="testing_movement">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 18.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25c.691 0 1.25.56 1.25 1.25s-.559 1.25-1.25 1.25zm1.961-5.928c-.904.975-.947 1.514-.935 2.178h-2.005c-.007-1.475.02-2.125 1.431-3.468.573-.544 1.025-.975.962-1.821-.058-.805-.73-1.226-1.365-1.226-.709 0-1.538.527-1.538 2.013h-2.01c0-2.4 1.409-3.95 3.59-3.95 1.036 0 1.942.339 2.55.955.57.578.865 1.372.854 2.298-.016 1.383-.857 2.291-1.534 3.021z"/></svg>
+</Marker>
+  {/if}--->
+  {#if (sim_panel_toggle==true)}
+  <Marker lngLat={location} class="testing_movement">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 18.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25c.691 0 1.25.56 1.25 1.25s-.559 1.25-1.25 1.25zm1.961-5.928c-.904.975-.947 1.514-.935 2.178h-2.005c-.007-1.475.02-2.125 1.431-3.468.573-.544 1.025-.975.962-1.821-.058-.805-.73-1.226-1.365-1.226-.709 0-1.538.527-1.538 2.013h-2.01c0-2.4 1.409-3.95 3.59-3.95 1.036 0 1.942.339 2.55.955.57.578.865 1.372.854 2.298-.016 1.383-.857 2.291-1.534 3.021z"/></svg>
+</Marker>
+  {/if}
 </MapLibre>
 
-
+{#if (sim_panel_toggle==true)}
+<div id="simpanel_con">
+  <button class="sim_btn" id="sim_slow" on:click={AnimationSlowDown}>
+    <svg style="rotate:180deg"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 12l-12 8v-16l12 8zm0-8v16l12-8-12-8z"/></svg>
+  </button>
+  <button class="sim_btn" id="sim_play" on:click={()=> { if (start_protection==false) {AnimeStart().then(()=>{speed_toggle=true;start_protection = true})}}}>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 22v-20l18 10-18 10z"/></svg>
+  </button>
+  <button class="sim_btn" id="sim_pause" on:click={AnimationPause}>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 22h-4v-20h4v20zm6-20h-4v20h4v-20z"/></svg>
+  </button>
+  <button class="sim_btn" id="sim_fast" on:click={AnimationSpeedUP}>
+    <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 12l-12 8v-16l12 8zm0-8v16l12-8-12-8z"/></svg>
+  </button>
+  <button class="sim_btn" id="sim_reset" on:click={()=> {AnimationReset();speed_toggle=false }}>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.5 2c-5.629 0-10.212 4.436-10.475 10h-3.025l4.537 5.917 4.463-5.917h-2.975c.26-3.902 3.508-7 7.475-7 4.136 0 7.5 3.364 7.5 7.5s-3.364 7.5-7.5 7.5c-2.381 0-4.502-1.119-5.876-2.854l-1.847 2.449c1.919 2.088 4.664 3.405 7.723 3.405 5.798 0 10.5-4.702 10.5-10.5s-4.702-10.5-10.5-10.5z"/></svg>
+  </button>
+  {#if (speed_toggle==true)}
+  <span id="speed_ind">{speed[freq]}</span>
+  {/if}
+</div>
+{/if}
 
 </section>
 
 <style>
+  #test {
+    width: 10rem;
+    aspect-ratio: 1/1;
+    background: red;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    z-index: 200;
+  }
 	section {
 		width: auto;
 		min-height: 100vh;
@@ -97,5 +233,48 @@
 		width: 100vw;
 		min-height: 100vh;
 	}
-
+  #simpanel_con {
+    width: auto;
+    height: 2rem;
+    background-color: lightgray;
+    border-radius: 25px;
+    border: 2px solid darkgray;
+    padding: 0.125rem;
+    z-index: 102;
+    position: absolute;
+    top:7.5rem;
+    left:1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .sim_btn {
+    width: 30%;
+    height: 100%;
+    margin-right: 0.125rem;
+    background: none;
+    border: none;
+    transform: scale(0.95);
+    cursor: pointer;
+  }
+  #speed_ind {
+    height: 100%;
+    border-radius: 0 25px 25px 0;
+    background-color: rgba(132,21,38,1);
+    z-index: 103;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-inline: 0.5rem ;
+  }
+  #sim_play {
+    padding-right: 0;
+  }
+  #sim_reset,#sim_pause {
+    padding-left: 0;
+  }
+  #sim_fast {
+    padding-left: 0.125rem;
+  }
 </style>

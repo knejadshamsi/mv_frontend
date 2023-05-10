@@ -19,3 +19,5 @@ busRoutes.features.forEach((br) => {
     brtogc[option] = false
 })
 export let brtogstore = writable(brtogc)
+ 
+export let movesim = writable(false)

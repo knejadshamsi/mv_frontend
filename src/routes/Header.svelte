@@ -2,10 +2,15 @@
 	import logo from '$lib/images/move_logo.svg';
 	import "@fontsource/poppins"
 	import "@fontsource/poppins/700.css";
+	import {movesim} from "./stores"
+	let simtoggle = false
+	movesim.subscribe((value)=> {
+		simtoggle = value
+    })
 </script>
 
 <header>
-	<button id="menu_btn">
+	<button id="menu_btn" on:click={()=> {simtoggle = !simtoggle;movesim.set(simtoggle)}}>
 		<img src="{logo}" alt="MOVE's logo">
 	</button>
 	<div id="title">

@@ -1,0 +1,12 @@
+////// the manual way
+
+function test() {
+      console.log("fired")
+      let test4 = setInterval(function(){
+        testlocation2.lat = testlocation2.lat-0.0001
+        if (testlocation2.lat< 44) {
+          clearInterval(test4)
+          console.log("done!")
+        }
+      },1000)
+    }
