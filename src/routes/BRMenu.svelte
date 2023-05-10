@@ -1,5 +1,4 @@
 <script>
-    //@ts-ignore
 import busRoutes from "$lib/geodata/bus_routes_id.json"
 import {brtogstore} from './stores'
 
