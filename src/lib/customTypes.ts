@@ -1,3 +1,7 @@
+export type BooleanObject = {
+    [key:string]: boolean
+}
+
 export type MetroFeature = {
     type: string;
     geometry: {
