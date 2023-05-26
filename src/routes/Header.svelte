@@ -1,16 +1,10 @@
 <script>
 	import logo from '$lib/images/move_logo.svg';
-	import "@fontsource/poppins"
-	import "@fontsource/poppins/700.css";
 	import {sim_panel_logic} from "./stores"
-	let simtoggle = false
-	sim_panel_logic.subscribe((value)=> {
-		simtoggle = value
-    })
 </script>
 
 <header>
-	<button id="menu_btn" on:click={()=> {simtoggle = !simtoggle;sim_panel_logic.set(simtoggle)}}>
+	<button id="menu_btn" on:click={()=> {sim_panel_logic.set(!$sim_panel_logic)}}>
 		<img src="{logo}" alt="MOVE's logo">
 	</button>
 	<div id="title">
@@ -22,6 +16,8 @@
 
 
 <style>
+	@import "@fontsource/poppins";
+	@import "@fontsource/poppins/700.css";
 	:root {
 		--header_height: 4rem;
 		--header_bg: linear-gradient(to bottom, rgba(132,21,38,1), rgba(132,21,38,1))

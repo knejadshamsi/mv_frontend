@@ -81,6 +81,8 @@
     }
 
     $layer = id;
+
+
     $map.addLayer(
       flush({
         id: $layer,
@@ -201,6 +203,7 @@
   $: applyPaint?.(paint);
   $: applyLayout?.(layout);
   $: if ($layer) $map?.setLayerZoomRange($layer, actualMinZoom, actualMaxZoom);
+
 </script>
 
 <!--

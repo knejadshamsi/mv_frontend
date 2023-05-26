@@ -1,22 +1,12 @@
 <script>
-// @ts-nocheck
     import bus_stops from "$lib/images/bus_stops.svg"
     import bus_routes from "$lib/images/bus_routes.svg"
     import metro_stations from "$lib/images/metro_stations.svg"
     import metro_lines from "$lib/images/metro_lines.svg"
     import bicycle_stations from "$lib/images/bicycle_stations.svg"
-    import "@fontsource/poppins"
-    import "@fontsource/poppins/600.css";
-    import {interface_logic} from './stores'
+    import {interface_logic} from '../../routes/stores'
 
-    let toggles = {
-        "bs":false,
-        "br":false,
-        "ms": false,
-        "ml": false,
-        "bis":false,
-    }
-
+    let toggles = {"bs":false,"br":false,"ms": false,"ml": false,"bis":false}
  
 </script>
 
@@ -42,7 +32,7 @@
     <input class="it_btn_check" type="checkbox" id="metro_lines_check" bind:checked={toggles.ml} on:change={()=> {interface_logic.set(toggles)}} />
     <label class="info_toggle_btn" for="metro_lines_check" >
         <img class="it_btn_img" src="{metro_lines}" alt="">
-        <span class="it_btn_text">Metro routes</span>
+        <span class="it_btn_text">Metro Lines</span>
     </label>
 
     <input class="it_btn_check" type="checkbox" id="bicycle_stations_check" bind:checked={toggles.bis} on:change={()=> {interface_logic.set(toggles)}} />
@@ -54,6 +44,8 @@
 </div>
 
 <style>
+    @import "@fontsource/poppins";
+    @import "@fontsource/poppins/600.css";
     :root {
         --btn_height: 2.25rem;
         --btn_img_height: 1.5rem;

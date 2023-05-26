@@ -1,16 +1,16 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
-  import { createMapContext } from '$lib/maps/context';
+  import { createMapContext } from './context';
   import maplibre from 'maplibre-gl';
-      import type { LngLatBoundsLike } from 'maplibre-gl';
-      import type { LngLatLike } from 'maplibre-gl';
+  import type { LngLatBoundsLike } from 'maplibre-gl';
+  import type { LngLatLike } from 'maplibre-gl';
   import compare from 'just-compare';
   import 'maplibre-gl/dist/maplibre-gl.css';
-  import type { CustomImageSpec } from '$lib/maps/types';
-  import NavigationControl from '$lib/maps/NavigationControl.svelte';
-  import GeolocateControl from '$lib/maps/GeolocateControl.svelte';
-  import FullscreenControl from '$lib/maps/FullscreenControl.svelte';
-  import ScaleControl from '$lib/maps/ScaleControl.svelte';
+  import type { CustomImageSpec } from '$lib/MapComponents/types';
+  import NavigationControl from './NavigationControl.svelte';
+  import GeolocateControl from './GeolocateControl.svelte';
+  import FullscreenControl from './FullscreenControl.svelte';
+  import ScaleControl from './ScaleControl.svelte';
 
   export let map: maplibregl.Map | null = null;
   let classNames: string | undefined = undefined;

@@ -1,9 +1,9 @@
-<script>
-import busRoutes from "$lib/geodata/bus_routes_id.json"
-import {brtogstore} from './stores'
+<script lang="ts">
+import busRoutes from "$lib/Geodata/bus_routes_id.json"
+import {bus_routes_logic} from '$lib/LibStores'
 
 let brtoggle = {}
-brtogstore.subscribe((value)=> {
+bus_routes_logic.subscribe((value)=> {
     brtoggle = value
 })
 </script>
@@ -15,7 +15,7 @@ brtogstore.subscribe((value)=> {
             <td><span class="br_name">{busroute.line_name}</span></td>
             {#each Object.keys(busroute.routes) as route}
                 <td>
-                    <input class="br_btn_check" type="checkbox" id="br_inp_{busroute.line_number}_{route}" bind:checked={brtoggle[busroute.line_number + "_" + route]} on:change={brtogstore.set(brtoggle)} />
+                    <input class="br_btn_check" type="checkbox" id="br_inp_{busroute.line_number}_{route}" bind:checked={brtoggle[busroute.line_number + "_" + route]} on:change={bus_routes_logic.set(brtoggle)} />
                     <label class="info_toggle_btn" for="br_inp_{busroute.line_number}_{route}" > {route}
                     </label>
                 </td>

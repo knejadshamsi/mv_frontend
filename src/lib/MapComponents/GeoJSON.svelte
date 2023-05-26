@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onDestroy, tick } from 'svelte';
-  import { getId, updatedSourceContext } from '$lib/maps/context';
+  import { getId, updatedSourceContext } from './context';
   import type { GeoJSON } from 'geojson';
-  import type { ClusterOptions } from '$lib/maps/types';
+  import type { ClusterOptions } from './types';
   import flush from 'just-flush';
 
   export let id: string = getId('geojson');

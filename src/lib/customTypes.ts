@@ -11,7 +11,7 @@ export type MetroFeature = {
     properties: {
         station_code: number;
         station_name: string;
-    };
+};
 }
 
 export type BusFeature = {

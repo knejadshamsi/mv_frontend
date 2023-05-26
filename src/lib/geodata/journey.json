@@ -1,0 +1,226 @@
+[
+  {
+    "end": 2,
+    "speed": 25,
+    "dur": [
+      10
+    ],
+    "slope": [
+      0
+    ],
+    "shape": "line",
+    "type": "asphalt",
+    "location": [
+      -73.57930633169573,
+      45.49568967034918
+    ]
+  },
+  {
+    "end": 3,
+    "speed": 25,
+    "dur": [
+      10
+    ],
+    "slope": [
+      0
+    ],
+    "shape": "line",
+    "type": "asphalt",
+    "location": [
+      -73.57985016088608,
+      45.49518014568807
+    ]
+  },
+  {
+    "end": 4,
+    "speed": 25,
+    "dur": [
+      10
+    ],
+    "slope": [
+      0
+    ],
+    "shape": "line",
+    "type": "asphalt",
+    "location": [
+      -73.58055321754215,
+      45.49459028358436
+    ]
+  },
+  {
+    "end": 5,
+    "speed": 25,
+    "dur": [
+      10
+    ],
+    "slope": [
+      0
+    ],
+    "shape": "line",
+    "type": "asphalt",
+    "location": [
+      -73.58171422541162,
+      45.49358718412191
+    ]
+  },
+  {
+    "end": 6,
+    "speed": 25,
+    "dur": [
+      10
+    ],
+    "slope": [
+      0
+    ],
+    "shape": "line",
+    "type": "asphalt",
+    "location": [
+      -73.58282731473147,
+      45.49264438588523
+    ]
+  },
+  {
+    "end": 7,
+    "speed": 25,
+    "dur": [
+      10
+    ],
+    "slope": [
+      0
+    ],
+    "shape": "line",
+    "type": "asphalt",
+    "location": [
+      -73.58392993524143,
+      45.49169557387529
+    ]
+  },
+  {
+    "end": 8,
+    "speed": 25,
+    "dur": [
+      10
+    ],
+    "slope": [
+      0
+    ],
+    "shape": "line",
+    "type": "asphalt",
+    "location": [
+      -73.58486513526202,
+      45.490885152570826
+    ]
+  },
+  {
+    "end": 9,
+    "speed": 25,
+    "dur": [
+      10
+    ],
+    "slope": [
+      0
+    ],
+    "shape": "line",
+    "type": "asphalt",
+    "location": [
+      -73.58575021987808,
+      45.490116562882264
+    ]
+  },
+  {
+    "end": 10,
+    "speed": 25,
+    "dur": [
+      10
+    ],
+    "slope": [
+      0
+    ],
+    "shape": "line",
+    "type": "asphalt",
+    "location": [
+      -73.5867485746282,
+      45.49070102425779
+    ]
+  },
+  {
+    "end": 11,
+    "speed": 25,
+    "dur": [
+      10
+    ],
+    "slope": [
+      0
+    ],
+    "shape": "line",
+    "type": "asphalt",
+    "location": [
+      -73.58585558937439,
+      45.49144161099383
+    ]
+  },
+  {
+    "end": 12,
+    "speed": 25,
+    "dur": [
+      10
+    ],
+    "slope": [
+      0
+    ],
+    "shape": "line",
+    "type": "asphalt",
+    "location": [
+      -73.58488938462433,
+      45.49222860473404
+    ]
+  },
+  {
+    "end": 13,
+    "speed": 25,
+    "dur": [
+      10
+    ],
+    "slope": [
+      0
+    ],
+    "shape": "line",
+    "type": "asphalt",
+    "location": [
+      -73.583732348057,
+      45.493167073510705
+    ]
+  },
+  {
+    "end": 14,
+    "speed": 25,
+    "dur": [
+      10
+    ],
+    "slope": [
+      0
+    ],
+    "shape": "line",
+    "type": "asphalt",
+    "location": [
+      -73.58259388148912,
+      45.494098511994196
+    ]
+  },
+  {
+    "end": 15,
+    "speed": 25,
+    "dur": [
+      10
+    ],
+    "slope": [
+      0
+    ],
+    "shape": "line",
+    "type": "asphalt",
+    "location": [
+      -73.5814141943307,
+      45.49509930584114
+    ]
+  }
+]

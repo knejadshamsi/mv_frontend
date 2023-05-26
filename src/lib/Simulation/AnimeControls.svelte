@@ -1,73 +1,96 @@
 <script lang="ts">
-import expRoute from "$lib/geodata/route_output.json"
-import {location} from './stores'
-    let steps = 500
-    let coords = expRoute.features[0].geometry.coordinates
-    let i =0
-    let counter = 0 
-    let freq = 3
-    let anime:number;
-    let speed_toggle = false
-    let start_protection = false
-    const speed = {
-      1: "fastest",
-      2: "faster",
-      3: "normal",
-      4: "slower",
-      5: "slowest"
+import expRoute from "$lib/Geodata/route_output.json"
+import {s1_location,anime,scenario_logic} from "./sim_store"
+
+//export let Scenario: string;
+let scenario_toggle = {}
+scenario_logic.subscribe((value)=> {scenario_toggle = value})
+
+let s1 = {"coords": expRoute.features[0].geometry.coordinates, "steps":500}
+//s1
+let i =0
+let counter = 0 
+
+let anime_in_control:number;
+anime.subscribe((value)=> {
+  anime_in_control = value
+})
+
+const speed = {1: "fastest",2: "faster",3: "normal",4: "slower",5: "slowest"}
+let freq = 3
+
+let speed_toggle = false
+let start_protection = false
+function Animation() {
+    counter++
+    if (counter%freq==0) {
+        i++
+        s1_location.set(s1["coords"][i])
     }
-    function AnimeStart() {
-      return new Promise((resolve)=>{
-        Animation();
-        resolve();
-      })
+    if (i < (s1["steps"]-1)) {
+      anime_in_control = requestAnimationFrame(Animation)
+      anime.set(anime_in_control)
     }
+}
+function AnimeStart() {
+  if (scenario_toggle["1"]==true) {
     
-    function Animation() {
-        counter++
-        if (counter%freq==0) {
-          i++
-          location.set(coords[i])
-        }
-        if (i < (steps-1)) {
-          anime = requestAnimationFrame(Animation)
-        }
-      }
-    function AnimationReset() {
-      cancelAnimationFrame(anime)
-      i=0;
-      counter=0;
-      freq=3
-      start_protection = false
-      location.set([-73.579374, 45.495724])
+    return new Promise((resolve)=>{
+    Animation();
+    resolve()
+    })
+  } else if (scenario_toggle["2"]==true) {
+    return new Promise((resolve)=>{
+    Animation2();
+    resolve()
+    })
+  }
+    
+}
+function AnimationReset() {
+  if (scenario_toggle["1"]==true) {
+    cancelAnimationFrame(anime_in_control)
+    anime.set(anime_in_control)
+    i = 0
+    counter = 0
+    start_protection = false
+    location.set([-73.579374, 45.495724])
+  } else if (scenario_toggle["2"]==true) {
+
+  }
+}
+
+export function AnimationPause(anime_in_control){
+    cancelAnimationFrame(anime_in_control)
+    anime.set(anime_in_control)
+    //start_protection
+    return false
+}
+export function AnimationSlowDown(freq:number) {
+    if (freq < 5){
+    freq++
     }
-    function AnimationPause(){
-      cancelAnimationFrame(anime)
-      start_protection = false
+    return freq
+}
+export function AnimationSpeedUP(freq:number) {
+    if (freq > 1) {
+    freq = freq - 1
     }
-    function AnimationSlowDown() {
-      if (freq < 5){
-        freq++
-      }
-    }
-    function AnimationSpeedUP() {
-      if (freq > 1) {
-        freq = freq - 1
-      }
-    }
+    return freq
+}
 </script>
 
 <div id="simpanel_con">
-    <button class="sim_btn" id="sim_slow" on:click={AnimationSlowDown}>
+    <button class="sim_btn" id="sim_slow" on:click={()=> {freq = AnimationSlowDown(freq)}}>
       <svg style="rotate:180deg"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 12l-12 8v-16l12 8zm0-8v16l12-8-12-8z"/></svg>
     </button>
     <button class="sim_btn" id="sim_play" on:click={()=> { if (start_protection==false) {AnimeStart().then(()=>{speed_toggle=true;start_protection = true})}}}>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 22v-20l18 10-18 10z"/></svg>
     </button>
-    <button class="sim_btn" id="sim_pause" on:click={AnimationPause}>
+    <button class="sim_btn" id="sim_pause" on:click={()=> {start_protection = AnimationPause(anime_in_control)}}>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 22h-4v-20h4v20zm6-20h-4v20h4v-20z"/></svg>
     </button>
-    <button class="sim_btn" id="sim_fast" on:click={AnimationSpeedUP}>
+    <button class="sim_btn" id="sim_fast" on:click={()=> {freq=AnimationSpeedUP(freq)}}>
       <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 12l-12 8v-16l12 8zm0-8v16l12-8-12-8z"/></svg>
     </button>
     <button class="sim_btn" id="sim_reset" on:click={()=> {AnimationReset();speed_toggle=false }}>
@@ -87,9 +110,6 @@ import {location} from './stores'
     border: 2px solid darkgray;
     padding: 0.125rem;
     z-index: 102;
-    position: absolute;
-    top:7.5rem;
-    left:1rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -108,8 +128,6 @@ import {location} from './stores'
     transition: 0.25s ease;
   }
   .sim_btn:hover {
-    /*background-color:darkgray;
-    border-radius: 50%;*/
     margin-bottom: 0.25rem;
   }
   #speed_ind {

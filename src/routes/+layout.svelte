@@ -1,28 +1,21 @@
 <script>
 	import Header from './Header.svelte';
-	import ToggleMenu from './ToggleMenu.svelte';
-	import BRMenu from './BRMenu.svelte';
+	import VisualisationMenu from '$lib/Interface/VisualisationMenu.svelte';
+	import BusRoutesMenu from '$lib/Interface/BusRoutesMenu.svelte';
 	import {interface_logic} from './stores'
 	import './styles.css';
-	let layouttoggle = {}
-	interface_logic.subscribe((value)=> {
-		layouttoggle = value
-	})
+	import './visualization.css'
 
 </script>
-
-
 
 <div class="app">
 	<div id="interface">
 		<Header />
-		<ToggleMenu />
-		{#if (layouttoggle.br == true)}
-		<BRMenu />
+		<VisualisationMenu />
+		{#if $interface_logic["br"]}
+		<BusRoutesMenu />
 		{/if}
 	</div>
-
-	<!-- add menu here-->
 	<main>
 		<slot />
 	</main>

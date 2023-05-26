@@ -138,36 +138,13 @@ button:focus:not(:focus-visible) {
 	width: 1px;
 	white-space: nowrap;
 }
-
-.busstop {
-	max-width: 1rem;
-	border: 2px solid white;
-	background-color: rgb(0, 119, 182);
-	padding: 0.25rem;
-	aspect-ratio: 1/1.5;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-}
-.busstop svg path{
-	fill: white;
-	transform: scale(0.7);
-}
-.metrostation {
-	max-width: 1rem;
-	border: 2px solid white;
-	background-color: rgb(3, 4, 94);
-	border-radius: 50%;
-	padding: 0.125rem;
-	aspect-ratio: 1/1;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.metrostation svg g path{
-	fill: white;
-}
+#anime_control_con {
+    position: absolute;
+    top:7.5rem;
+    left:1rem;
+    display: flex;
+    flex-direction: column;
+  }
 .testing_movement {
 	aspect-ratio: 1/1;
 	background-color: #ff3e00;

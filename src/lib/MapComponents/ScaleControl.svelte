@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { mapContext } from '$lib/maps/context';
+  import { mapContext } from './context';
   import maplibregl from 'maplibre-gl';
   import { onDestroy } from 'svelte';
 
