@@ -16,6 +16,7 @@
   const { map, layerEvent, self: marker } = updatedMarkerContext();
 
   function addMarker(node: HTMLDivElement) {
+    //@ts-expect-error
     $marker = new maplibre.Marker({ element: node }).setLngLat(lngLat).addTo($map);
 
     return {

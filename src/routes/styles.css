@@ -137,7 +137,7 @@ button:focus:not(:focus-visible) {
 	width: 1px;
 	white-space: nowrap;
 }
-.testing_movement {
+.umo {
 	aspect-ratio: 1/1;
 	background-color: #ff3e00;
 	border: 2px solid white;
@@ -146,6 +146,6 @@ button:focus:not(:focus-visible) {
 	place-items: center;
 	padding: 0.125rem;
 }
-.testing_movement svg path {
+.umo svg path {
 	fill: white;
 }

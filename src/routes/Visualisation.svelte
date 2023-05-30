@@ -4,6 +4,7 @@
   import BusRoutes from "$lib/Visualisation/BusRoutes.svelte";
   import MetroLines from "$lib/Visualisation/MetroLines.svelte";
   import {interface_logic} from './stores'   
+  import {metro_lines_logic} from '$lib/LibStores'
 </script>
 
 {#if $interface_logic["bs"]}
@@ -13,6 +14,6 @@
 {#if $interface_logic["ms"]}
 <MetroStations />
 {/if}
-{#if $interface_logic["ml"]}
+{#if $metro_lines_logic}
 <MetroLines />
 {/if}

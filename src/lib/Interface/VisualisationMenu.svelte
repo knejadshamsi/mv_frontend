@@ -4,7 +4,8 @@
     import metro_stations from "$lib/images/metro_stations.svg"
     import metro_lines from "$lib/images/metro_lines.svg"
     import bicycle_stations from "$lib/images/bicycle_stations.svg"
-    import {interface_logic,sim_panel_logic} from '../../routes/stores'
+    import {interface_logic} from '../../routes/stores'
+    import {metro_lines_logic} from '$lib/LibStores'
     import { fly } from 'svelte/transition';
 
     let toggles = {"bs":false,"br":false,"ms": false,"ml": false,"bis":false}
@@ -30,7 +31,7 @@
         <span class="it_btn_text">Metro stations</span>
     </label>
 
-    <input class="it_btn_check" type="checkbox" id="metro_lines_check" bind:checked={toggles.ml} on:change={()=> {interface_logic.set(toggles)}} />
+    <input class="it_btn_check" type="checkbox" id="metro_lines_check" bind:checked={toggles.ml} on:change={()=> {metro_lines_logic.set(toggles.ml)}} />
     <label class="info_toggle_btn" for="metro_lines_check" >
         <img class="it_btn_img" src="{metro_lines}" alt="">
         <span class="it_btn_text">Metro Lines</span>

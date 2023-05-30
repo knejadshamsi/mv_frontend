@@ -4,6 +4,7 @@
   import {map} from '$lib/LibStores'
   import {sim_panel_logic} from './stores'
   import SimulationVisualisation from '$lib/Simulation/SimulationVisualisation.svelte';
+  import metroLinesFile from "$lib/Geodata/metro_lines_coord.json"
 
 
   //let map: maplibregl.Map | null = null
