@@ -126,7 +126,6 @@ button:focus:not(:focus-visible) {
 		font-size: 2.4rem;
 	}
 }
-
 .visually-hidden {
 	border: 0;
 	clip: rect(0 0 0 0);
@@ -138,13 +137,6 @@ button:focus:not(:focus-visible) {
 	width: 1px;
 	white-space: nowrap;
 }
-#anime_control_con {
-    position: absolute;
-    top:7.5rem;
-    left:1rem;
-    display: flex;
-    flex-direction: column;
-  }
 .testing_movement {
 	aspect-ratio: 1/1;
 	background-color: #ff3e00;

@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
-import busRoutes from "$lib/geodata/bus_routes_coord.json"
-import metroLines from "$lib/geodata/metro_lines_coord.json"
+import busRoutes from "$lib/Geodata/bus_routes_coord.json"
+import metroLines from "$lib/Geodata/metro_lines_coord.json"
 import type {BooleanObject} from "$lib/CustomTypes"
 
 export let interface_logic = writable({"bs":false,"br":false,"ms":false,"ml":false,"bis":false})

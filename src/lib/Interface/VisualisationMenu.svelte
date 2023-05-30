@@ -4,13 +4,14 @@
     import metro_stations from "$lib/images/metro_stations.svg"
     import metro_lines from "$lib/images/metro_lines.svg"
     import bicycle_stations from "$lib/images/bicycle_stations.svg"
-    import {interface_logic} from '../../routes/stores'
+    import {interface_logic,sim_panel_logic} from '../../routes/stores'
+    import { fly } from 'svelte/transition';
 
     let toggles = {"bs":false,"br":false,"ms": false,"ml": false,"bis":false}
  
 </script>
 
-<div id="info_toggle_con">
+<div id="info_toggle_con" in:fly={{duration:150}}>
     <input class="it_btn_check" id="bus_stop_check" type="checkbox" bind:checked={toggles.bs} on:change={()=> {interface_logic.set(toggles)}} />
     <label class="info_toggle_btn" for="bus_stop_check" >
         <img class="it_btn_img" src="{bus_stops}" alt="">

@@ -1,9 +1,6 @@
 <script lang="ts">
     import {scenario_logic} from './sim_store'
     import type {BooleanObject} from "$lib/CustomTypes"
-    import { createEventDispatcher } from 'svelte'
-
-    const dispatch = createEventDispatcher()
 
     let scenario_toggle: BooleanObject;
     scenario_logic.subscribe((value)=> {
@@ -13,7 +10,6 @@
         for (let scenario in scenario_toggle) {
             if (scenario==id) {
                 scenario_toggle[scenario] = true
-                dispatch('ScenarioSwitch', {id: id})
             } else {
                 scenario_toggle[scenario] = false
             }
@@ -40,7 +36,7 @@
     @import "@fontsource/poppins";
     @import "@fontsource/poppins/600.css";
     #scenario_list_con {
-    width: fit-content;
+    width: auto;
     height: auto;
     background-color: lightgray;
     border: 2px solid darkgray;
@@ -53,6 +49,7 @@
         text-align: left;
         padding-left: 1rem;
         padding-right: 1.5rem;
+        padding-left: 0.125rem;
         padding-block: 0.5rem;
         border: none;
         border-bottom: 1px solid darkgray;
@@ -69,7 +66,7 @@
         top: 0;
         right: 0;
     }
-    .scenario_list_input:checked + label {
+    .scenario_list_input:checked + .scenario_list {
         background: darkgray;
     }
 </style>

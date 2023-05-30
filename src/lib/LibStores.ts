@@ -2,6 +2,9 @@ import { writable } from "svelte/store";
 import busRoutes from "$lib/Geodata/bus_routes_coord.json"
 import type {BooleanObject} from "$lib/CustomTypes"
 
+let map_obj : maplibregl.Map | null = null
+export let map = writable(map_obj)
+
 let bus_routes_toggles : BooleanObject = {}
 
 busRoutes["features"].forEach((br) => {
@@ -11,4 +14,3 @@ busRoutes["features"].forEach((br) => {
 
 export let bus_routes_logic = writable(bus_routes_toggles)
 export let metro_lines_logic = writable(false)
-export let umo = writable([-73.579374, 45.495724])

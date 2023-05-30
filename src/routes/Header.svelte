@@ -1,19 +1,20 @@
 <script>
-	import logo from '$lib/images/move_logo.svg';
-	import {sim_panel_logic} from "./stores"
+	import logo from '$lib/Images/move_logo.svg';
+	import {sim_panel_logic} from "./stores";
+	import { fade, fly } from 'svelte/transition';
 </script>
 
 <header>
 	<button id="menu_btn" on:click={()=> {sim_panel_logic.set(!$sim_panel_logic)}}>
 		<img src="{logo}" alt="MOVE's logo">
 	</button>
-	<div id="title">
+	{#if !$sim_panel_logic}
+	<div id="title" in:fly={{duration:150}} out:fade={{duration:50}}>
 		<span id="Abbreviation">MOVE</span>
 		<span id="full">Montreal's OSM Virtual Environment</span>
 	</div>
+	{/if}
 </header>
-
-
 
 <style>
 	@import "@fontsource/poppins";
@@ -26,8 +27,8 @@
 		height: var(--header_height);
 		background: var(--header_bg);
 		color: var(--brand_white);
-		padding: 0.75rem;
-		margin: 0.5rem;
+		padding-block: 0.75rem;
+		padding-inline: 0.125rem;
 		border-radius: 20px;
 		display: flex;
 		flex-direction: row;
@@ -57,5 +58,6 @@
 		justify-content: center;
 		font-family: "Poppins", sans-serif;
 		font-size: 0.75rem;
+		padding-right: 0.5rem;
 	}
 </style>
