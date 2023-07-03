@@ -13,4 +13,4 @@ let metro_line_toggles: BooleanObject = {};
 metroLines["features"].forEach((ml)=> {let line = ml["properties"]["id"];metro_line_toggles[line]=false})
 export let brtogstore = writable(bus_routes_toggles)
 export let mltogstore = writable(false)
-export let sim_panel_logic = writable(false)
+export let simulation_toggle = writable(false)

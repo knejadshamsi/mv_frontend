@@ -5,7 +5,7 @@
 
   const { map } = mapContext();
 
-  export let position: maplibregl.ControlPosition = 'bottom-right';
+  export let position: maplibregl.ControlPosition = 'top-left';
   export let showCompass = true;
   export let showZoom = true;
   export let visualizePitch = false;

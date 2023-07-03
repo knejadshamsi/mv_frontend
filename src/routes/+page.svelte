@@ -1,15 +1,12 @@
 <script lang="ts">
   import Maplibre from '$lib/MapComponents/MapLibre.svelte'
+  import NavigationControl from '$lib/MapComponents/NavigationControl.svelte'
   import Visualisation from './Visualisation.svelte';
   import {map} from '$lib/LibStores'
-  import {sim_panel_logic} from './stores'
+  import {simulation_toggle} from './stores'
   import SimulationVisualisation from '$lib/Simulation/SimulationVisualisation.svelte';
-  import metroLinesFile from "$lib/Geodata/metro_lines_coord.json"
 
-
-  //let map: maplibregl.Map | null = null
-
-    $: if ($sim_panel_logic) {
+    $: if ($simulation_toggle) {
       if ($map) {
         $map.flyTo({center:[-73.5834,45.4937],zoom:15.5})
       }
@@ -23,15 +20,14 @@
 </svelte:head>
 
 <section id="map_con">
-<Maplibre style="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json" standardControls
+<Maplibre style="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
  bind:map={$map}>
+<NavigationControl position="bottom-right" />
 <Visualisation />
-{#if $sim_panel_logic}
+{#if $simulation_toggle}
 <SimulationVisualisation />
 {/if}
 </Maplibre>
-
-
 
 </section>
 

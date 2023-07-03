@@ -36,8 +36,7 @@
     @import "@fontsource/poppins";
     @import "@fontsource/poppins/600.css";
     #scenario_list_con {
-    width: auto;
-    height: auto;
+    width: 100%;
     background-color: lightgray;
     border: 2px solid darkgray;
     margin-top: 0.5rem;
@@ -47,9 +46,7 @@
     .scenario_list {
         background: none;
         text-align: left;
-        padding-left: 1rem;
-        padding-right: 1.5rem;
-        padding-left: 0.125rem;
+        padding-inline: 1rem;
         padding-block: 0.5rem;
         border: none;
         border-bottom: 1px solid darkgray;

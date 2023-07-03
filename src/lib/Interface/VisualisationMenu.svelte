@@ -4,6 +4,7 @@
     import metro_stations from "$lib/images/metro_stations.svg"
     import metro_lines from "$lib/images/metro_lines.svg"
     import bicycle_stations from "$lib/images/bicycle_stations.svg"
+    import {BRVisualisation} from "$lib/Interface/Interface_stores"
     import {interface_logic} from '../../routes/stores'
     import {metro_lines_logic} from '$lib/LibStores'
     import { fly } from 'svelte/transition';
@@ -19,7 +20,7 @@
         <span class="it_btn_text">Bus stops</span>
     </label>
     
-    <input class="it_btn_check" type="checkbox" id="bus_route_check" bind:checked={toggles.br} on:change={()=> {interface_logic.set(toggles)}} />
+    <input class="it_btn_check" type="checkbox" id="bus_route_check" bind:checked={toggles.br} on:change={()=> {BRVisualisation.set(toggles.br)}} />
     <label class="info_toggle_btn" for="bus_route_check" >
         <img class="it_btn_img" src="{bus_routes}" alt="">
         <span class="it_btn_text">Bus routes</span>
@@ -53,13 +54,11 @@
         --btn_img_height: 1.5rem;
     }
 #info_toggle_con {
-    width: auto;
-    flex-grow: 1;
     z-index: 100;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    transition: all 0.2s ease-in;
+    margin-top: 0.5rem;
 }
 .it_btn_check {
     opacity: 0;

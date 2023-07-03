@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { BooleanObject } from "$lib/CustomTypes";
   import {scenario_logic,speed_indicator_logic,speed_indicator} from "./sim_store"
+  import {sim_panel_logic} from "$lib/Interface/Interface_stores"
   import {function_map} from './ac_functions'
   import * as ACFunction from './ac_functions'
 
@@ -44,6 +45,9 @@ function AnimationButton(action: string) {
     <button class="sim_btn" id="sim_reset" on:click={()=> {speed_indicator_logic.set(false);button_protection = false;AnimationButton("Reset")}}>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.5 2c-5.629 0-10.212 4.436-10.475 10h-3.025l4.537 5.917 4.463-5.917h-2.975c.26-3.902 3.508-7 7.475-7 4.136 0 7.5 3.364 7.5 7.5s-3.364 7.5-7.5 7.5c-2.381 0-4.502-1.119-5.876-2.854l-1.847 2.449c1.919 2.088 4.664 3.405 7.723 3.405 5.798 0 10.5-4.702 10.5-10.5s-4.702-10.5-10.5-10.5z"/></svg>
     </button>
+    <button id="sim_close" class="sim_btn" on:click={()=> {sim_panel_logic.set(false)}}>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.597 17.954l-4.591-4.55-4.555 4.596-1.405-1.405 4.547-4.592-4.593-4.552 1.405-1.405 4.588 4.543 4.545-4.589 1.416 1.403-4.546 4.587 4.592 4.548-1.403 1.416z"/></svg>
+    </button>
 </div>
 {#if $speed_indicator_logic}
 <span id="speed_ind">{$speed_indicator}</span>
@@ -51,11 +55,10 @@ function AnimationButton(action: string) {
 
 <style> 
   #simpanel_con {
-    width: auto;
+    width: 100%;
     height: 2.125rem;
     background-color: lightgray;
     border: 2px solid darkgray;
-    padding: 0.125rem;
     z-index: 102;
     display: flex;
     flex-direction: row;
@@ -98,4 +101,7 @@ function AnimationButton(action: string) {
   #sim_fast {
     padding-left: 0.125rem;
   }
+  /* #sim_close {
+    margin-left: auto;
+  } */
 </style>
