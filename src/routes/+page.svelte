@@ -2,11 +2,11 @@
   import Maplibre from '$lib/MapComponents/MapLibre.svelte'
   import NavigationControl from '$lib/MapComponents/NavigationControl.svelte'
   import Visualisation from './Visualisation.svelte';
+  import {state} from "$lib/Interface/StateManagement"
   import {map} from '$lib/LibStores'
-  import {simulation_toggle} from './stores'
   import SimulationVisualisation from '$lib/Simulation/SimulationVisualisation.svelte';
 
-    $: if ($simulation_toggle) {
+    $: if ($state==="Simulation") {
       if ($map) {
         $map.flyTo({center:[-73.5834,45.4937],zoom:15.5})
       }
@@ -24,7 +24,7 @@
  bind:map={$map}>
 <NavigationControl position="bottom-right" />
 <Visualisation />
-{#if $simulation_toggle}
+{#if $state === "Simulation"}
 <SimulationVisualisation />
 {/if}
 </Maplibre>

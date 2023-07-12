@@ -2,12 +2,11 @@
     import Header from '$lib/Interface/Header.svelte';
     import Panel from '$lib/Interface/Panel.svelte';
     import ThirdMenu from '$lib/Interface/ThirdMenu.svelte';
-    import {panel_logic} from "$lib/Interface/Interface_stores"
-    
+    import {state} from "$lib/Interface/StateManagement"
 </script>
 <section>
     <Header />
-    {#if $panel_logic} 
+    {#if $state === "Menu"} 
     <Panel />
     {/if}
     <ThirdMenu />

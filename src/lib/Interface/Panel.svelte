@@ -1,11 +1,11 @@
 <script>
-    import { fade, fly } from 'svelte/transition';
-    import {panel_logic,sim_panel_logic} from "$lib/Interface/Interface_stores"
+    import { fly } from 'svelte/transition';
+    import {state} from "$lib/Interface/StateManagement"
 </script>
 <div id="MainMenu" in:fly={{duration:150}}>
     <div id="Menu_list">
-        <button class="Menu_btn" on:click={()=> {panel_logic.set(false); sim_panel_logic.set(true)}}>SIMULATION</button>
-        <button class="Menu_btn">PTA</button>
+        <button class="Menu_btn" on:click={()=> {state.set("Simulation")}}>SIMULATION</button>
+        <button class="Menu_btn" on:click={()=> {state.set("PTA")}}>PTA</button>
         <!-- <button class="Menu_btn"></button> -->
     </div>
 </div>

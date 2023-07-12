@@ -1,32 +1,27 @@
 <script lang="ts">
-    import {scenario_logic} from './sim_store'
-    import type {BooleanObject} from "$lib/CustomTypes"
-
-    let scenario_toggle: BooleanObject;
-    scenario_logic.subscribe((value)=> {
-        scenario_toggle = value as BooleanObject
-    })
-    function scenario_toggling(id:string) {
-        for (let scenario in scenario_toggle) {
-            if (scenario==id) {
-                scenario_toggle[scenario] = true
-            } else {
-                scenario_toggle[scenario] = false
-            }
-        }
-        scenario_logic.set(scenario_toggle as { 1: boolean; 2: boolean; 3: boolean; })
+    import {scenario} from "$lib/Interface/StateManagement"
+    let check1 :boolean,check2 : boolean,check3 :boolean = false
+    $: if ($scenario === 1) {
+        check2 = false
+        check3 = false
+    } else if($scenario === 2) {
+        check1 = false
+        check3 = false
+    } else if($scenario === 3){
+        check1 = false
+        check2 = false
     }
 </script>
 <div id="scenario_list_con">
-    <input class="scenario_list_input" type="checkbox" id="scenario_1_check" bind:checked={scenario_toggle["1"]} on:click={()=> {scenario_toggling("1")}} />
+    <input class="scenario_list_input" type="checkbox" id="scenario_1_check" bind:checked={check1} on:click={()=> {scenario.set(1)}} />
     <label class="scenario_list" for="scenario_1_check" >
         <span class="it_btn_text">scenario 1</span>
     </label>
-    <input class="scenario_list_input" type="checkbox" id="scenario_2_check" bind:checked={scenario_toggle["2"]} on:click={()=> {scenario_toggling("2")}} />
+    <input class="scenario_list_input" type="checkbox" id="scenario_2_check" bind:checked={check2} on:click={()=> {scenario.set(2)}} />
     <label class="scenario_list" for="scenario_2_check" >
         <span class="it_btn_text">scenario 2</span>
     </label>
-    <input class="scenario_list_input" type="checkbox" id="scenario_3_check" bind:checked={scenario_toggle["3"]} on:click={()=> {scenario_toggling("3")}} />
+    <input class="scenario_list_input" type="checkbox" id="scenario_3_check" bind:checked={check3} on:click={()=> {scenario.set(3)}} />
     <label class="scenario_list" for="scenario_3_check" >
         <span class="it_btn_text">scenario 3</span>
     </label>
