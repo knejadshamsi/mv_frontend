@@ -1,4 +1,4 @@
-import {scenario_logic, speed_indicator} from "./sim_store"
+import {speed_indicator} from "./sim_store"
 import {location,coords,animationduration, frames_played, frames_passed, frame_frequesncy} from "./sim_store"
 
 let sp_ind : string, fp:number, fpa:number, ff:number, animecoords:any , duration:number
@@ -66,7 +66,6 @@ export function s1SU() {
 }
 export function s1RE() {
     cancelAnimationFrame(anime)
-    scenario_logic.set({1:true, 2:false,3:false})
     fpa = 0
     fp = 0
 }

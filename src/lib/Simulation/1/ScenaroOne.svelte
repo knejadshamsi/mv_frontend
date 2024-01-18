@@ -1,11 +1,11 @@
 <script lang="ts">
 import Marker from "$lib/MapComponents/Marker.svelte";
 import {location} from '$lib/Simulation/sim_store'
-import {scenario_logic} from '$lib/Simulation/sim_store'
 import {coords, frames_played, frames_passed, frame_frequesncy,animationduration} from '$lib/Simulation/sim_store'
 import Route from "$lib/Geodata/route_output.json"
+import {scenario} from "$lib/Interface/StateManagement"
 
-$: if ($scenario_logic["1"]) {
+$: if ($scenario === 1) {
     frames_played.set(0)
     frames_passed.set(0)
     frame_frequesncy.set(3)

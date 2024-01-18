@@ -5,13 +5,6 @@
   import {state} from "$lib/Interface/StateManagement"
   import {map} from '$lib/LibStores'
   import SimulationVisualisation from '$lib/Simulation/SimulationVisualisation.svelte';
-
-    $: if ($state==="Simulation") {
-      if ($map) {
-        $map.flyTo({center:[-73.5834,45.4937],zoom:15.5})
-      }
-  }
-  
 </script>
 
 <svelte:head>

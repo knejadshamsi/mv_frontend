@@ -1,7 +1,12 @@
 <script lang="ts">
     import {scenario} from "$lib/Interface/StateManagement"
-    let check1 :boolean,check2 : boolean,check3 :boolean = false
+    import {map} from "$lib/LibStores"
+    let check1 :boolean = true
+    let check2 : boolean,check3 :boolean = false
     $: if ($scenario === 1) {
+        if ($map) {
+        $map.flyTo({center:[-73.5834,45.4937],zoom:15.5})
+        }
         check2 = false
         check3 = false
     } else if($scenario === 2) {
