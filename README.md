@@ -1,38 +1,35 @@
-# create-svelte
+# MOVE: GeoJSON Data Visualization Platform
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Overview
+MOVE is a platform primarily designed to display various types of GeoJSON data, with a focus on Montreal. Originating as a personal project, MOVE aims to expand its reach, allowing anyone to clone the repository for their use. It is particularly tailored for students and academic staff dealing with GeoJSON data.
 
-## Creating a project
+## Features
+Currently, MOVE's core functionality revolves around displaying GeoJSON data. Future updates are planned to enhance these capabilities significantly.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Technology Stack
+MOVE is built using SvelteKit, alongside HTML and CSS. These technologies provide a robust and flexible foundation for the platform.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Installation
+To set up MOVE, follow the typical SvelteKit project setup. No additional dependencies or prerequisites are required beyond the standard SvelteKit installation.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Running the Project
+Once installed, you can run MOVE using the `npm run dev` command. This launches a local development server to view and interact with the platform.
 
-## Developing
+## Usage
+Included in the project are sample data sets showcasing public transportation. These samples serve as a starting point for users to understand how MOVE displays GeoJSON data.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Future Plans
+- Integration of a 3D interactive environment.
+- Extensive code refactoring for improved performance and scalability.
 
-```bash
-npm run dev
+## Contributing
+Currently, as MOVE is a personal project, there are no formal guidelines for contributions. However, interested contributors can refer to the project’s codebase and propose enhancements or fixes.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Support
+For support and troubleshooting, users are advised to refer to the SvelteKit documentation. This will assist in addressing common issues related to the framework used in MOVE.
 
-## Building
+## Licensing
+To Be Determined. The licensing model for MOVE will be updated in the future.
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Note to Developers and Users
+As the platform evolves, your feedback and suggestions are invaluable. Feel free to explore MOVE, experiment with its features, and share your insights to shape its growth.
