@@ -4,7 +4,7 @@
 	import { fade, fly } from 'svelte/transition';
 </script>
 
-<header in:fly={{duration:150}} out:fade={{duration:50}}>
+<header in:fly|global={{duration:150}} out:fade|global={{duration:50}}>
 	<button id="menu_btn" on:click={()=> { if ($state === "Menu") {state.set("Visualisation")} else {state.set("Menu")}}}>
 		<img src="{logo}" alt="MOVE's logo">
 	</button>

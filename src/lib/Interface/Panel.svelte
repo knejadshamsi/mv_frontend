@@ -2,7 +2,7 @@
     import { fly } from 'svelte/transition';
     import {state} from "$lib/Interface/StateManagement"
 </script>
-<div id="MainMenu" in:fly={{duration:150}}>
+<div id="MainMenu" in:fly|global={{duration:150}}>
     <div id="Menu_list">
         <button class="Menu_btn" on:click={()=> {state.set("Simulation")}}>SIMULATION</button>
         <button class="Menu_btn" on:click={()=> {state.set("PTA")}}>PTA</button>

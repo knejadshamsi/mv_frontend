@@ -5,7 +5,7 @@
 </script>
 
 
-<div id="anime_control_con" in:fade={{duration:150}}>
+<div id="anime_control_con" in:fade|global={{duration:150}}>
   <AnimeControls />
   <ScenarioMenu />
 </div>

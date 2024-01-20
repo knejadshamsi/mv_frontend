@@ -13,7 +13,7 @@
  
 </script>
 
-<div id="info_toggle_con" in:fly={{duration:150}}>
+<div id="info_toggle_con" in:fly|global={{duration:150}}>
     <input class="it_btn_check" id="bus_stop_check" type="checkbox" bind:checked={toggles.bs} on:change={()=> {interface_logic.set(toggles)}} />
     <label class="info_toggle_btn" for="bus_stop_check" >
         <img class="it_btn_img" src="{bus_stops}" alt="">
