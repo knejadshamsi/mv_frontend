@@ -1,5 +1,5 @@
 <script lang="ts">
-import Marker from "$lib/MapComponents/Marker.svelte";
+import {Marker} from 'svelte-maplibre';
 import {location} from '$lib/Simulation/sim_store'
 import {coords, frames_played, frames_passed, frame_frequesncy,animationduration} from '$lib/Simulation/sim_store'
 import Route from "$lib/Geodata/route_output.json"

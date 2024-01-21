@@ -1,6 +1,6 @@
 <script lang="ts">
     import BusStopsFile from "$lib/Geodata/bus_stops.json";
-    import Marker from "$lib/MapComponents/Marker.svelte";
+    import {Marker} from 'svelte-maplibre';
     import type {BusFeature} from "$lib/CustomTypes"
     const BusStops = BusStopsFile["features"] as BusFeature[]
 </script>

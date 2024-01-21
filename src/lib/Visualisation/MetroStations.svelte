@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Marker from "$lib/MapComponents/Marker.svelte";
+    import {Marker} from 'svelte-maplibre';
     import MetroStationsFile from "$lib/Geodata/motro_stations.json";
     import type {MetroFeature} from "$lib/CustomTypes";
     const MetroStations = MetroStationsFile["features"] as MetroFeature[];

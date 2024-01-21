@@ -1,7 +1,6 @@
 <script lang="ts">
     import busRouteFile from "$lib/Geodata/bus_routes_coord.json";
-    import GeoJSON from "$lib/MapComponents/GeoJSON.svelte";
-    import LineLayer from "$lib/MapComponents/LineLayer.svelte";
+    import {GeoJSON, LineLayer} from 'svelte-maplibre';
     import {bus_routes_logic} from '$lib/LibStores'
     const BusRoutes = busRouteFile["features"]
 </script>

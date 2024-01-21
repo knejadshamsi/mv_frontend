@@ -1,6 +1,5 @@
 <script lang="ts">
-  import Maplibre from '$lib/MapComponents/MapLibre.svelte'
-  import NavigationControl from '$lib/MapComponents/NavigationControl.svelte'
+  import { MapLibre, NavigationControl } from 'svelte-maplibre';
   import Visualisation from './Visualisation.svelte';
   import {state} from "$lib/Interface/StateManagement"
   import {map} from '$lib/LibStores'
@@ -13,24 +12,25 @@
 </svelte:head>
 
 <section id="map_con">
-<Maplibre style="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
- bind:map={$map}>
+<MapLibre style="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json" zoom={10.5} center={[-73.685, 45.551]} bind:map={$map}>
 <NavigationControl position="bottom-right" />
 <Visualisation />
 {#if $state === "Simulation"}
 <SimulationVisualisation />
 {/if}
-</Maplibre>
+</MapLibre>
 
 </section>
 
 <style>
 	section {
 		width: auto;
+		min-height: 100lvh;
 		min-height: 100vh;
 	}
 	#map_con {
 		width: 100vw;
+		min-height: 100lvh;
 		min-height: 100vh;
 	}
 </style>
