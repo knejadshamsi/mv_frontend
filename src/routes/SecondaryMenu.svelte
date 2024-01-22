@@ -10,7 +10,10 @@
 </section>
 <style>
     section {
-        width: 20rem;
-        margin-left: auto;
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        z-index: 100;
+        overflow: hidden;
     }
 </style>

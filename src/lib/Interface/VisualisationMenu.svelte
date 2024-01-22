@@ -35,7 +35,7 @@
     <input class="it_btn_check" type="checkbox" id="metro_lines_check" bind:checked={toggles.ml} on:change={()=> {metro_lines_logic.set(toggles.ml)}} />
     <label class="info_toggle_btn" for="metro_lines_check" >
         <img class="it_btn_img" src="{metro_lines}" alt="">
-        <span class="it_btn_text">Metro Lines</span>
+        <span class="it_btn_text">Metro lines</span>
     </label>
 
     <input class="it_btn_check" type="checkbox" id="bicycle_stations_check" bind:checked={toggles.bis} on:change={()=> {interface_logic.set(toggles)}} />
@@ -50,17 +50,19 @@
     @import "@fontsource/poppins";
     @import "@fontsource/poppins/600.css";
     :root {
-        --btn_height: 2.25rem;
-        --btn_img_height: 1.5rem;
+        --btn_height: 2rem;
+        --btn_img_height: 1.25rem;
     }
-#info_toggle_con {
+    #info_toggle_con {
     z-index: 100;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 0.5rem;
-}
+    margin-left: 0.25rem;
+    }
 .it_btn_check {
+    width: 0;
+    height: 0;
     opacity: 0;
     position: absolute;
 }
@@ -70,10 +72,10 @@
 .info_toggle_btn {
     height: var(--btn_height);
     border: 1.5px solid darkgray;
-    border-radius: 20px;
+    border-radius: 10px;
     background: lightgray;
-    margin-inline: 0.125rem;
-    margin-block: 0.5rem;
+    margin-left: 0.125rem;
+    padding-inline: 0.45rem;
     user-select: none;
     cursor: pointer;
     display: flex;
@@ -91,8 +93,8 @@
 .it_btn_text {
     margin-left: 0.25rem;
     font-family: "poppins", sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 650;
+    font-size: 0.8rem;
     padding-right: 0.25rem;
 }
 </style>

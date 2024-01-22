@@ -41,21 +41,12 @@ bus_routes_logic.subscribe((value)=> {
         text-align: center;
     }
     #brmenu_con {
-    position: absolute;
-    top: 0;
-    right: 0.5rem;
     width: 25rem;
     aspect-ratio: 1/1.5;
     border: 1.5px solid darkgray;
     border-radius: 15px;
     background: lightgray;
-    margin-inline: 0.125rem;
-    margin-block: 0.5rem;
     user-select: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
     overflow-y: scroll;
     overflow-x: hidden;
     user-select: none;

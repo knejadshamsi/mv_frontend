@@ -14,7 +14,7 @@
 <style>
     #MainMenu {
         width: 100%;
-        background-color: rgba(132,21,38,0.8);
+        background-color: rgba(132,21,38,1);
         z-index: 102;
         margin-top: 0.5rem;
         overflow: hidden;

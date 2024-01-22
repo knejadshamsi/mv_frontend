@@ -15,6 +15,5 @@
     section {
         display: flex;
         flex-direction: column;
-        margin: 0.75rem 0.5rem 0 0.5rem;
     }
 </style>
