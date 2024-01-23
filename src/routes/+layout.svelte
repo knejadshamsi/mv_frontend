@@ -1,16 +1,14 @@
 <script>
-	import VisualisationMenu from '$lib/Interface/VisualisationMenu.svelte';
-	import MainMenu from './MainMenu.svelte';
+	import Toggles from '$lib/Interface/Toggles.svelte';
+	import Menu from './Menu.svelte';
     import SecondaryMenu from './SecondaryMenu.svelte';
 	import './styles.css';
 	import './visualization.css'
 </script>
 
 <div class="app">
-	<div id="interface">
-		<MainMenu />
-		<VisualisationMenu />
-	</div>
+	<Menu />
+	<Toggles />
 	<SecondaryMenu />
 	<main>
 		<slot />
@@ -20,20 +18,23 @@
 
 <style>
 	.app {
-		min-height: 100lvh;
-		min-height: 100vh;
-		position: relative;
-	}
-	#interface { 
-		position: absolute;
-		z-index: 100;
+		height: 100vh;
+		height: 100lvh;
+		box-sizing: border-box;
+		padding: 0.5rem;
 		display: flex;
-		margin: 0.5rem 0 0 0.5rem;
+		flex-direction: row;
+		align-items: flex-start;
+		
 	}
 	main {
 		height: 100lvh;
 		height: 100vh;
 		overflow: hidden;
 		box-sizing: border-box;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
 	}
 </style>
