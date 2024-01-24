@@ -1,7 +1,7 @@
 <script lang="ts">
-    import Header from '$lib/Interface/Header.svelte';
-    import Panel from '$lib/Interface/Panel.svelte';
-    import ActionMenu from '$lib/Interface/ActionMenu.svelte';
+    import Header from '$lib/Interface/Header.svelte'
+    import Panel from '$lib/Interface/Panel.svelte'
+    import ActionMenu from '$lib/Interface/ActionMenu.svelte'
     import {state} from "$lib/Interface/StateManagement"
 </script>
 <section>

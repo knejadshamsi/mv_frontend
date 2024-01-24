@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type { BooleanObject } from "$lib/CustomTypes";
-  import {scenario_logic,speed_indicator_logic,speed_indicator} from "./sim_store"
-  import {state} from "$lib/Interface/StateManagement"
+  import type { BooleanObject } from '$lib/CustomTypes'
+  import {scenario_logic,speed_indicator_logic,speed_indicator} from './sim_store'
+  import {state} from '$lib/Interface/StateManagement'
   import {function_map} from './ac_functions'
   import * as ACFunction from './ac_functions'
 

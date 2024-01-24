@@ -1,7 +1,7 @@
 <script>
-	import logo from '$lib/Images/move_logo.svg';
-	import {state} from "$lib/Interface/StateManagement"
-	import { fade, fly } from 'svelte/transition';
+	import logo from '$lib/Images/move_logo.svg'
+	import {state} from '$lib/Interface/StateManagement'
+	import { fade, fly } from 'svelte/transition'
 </script>
 
 <header in:fly|global={{duration:150}} out:fade|global={{duration:50}}>

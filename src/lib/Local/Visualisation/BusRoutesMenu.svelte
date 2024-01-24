@@ -1,6 +1,6 @@
 <script lang="ts">
-import busRoutes from "$lib/Geodata/bus_routes_id.json"
-import {bus_routes_logic} from '$lib/LibStores'
+import busRoutes from '$lib/Local/Geodata/bus_routes_id.json'
+import {bus_routes_logic} from '$lib/Local/LocalStore'
 
 let brtoggle = {}
 bus_routes_logic.subscribe((value)=> {

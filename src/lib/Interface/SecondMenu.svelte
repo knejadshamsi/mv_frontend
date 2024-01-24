@@ -1,6 +1,6 @@
 <script>
-    import BusRoutesMenu from "$lib/Interface/BusRoutesMenu.svelte";
-    import {BRVisualisation} from "$lib/Interface/Interface_stores"
+    import BusRoutesMenu from '$lib/Local/Visualisation/BusRoutesMenu.svelte'
+    import {BRVisualisation} from '$lib/Interface/Interface_stores'
 
 </script>
 <section>

@@ -1,15 +1,15 @@
 <script>
-	import Toggles from '$lib/Interface/Toggles.svelte';
-	import Menu from './Menu.svelte';
-    import SecondaryMenu from './SecondaryMenu.svelte';
-	import './styles.css';
+	import Toggles from '$lib/Interface/Toggles.svelte'
+	import Menu from '$lib/Interface/Menu.svelte'
+    import SecondMenu from '$lib/Interface/SecondMenu.svelte'
+	import './styles.css'
 	import './visualization.css'
 </script>
 
 <div class="app">
 	<Menu />
 	<Toggles />
-	<SecondaryMenu />
+	<SecondMenu />
 	<main>
 		<slot />
 	</main>

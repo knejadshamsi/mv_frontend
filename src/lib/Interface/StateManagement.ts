@@ -1,4 +1,4 @@
-import { writable, type Writable } from "svelte/store";
+import { writable, type Writable } from "svelte/store"
 
 type State = "Visualisation" | "Menu" | "Simulation" | "PTA"
 type Scenario = 1 | 2 | 3

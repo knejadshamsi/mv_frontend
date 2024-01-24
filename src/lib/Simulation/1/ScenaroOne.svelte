@@ -1,9 +1,9 @@
 <script lang="ts">
-import {Marker} from 'svelte-maplibre';
+import {Marker} from 'svelte-maplibre'
 import {location} from '$lib/Simulation/sim_store'
 import {coords, frames_played, frames_passed, frame_frequesncy,animationduration} from '$lib/Simulation/sim_store'
-import Route from "$lib/Geodata/route_output.json"
-import {scenario} from "$lib/Interface/StateManagement"
+import Route from '$lib/Local/Geodata/route_output.json'
+import {scenario} from '$lib/Interface/StateManagement'
 
 $: if ($scenario === 1) {
     frames_played.set(0)

@@ -1,5 +1,5 @@
-import {speed_indicator} from "./sim_store"
-import {location,coords,animationduration, frames_played, frames_passed, frame_frequesncy} from "./sim_store"
+import {speed_indicator} from './sim_store'
+import {location,coords,animationduration, frames_played, frames_passed, frame_frequesncy} from './sim_store'
 
 let sp_ind : string, fp:number, fpa:number, ff:number, animecoords:any , duration:number
 export const speed : {[key:number]:string} = {1: "fastest",2: "faster",3: "normal",4: "slower",5: "slowest"}

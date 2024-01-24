@@ -1,12 +1,12 @@
 <script>
-    import bus_stops from "$lib/images/bus_stops.svg"
-    import bus_routes from "$lib/images/bus_routes.svg"
-    import metro_stations from "$lib/images/metro_stations.svg"
-    import metro_lines from "$lib/images/metro_lines.svg"
-    import bicycle_stations from "$lib/images/bicycle_stations.svg"
-    import {BRVisualisation} from "$lib/Interface/Interface_stores"
-    import {interface_logic} from '../../routes/stores'
-    import {metro_lines_logic} from '$lib/LibStores'
+    import bus_stops from '$lib/images/bus_stops.svg'
+    import bus_routes from '$lib/images/bus_routes.svg'
+    import metro_stations from '$lib/images/metro_stations.svg'
+    import metro_lines from '$lib/images/metro_lines.svg'
+    import bicycle_stations from '$lib/images/bicycle_stations.svg'
+    import {BRVisualisation} from '$lib/Interface/Interface_stores'
+    import {interface_logic} from '$lib/LibStores'
+    import {metro_lines_logic} from '$lib/Local/LocalStore'
     import { fly } from 'svelte/transition';
 
     let toggles = {"bs":false,"br":false,"ms": false,"ml": false,"bis":false}

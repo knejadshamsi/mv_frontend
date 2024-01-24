@@ -1,6 +1,6 @@
 <script>
-    import { fly,blur } from 'svelte/transition';
-    import {state} from "$lib/Interface/StateManagement"
+    import { fly,blur } from 'svelte/transition'
+    import {state} from '$lib/Interface/StateManagement'
 </script>
 <div id="MainMenu" in:fly={{duration:250}} out:blur={{duration:150}}>
     <div id="Menu_list">

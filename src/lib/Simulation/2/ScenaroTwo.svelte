@@ -1,10 +1,10 @@
 <script lang="ts">
-    import {s2_duration,s2_location,s2_start,s2_end} from "../sim_store";
-    import type { LngLatLike } from 'maplibre-gl';
-    import {Marker} from 'svelte-maplibre';
-    import Journey from "./journey.json"
+    import {s2_duration,s2_location,s2_start,s2_end} from '../sim_store'
+    import type { LngLatLike } from 'maplibre-gl'
+    import {Marker} from 'svelte-maplibre'
+    //import Journey from "./journey.json"
     //import dispatch from "$lib/sim/AnimeControls.svelte"
-    import { onDestroy, onMount } from "svelte";
+    //import { onDestroy, onMount } from "svelte";
 
 
   

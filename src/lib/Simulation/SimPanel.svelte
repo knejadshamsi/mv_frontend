@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { fade } from 'svelte/transition';
-  import AnimeControls from "./AnimeControls.svelte"
-  import ScenarioMenu from "./ScenarioMenu.svelte"
+  import { fade } from 'svelte/transition'
+  import AnimeControls from './AnimeControls.svelte'
+  import ScenarioMenu from './ScenarioMenu.svelte'
 </script>
 
 

@@ -1,6 +1,6 @@
 <script lang="ts">
-    import {scenario} from "$lib/Interface/StateManagement"
-    import {map} from "$lib/LibStores"
+    import {scenario} from '$lib/Interface/StateManagement'
+    import {map} from '$lib/LibStores'
     let check1 :boolean = true
     let check2 : boolean,check3 :boolean = false
     $: if ($scenario === 1) {

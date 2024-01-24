@@ -1,8 +1,10 @@
 <script lang="ts">
-    import metroLinesFile from "$lib/Geodata/metro_lines_coord.json"
-    import {map} from "$lib/LibStores"
-    import { onDestroy, onMount } from "svelte";
+    import metroLinesFile from '$lib/Local/Geodata/metro_lines_coord.json'
+    import {map} from '$lib/LibStores'
+    import { onDestroy, onMount } from 'svelte'
+
     const metroLines = metroLinesFile["features"]
+    
     onMount(() => {
     if (map) {
         map.update(map => {

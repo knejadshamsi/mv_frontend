@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { MapLibre, NavigationControl } from 'svelte-maplibre';
-  import Visualisation from './Visualisation.svelte';
+  import { MapLibre, NavigationControl } from 'svelte-maplibre'
+  import VisualisationLogic from '$lib/Local/Visualisation/VisualisationLogic.svelte'
   import {state} from "$lib/Interface/StateManagement"
   import {map} from '$lib/LibStores'
-  import SimulationVisualisation from '$lib/Simulation/SimulationVisualisation.svelte';
+  import SimVisualisation from '$lib/Simulation/SimVisualisation.svelte'
 </script>
 
 <svelte:head>
@@ -14,9 +14,9 @@
 <section id="map_con">
 <MapLibre style="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json" zoom={10.5} center={[-73.685, 45.551]} bind:map={$map}>
 <NavigationControl position="bottom-right" />
-<Visualisation />
+<VisualisationLogic />
 {#if $state === "Simulation"}
-<SimulationVisualisation />
+<SimVisualisation />
 {/if}
 </MapLibre>
 
