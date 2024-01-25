@@ -2,7 +2,6 @@
     import busRouteFile from '$lib/Local/Geodata/bus_routes_coord.json'
     import {GeoJSON, LineLayer} from 'svelte-maplibre'
     import {bus_routes_logic} from '$lib/Local/LocalStore'
-    // import {bus_routes_logic} from '$lib/LibStores'
     const BusRoutes = busRouteFile["features"]
 </script>
 

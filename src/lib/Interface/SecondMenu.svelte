@@ -1,10 +1,10 @@
 <script>
     import BusRoutesMenu from '$lib/Local/Visualisation/BusRoutesMenu.svelte'
-    import {BRVisualisation} from '$lib/Interface/Interface_stores'
+    import {bus_route_check} from '$lib/LibStores'
 
 </script>
 <section>
-   {#if $BRVisualisation} 
+   {#if $bus_route_check} 
    <BusRoutesMenu />
    {/if}
 </section>

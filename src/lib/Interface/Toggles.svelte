@@ -1,44 +1,40 @@
-<script>
+<script lang="ts">
     import bus_stops from '$lib/images/bus_stops.svg'
     import bus_routes from '$lib/images/bus_routes.svg'
     import metro_stations from '$lib/images/metro_stations.svg'
     import metro_lines from '$lib/images/metro_lines.svg'
     import bicycle_stations from '$lib/images/bicycle_stations.svg'
-    import {BRVisualisation} from '$lib/Interface/Interface_stores'
-    import {interface_logic} from '$lib/LibStores'
-    import {metro_lines_logic} from '$lib/Local/LocalStore'
     import { fly } from 'svelte/transition';
-
-    let toggles = {"bs":false,"br":false,"ms": false,"ml": false,"bis":false}
+    import {bus_stop_check ,bus_route_check ,metro_stations_check ,metro_lines_check ,bicycle_stations_check } from '$lib/LibStores'
  
 </script>
 
 <div id="info_toggle_con" in:fly|global={{duration:150}}>
-    <input class="it_btn_check" id="bus_stop_check" type="checkbox" bind:checked={toggles.bs} on:change={()=> {interface_logic.set(toggles)}} />
+    <input class="it_btn_check" id="bus_stop_check" type="checkbox" on:change={()=> {bus_stop_check.set(!$bus_stop_check)}} />
     <label class="info_toggle_btn" for="bus_stop_check" >
         <img class="it_btn_img" src="{bus_stops}" alt="">
         <span class="it_btn_text">Bus stops</span>
     </label>
     
-    <input class="it_btn_check" type="checkbox" id="bus_route_check" bind:checked={toggles.br} on:change={()=> {BRVisualisation.set(toggles.br)}} />
+    <input class="it_btn_check" type="checkbox" id="bus_route_check" on:change={()=> {bus_route_check.set(!$bus_route_check)}} />
     <label class="info_toggle_btn" for="bus_route_check" >
         <img class="it_btn_img" src="{bus_routes}" alt="">
         <span class="it_btn_text">Bus routes</span>
     </label>
         
-    <input class="it_btn_check" type="checkbox" id="metro_stations_check" bind:checked={toggles.ms} on:change={()=> {interface_logic.set(toggles)}} />
+    <input class="it_btn_check" type="checkbox" id="metro_stations_check" on:change={()=> {metro_stations_check.set(!$metro_stations_check)}} />
     <label class="info_toggle_btn" for="metro_stations_check" >
         <img class="it_btn_img" src="{metro_stations}" alt="">
         <span class="it_btn_text">Metro stations</span>
     </label>
 
-    <input class="it_btn_check" type="checkbox" id="metro_lines_check" bind:checked={toggles.ml} on:change={()=> {metro_lines_logic.set(toggles.ml)}} />
+    <input class="it_btn_check" type="checkbox" id="metro_lines_check" on:change={()=> {metro_lines_check.set(!$metro_lines_check)}} />
     <label class="info_toggle_btn" for="metro_lines_check" >
         <img class="it_btn_img" src="{metro_lines}" alt="">
         <span class="it_btn_text">Metro lines</span>
     </label>
 
-    <input class="it_btn_check" type="checkbox" id="bicycle_stations_check" bind:checked={toggles.bis} on:change={()=> {interface_logic.set(toggles)}} />
+    <input class="it_btn_check" type="checkbox" id="bicycle_stations_check" on:change={()=> {bicycle_stations_check.set(!$bicycle_stations_check)}} />
     <label class="info_toggle_btn" for="bicycle_stations_check" >
         <img class="it_btn_img" src="{bicycle_stations}" alt="">
         <span class="it_btn_text">Bicycle stations</span>

@@ -3,17 +3,16 @@
   import MetroStations from './MetroStations.svelte'
   import BusRoutes from './BusRoutes.svelte'
   import MetroLines from './MetroLines.svelte'
-  import {interface_logic} from '$lib/LibStores'   
-  import {metro_lines_logic} from '$lib/Local/LocalStore'
+  import {bus_stop_check,metro_stations_check,metro_lines_check} from '$lib/LibStores'
 </script>
 
-{#if $interface_logic["bs"]}
+{#if $bus_stop_check}
 <BusStops />
 {/if}
 <BusRoutes />
-{#if $interface_logic["ms"]}
+{#if $metro_stations_check}
 <MetroStations />
 {/if}
-{#if $metro_lines_logic}
+{#if $metro_lines_check}
 <MetroLines />
 {/if}
