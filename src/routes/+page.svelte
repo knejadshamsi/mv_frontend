@@ -4,6 +4,7 @@
   import {state} from "$lib/Interface/StateManagement"
   import {map} from '$lib/LibStores'
   import SimVisualisation from '$lib/Simulation/SimVisualisation.svelte'
+  import DDDVisuals from '$lib/DDD/DDDVisuals.svelte'
 </script>
 
 <svelte:head>
@@ -17,6 +18,8 @@
 <VisualisationLogic />
 {#if $state === "Simulation"}
 <SimVisualisation />
+{:else if $state === "3D"}
+<DDDVisuals />
 {/if}
 </MapLibre>
 

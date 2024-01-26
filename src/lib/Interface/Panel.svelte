@@ -5,7 +5,7 @@
 <div id="MainMenu" in:fly={{duration:250}} out:blur={{duration:150}}>
     <div id="Menu_list">
         <button class="Menu_btn" on:click={()=> {state.set("Simulation")}}>SIMULATION</button>
-        <button class="Menu_btn" on:click={()=> {state.set("PTA")}}>PTA</button>
+        <button class="Menu_btn" on:click={()=> {state.set("3D")}}>3D DEMO</button>
         <!-- <button class="Menu_btn"></button> -->
     </div>
 </div>

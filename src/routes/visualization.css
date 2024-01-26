@@ -30,3 +30,10 @@
 .metrostation svg g path{
 	fill: white;
 }
+.dddmarker {
+	cursor: pointer;
+}
+.dddmarker img {
+    width: 7rem;
+	aspect-ratio: 1/1;
+}
