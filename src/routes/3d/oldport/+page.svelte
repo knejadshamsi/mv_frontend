@@ -1,5 +1,8 @@
 <script>
     import oldport from '$lib/Images/stickers/DALL_E_OLD_PORT.png'
+    import Scene from './Scene.svelte'
+    import { Canvas } from '@threlte/core'
+    import { World } from '@threlte/rapier'
 </script>
 <section> 
     <div class="logo">
@@ -11,7 +14,7 @@
         <div class="loading">LOADING....</div>
     </div>
 </section>
-<main>main</main>
+<main><Canvas><World><Scene /></World></Canvas></main>
 
 <style>
     @import "@fontsource/poppins";
@@ -21,19 +24,19 @@
         height: 100vh;
         height: 100lvh;
         overflow: hidden;
+        background-color: var(--color-bg-1);
+        background-image: radial-gradient( 50% 50% at 50% 50%, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100% ), linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%)
     }
     section {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 2;
+        z-index: -1;
         display: flex;
         flex-direction: row;
-        background-color: var(--color-bg-1);
-        background-image: radial-gradient( 50% 50% at 50% 50%, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100% ), linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%)
-    }
+        }
     main {
-        z-index: 1;
+        z-index: 2;
     }
     .logo, .dec {
         display: flex;
