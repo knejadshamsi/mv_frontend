@@ -4,12 +4,34 @@
     import SecondMenu from '$lib/Interface/SecondMenu.svelte'
 	import './styles.css'
 	import './visualization.css'
+	import { onNavigate } from '$app/navigation'
+	import {page} from '$lib/Interface/StateManagement'
+	import DDDGuide from '$lib/DDD/DDDGuide.svelte'
+
+
+	onNavigate((navigation) => {
+		// @ts-ignore
+		if (!document.startViewTransition) return
+
+		return new Promise((resolve) => {
+			// @ts-ignore
+			document.startViewTransition(async () => {
+				resolve()
+				await navigation.complete
+			})
+		})
+	})
+
 </script>
 
 <div class="app">
 	<Menu />
+	{#if $page === "Map"}
 	<Toggles />
 	<SecondMenu />
+	{:else if $page === "3D"}
+	<DDDGuide />
+	{/if}
 	<main>
 		<slot />
 	</main>

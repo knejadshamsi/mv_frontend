@@ -1,6 +1,18 @@
 @import "@fontsource/poppins";
 @import "@fontsource/poppins/700.css";
 
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation-duration: 1s;
+}
+::view-transition-old(img),
+::view-transition-new(img) {
+	animation-duration: 4s;
+	animation: 1s cubic-bezier(0.4, 0, 1, 1),
+    1.5s cubic-bezier(0.4, 0, 0.2,1);
+
+}
+
 :root {
 	--brand_main: rgba(132,21,38,1);
 	--brand_white: rgba(255,250,250,1);
