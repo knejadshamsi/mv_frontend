@@ -6,7 +6,8 @@ import { AutoColliders, CollisionGroups  } from '@threlte/rapier'
 import { spring } from 'svelte/motion'
 import Player from './Player.svelte'
 import Ground from './Ground.svelte'
-//import { Environment } from '@threlte/extras'
+import DDDBuildings from './DDDBuildings.svelte'
+import { Environment } from '@threlte/extras'
 
 let playerMesh: Mesh
   let positionHasBeenSet = false
@@ -28,7 +29,7 @@ let playerMesh: Mesh
 </script>
 
 <Sky turbidity={0} elevation={40} rayleigh={0.07} />
-<!-- <Environment path="/hdr/" files="kloofendal_43d_clear_puresky_1k.hdr" /> -->
+<Environment path="/hdr/" files="kloofendal_43d_clear_puresky_1k.hdr" />
 <!-- <T.PerspectiveCamera position={[2, 2, 2]} on:create={({ ref }) => {ref.lookAt(0, 0, -1)}} /> -->
 <T.DirectionalLight intensity={0.8} position.x={5} position.y={10} />
 <T.AmbientLight intensity={0.3} />
@@ -41,13 +42,17 @@ let playerMesh: Mesh
     </T.Mesh>
 </Float>
 
-<CollisionGroups groups={[0, 15]}>
-    <Ground />
-  </CollisionGroups>
-  
 <CollisionGroups groups={[0]}>
+    <Ground />
+</CollisionGroups>
+
+<CollisionGroups groups={[2]}>
+  <DDDBuildings position={[0, -35, 0]}/>
+</CollisionGroups>
+  
+<CollisionGroups groups={[3]}>
     <Player
       bind:playerMesh
-      position={[0, 2, 3]}
+      position={[1, 10, 3]}
     />
 </CollisionGroups>
