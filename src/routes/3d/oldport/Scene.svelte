@@ -1,6 +1,6 @@
 <script lang="ts">
 import { T,useTask } from '@threlte/core'
-import { ContactShadows, Grid, Float, Sky } from '@threlte/extras'
+import { interactivity ,ContactShadows, Grid, Float, Sky } from '@threlte/extras'
 import { BoxGeometry, Mesh, MeshStandardMaterial, Vector3 } from 'three'
 import { AutoColliders, CollisionGroups  } from '@threlte/rapier'
 import { spring } from 'svelte/motion'
@@ -26,6 +26,8 @@ let playerMesh: Mesh
     })
     if (!positionHasBeenSet) positionHasBeenSet = true
   })
+  interactivity()
+  
 </script>
 
 <Sky turbidity={0} elevation={40} rayleigh={0.07} />
