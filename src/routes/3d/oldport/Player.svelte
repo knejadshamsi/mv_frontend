@@ -10,8 +10,7 @@
     export let position: [x: number, y: number, z: number] = [0, 0, 0]
     let radius = 0.3
     let height = 1.7
-    export let speed = 6
-  
+
     let rigidBody: RapierRigidBody
     let lock: () => void
     let cam: PerspectiveCamera
@@ -20,6 +19,14 @@
     let backward = 0
     let left = 0
     let right = 0
+
+    let jumpStrength = 5;
+    let nextJumpTime = 0;
+    let jumpCooldown = 1;
+
+    export let speed = 7;     
+    let runSpeed = 12;
+    let isRunning = false; 
   
     const t = new Vector3()
   
@@ -35,10 +42,11 @@
   
     useTask(() => {
       if (!rigidBody) return
+      const currentSpeed = isRunning ? runSpeed : speed;
       // get direction
       const velVec = t.fromArray([right - left, 0, backward - forward])
       // sort rotate and multiply by speed
-      velVec.applyEuler(cam.rotation).multiplyScalar(speed)
+      velVec.applyEuler(cam.rotation).multiplyScalar(currentSpeed)
       // don't override falling velocity
       const linVel = rigidBody.linvel()
       t.y = linVel.y
@@ -64,6 +72,17 @@
         case 'd':
           right = 1
           break
+        case ' ':
+          const currentTime = performance.now() / 1000; // Current time in seconds
+          if (currentTime >= nextJumpTime) { 
+            nextJumpTime = currentTime + jumpCooldown;
+            const currentVel = rigidBody.linvel();
+            rigidBody.setLinvel(new Vector3(currentVel.x, jumpStrength, currentVel.z), true);
+          }
+          break
+        case 'Shift':
+          isRunning = true;
+          break
         default:
           break
       }
@@ -82,6 +101,9 @@
           break
         case 'd':
           right = 0
+          break
+        case 'Shift':
+          isRunning = false;
           break
         default:
           break
