@@ -5,8 +5,11 @@ import { BoxGeometry, Mesh, MeshStandardMaterial, Vector3 } from 'three'
 import { AutoColliders, CollisionGroups  } from '@threlte/rapier'
 import { spring } from 'svelte/motion'
 import Player from './Player.svelte'
-import Ground from './Ground.svelte'
+//import Ground from './Ground.svelte'
+import Groundv2 from './Groundv2.svelte'
 import DDDBuildings from './DDDBuildings.svelte'
+import New_buildings from './New_buildings.svelte'
+import New_buildings2 from './New_buildings2.svelte'
 import { Environment } from '@threlte/extras'
 
 let playerMesh: Mesh
@@ -45,11 +48,14 @@ let playerMesh: Mesh
 </Float>
 
 <CollisionGroups groups={[0]}>
-    <Ground />
+    <!-- <Ground /> -->
+    <Groundv2 />
 </CollisionGroups>
 
 <CollisionGroups groups={[2]}>
-  <DDDBuildings position={[0, -35, 0]}/>
+  <!-- <DDDBuildings position={[0, -35, 0]}/> -->
+  <!-- <New_buildings /> -->
+  <New_buildings2 />
 </CollisionGroups>
   
 <CollisionGroups groups={[3]}>
