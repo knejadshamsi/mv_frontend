@@ -10,6 +10,7 @@ import Groundv2 from './Groundv2.svelte'
 import DDDBuildings from './DDDBuildings.svelte'
 import New_buildings from './New_buildings.svelte'
 import New_buildings2 from './New_buildings2.svelte'
+import Oldport_via_blosm from './Oldport_via_blosm.svelte'
 import { Environment } from '@threlte/extras'
 
 let playerMesh: Mesh
@@ -56,6 +57,7 @@ let playerMesh: Mesh
   <!-- <DDDBuildings position={[0, -35, 0]}/> -->
   <!-- <New_buildings /> -->
   <New_buildings2 />
+  <!-- <Oldport_via_blosm /> -->
 </CollisionGroups>
   
 <CollisionGroups groups={[3]}>

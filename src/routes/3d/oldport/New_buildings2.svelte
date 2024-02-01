@@ -27,9 +27,9 @@
 	<slot name="fallback" />
 	{:then gltf}
 		<AutoColliders shape={'cuboid'}>
-			{#each mesh_list as mesh,i}
+			{#each mesh_list as mesh, i}
                 <T.Mesh geometry={gltf.nodes[mesh].geometry} 
-                    position={mesh_list_coord[i]}
+                    position={JSON.parse(mesh_list_coord[i])}
                     on:pointerenter={() => enterMesh(mesh)} 
                     on:pointerleave={() => leaveMesh()}>
 					<T.MeshStandardMaterial color={$activeMesh === mesh ? '#99ff99' : '#ffffff'} />
