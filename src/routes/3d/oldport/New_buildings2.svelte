@@ -3,8 +3,10 @@
     import { T, forwardEventHandlers } from '@threlte/core'
     import { useGltf } from '@threlte/extras'
 	import { AutoColliders } from '@threlte/rapier'
-	import {mesh_list} from './geom_list_new'
+	import {mesh_list} from './geom_list'
     import {mesh_list_coord} from './geom_list_coord'
+	import {mesh_list_two} from './geom_list2'
+    import {mesh_list_coord_two} from './geom_list_coord2'
 	import { writable } from 'svelte/store';
 
     export const ref = new Group()
@@ -20,21 +22,42 @@
 	function leaveMesh() {
 		activeMesh.set("none")
 	}
-</script>
+	</script>
 
 <T is={ref} dispose={false} {...$$restProps} bind:this={$component}>
 	{#await gltf}
 	<slot name="fallback" />
 	{:then gltf}
 		<AutoColliders shape={'cuboid'}>
-			{#each mesh_list as mesh, i}
+			{#each mesh_list_two as mesh, i}
                 <T.Mesh geometry={gltf.nodes[mesh].geometry} 
-                    position={JSON.parse(mesh_list_coord[i])}
+				position={mesh_list_coord_two[i].split(',').map(Number)}
                     on:pointerenter={() => enterMesh(mesh)} 
                     on:pointerleave={() => leaveMesh()}>
 					<T.MeshStandardMaterial color={$activeMesh === mesh ? '#99ff99' : '#ffffff'} />
 				</T.Mesh>
             {/each}
+			{#each mesh_list as mesh, i}
+                <T.Mesh geometry={gltf.nodes[mesh].geometry} 
+				position={mesh_list_coord[i].split(',').map(Number)}
+                    on:pointerenter={() => enterMesh(mesh)} 
+                    on:pointerleave={() => leaveMesh()}>
+					<T.MeshStandardMaterial color={$activeMesh === mesh ? '#99ff99' : '#ffffff'} />
+				</T.Mesh>
+            {/each}
+			
+			<!-- <T.Mesh geometry={gltf.nodes[mesh_list_two[0]].geometry} 
+				position={mesh_list_coord_two[0].split(',').map(Number)}
+                    on:pointerenter={() => enterMesh(mesh)} 
+                    on:pointerleave={() => leaveMesh()}>
+					<T.MeshStandardMaterial color={$activeMesh === mesh ? '#99ff99' : '#ffffff'} />
+				</T.Mesh> -->
+			<!-- <T.Mesh geometry={gltf.nodes[mesh_list[100]].geometry} 
+					position={gpt}
+                    on:pointerenter={() => enterMesh(mesh_list[10])} 
+                    on:pointerleave={() => leaveMesh()}>
+					<T.MeshStandardMaterial color={$activeMesh === mesh_list[0] ? '#99ff99' : '#ffffff'} />
+				</T.Mesh> -->
 		</AutoColliders>
 	{:catch error}
 		<slot name="error" {error} />
