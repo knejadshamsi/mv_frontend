@@ -8,7 +8,6 @@ import Player from '$lib/DDD/Player.svelte'
 import OldportGround from './OldportGround.svelte'
 import OldportBuildings from './OldportBuildings.svelte'
 import OldportRoads from './OldportRoads.svelte'
-// import { Environment } from '@threlte/extras'
 
 let playerMesh: Mesh
   let positionHasBeenSet = false
@@ -31,11 +30,8 @@ let playerMesh: Mesh
   
 </script>
 
-<Sky turbidity={0} elevation={50} rayleigh={0.07} />
-<!-- <Environment path="/hdr/" files="kloofendal_43d_clear_puresky_1k.hdr" /> -->
-<!-- <T.DirectionalLight intensity={0.8} position.x={5} position.y={10} />
-<T.AmbientLight intensity={0.3} /> -->
-<!-- <ContactShadows scale={10} blur={2} far={2.5} opacity={0.5} /> -->
+<Sky turbidity={0.65} elevation={85} rayleigh={0.17} />
+<T.AmbientLight intensity={0.3} /> 
 <Float floatIntensity={1} floatingRange={[0, 1]} >
     <T.Mesh position.y={1.2} position.z={-0.75}>
         <T.BoxGeometry />

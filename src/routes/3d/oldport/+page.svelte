@@ -3,6 +3,11 @@
     import Scene from './Scene.svelte'
     import { Canvas } from '@threlte/core'
     import { World } from '@threlte/rapier'
+    import {page} from '$lib/Interface/StateManagement'
+    import { onMount } from 'svelte';
+
+    onMount(()=> { page.set("3D")})
+    
 </script>
 <section> 
     <div class="logo">
