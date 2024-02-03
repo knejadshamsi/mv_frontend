@@ -4,7 +4,7 @@
   import {state} from "$lib/Interface/StateManagement"
   import {map} from '$lib/LibStores'
   import SimVisualisation from '$lib/Simulation/SimVisualisation.svelte'
-  import DDDVisuals from '$lib/DDD/DDDVisuals.svelte'
+  import DDDVisuals from '$lib/DDD/Interface/DDDVisuals.svelte'
 </script>
 
 <svelte:head>

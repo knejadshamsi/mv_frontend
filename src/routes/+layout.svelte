@@ -6,7 +6,7 @@
 	import './visualization.css'
 	import { onNavigate } from '$app/navigation'
 	import {page} from '$lib/Interface/StateManagement'
-	import DDDGuide from '$lib/DDD/DDDGuide.svelte'
+	import DDDGuide from '$lib/DDD/Interface/DDDGuide.svelte'
 
 
 	onNavigate((navigation) => {

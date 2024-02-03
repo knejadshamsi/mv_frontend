@@ -5,7 +5,6 @@
     import { onDestroy } from 'svelte'
     import { PerspectiveCamera, Vector3 } from 'three'
     import PointerLockControls from './PointerLockControls.svelte'
-    //import {activemash} from './DDDBuildings.svelte'
   
     export let position: [x: number, y: number, z: number] = [0, 0, 0]
     let radius = 0.3

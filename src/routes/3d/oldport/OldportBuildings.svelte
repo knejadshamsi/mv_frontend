@@ -3,10 +3,10 @@
     import { T, forwardEventHandlers } from '@threlte/core'
     import { useGltf } from '@threlte/extras'
 	import { AutoColliders } from '@threlte/rapier'
-	import {mesh_list} from './geom_list'
-    import {mesh_list_coord} from './geom_list_coord'
-	import {mesh_list_two} from './geom_list2'
-    import {mesh_list_coord_two} from './geom_list_coord2'
+	import {mesh_list} from '$lib/DDD/js/Oldport/geom_list'
+    import {mesh_list_coord} from '$lib/DDD/js/Oldport/geom_list_coord'
+	import {mesh_list_two} from '$lib/DDD/js/Oldport/geom_list2'
+    import {mesh_list_coord_two} from '$lib/DDD/js/Oldport/geom_list_coord2'
 	import { writable } from 'svelte/store';
 
     export const ref = new Group()
