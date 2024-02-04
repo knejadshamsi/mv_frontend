@@ -1,7 +1,7 @@
 <script>
     import { Group } from 'three'
     import { T, forwardEventHandlers } from '@threlte/core'
-    import { useGltf } from '@threlte/extras'
+    import { useGltf,Edges } from '@threlte/extras'
 	import { AutoColliders } from '@threlte/rapier'
 	import {mesh_list} from '$lib/DDD/js/Oldport/geom_list'
     import {mesh_list_coord} from '$lib/DDD/js/Oldport/geom_list_coord'
@@ -18,6 +18,7 @@
 
 	function enterMesh(meshId) {
   		activeMesh.set(meshId)
+		console.log("fired")
 	}
 	function leaveMesh() {
 		activeMesh.set("none")
@@ -34,7 +35,8 @@
 				position={mesh_list_coord_two[i].split(',').map(Number)}
                     on:pointerenter={() => enterMesh(mesh)} 
                     on:pointerleave={() => leaveMesh()}>
-					<T.MeshStandardMaterial color={$activeMesh === mesh ? '#99ff99' : '#ffffff'} />
+					<T.MeshStandardMaterial color={$activeMesh === mesh ? '#ff0000' : '#fff'} />
+					<Edges color="black" />
 				</T.Mesh>
             {/each}
 			{#each mesh_list as mesh, i}
@@ -43,6 +45,7 @@
                     on:pointerenter={() => enterMesh(mesh)} 
                     on:pointerleave={() => leaveMesh()}>
 					<T.MeshStandardMaterial color={$activeMesh === mesh ? '#99ff99' : '#ffffff'} />
+					<Edges color="black" />
 				</T.Mesh>
             {/each}
 			
