@@ -2,11 +2,15 @@
     import oldport from '$lib/Images/stickers/DALL_E_OLD_PORT.png'
     import Scene from './Scene.svelte'
     import { Canvas } from '@threlte/core'
-    import { World } from '@threlte/rapier'
+    import { World  } from '@threlte/rapier'
     import {page} from '$lib/Interface/StateManagement'
-    import { onMount } from 'svelte';
+    import {  onMount } from 'svelte';
 
-    onMount(()=> { page.set("3D")})
+    onMount(()=> { 
+        page.set("3D")
+    })
+    
+    
     
 </script>
 <section> 

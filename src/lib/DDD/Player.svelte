@@ -1,12 +1,14 @@
 <script lang="ts">
-    import type { RigidBody as RapierRigidBody } from '@dimforge/rapier3d-compat'
+    import { RigidBody as RapierRigidBody, Ray } from '@dimforge/rapier3d-compat'
     import { T, useTask, useThrelte } from '@threlte/core'
     import { RigidBody, CollisionGroups, Collider } from '@threlte/rapier'
     import { onDestroy } from 'svelte'
-    import { PerspectiveCamera, Vector3 } from 'three'
+    import { PerspectiveCamera, Vector3, _SRGBAFormat, Raycaster } from 'three'
     import PointerLockControls from './PointerLockControls.svelte'
   
     export let position: [x: number, y: number, z: number] = [0, 0, 0]
+    let colposition: {x: number, y: number, z: number} = {x:0, y:0, z:0}
+
     let radius = 0.3
     let height = 1.7
 
@@ -26,8 +28,12 @@
     export let speed = 7;     
     let runSpeed = 12;
     let isRunning = false; 
+
+    let framecount = 0;
+    let frameinterval = 90
   
     const t = new Vector3()
+    const forwardVector = new Vector3(0, 0, -1);
   
     const lockControls = () => lock()
   
@@ -38,7 +44,11 @@
     onDestroy(() => {
       renderer.domElement.removeEventListener('click', lockControls)
     })
-  
+    function ColliderUpdate() {
+      const forward =  forwardVector.applyQuaternion(cam.quaternion).normalize()
+      colposition = { x: position[0] + forward.x * 10, y: position[1] + forward.y * 10, z: position[2] + forward.z * 10,}
+    }
+
     useTask(() => {
       if (!rigidBody) return
       const currentSpeed = isRunning ? runSpeed : speed;
@@ -55,6 +65,13 @@
       // when body position changes update position prop for camera
       const pos = rigidBody.translation()
       position = [pos.x, pos.y, pos.z]
+
+      framecount = framecount +1
+      if (framecount === frameinterval) {
+        ColliderUpdate()
+        framecount = 0
+      }
+
     })
   
     function onKeyDown(e: KeyboardEvent) {
@@ -108,6 +125,13 @@
           break
       }
     }
+    
+  function eventhndle(event) {
+    console.log(event)
+    console.log("for targetRigidBody",event.targetRigidBody.userData["id"])
+    console.log("for targetCollider",event.targetCollider.userData["id"])
+   
+  }
   </script>
   
   <svelte:window
@@ -136,14 +160,15 @@
       bind:rigidBody
       {position}
       enabledRotations={[false, false, false]}
+      userData = {{ id: 'testing', type: 'it works' }}
     >
       <CollisionGroups groups={[0]}>
         <Collider
           shape={'capsule'}
           args={[height / 2 - radius, radius]}
         />
+       
       </CollisionGroups>
-  
       <CollisionGroups groups={[15]}>
         <T.Group position={[0, -height / 2 + radius, 0]}>
           <Collider
@@ -155,3 +180,13 @@
       </CollisionGroups>
     </RigidBody>
   </T.Group>
+
+  <T.Group position={[colposition['x'],colposition['y'],colposition['z']]}>
+    <Collider
+      on:sensorenter={eventhndle}
+      sensor
+      shape={'cuboid'}
+      args={[1, 1, 1]}
+    />
+
+</T.Group>

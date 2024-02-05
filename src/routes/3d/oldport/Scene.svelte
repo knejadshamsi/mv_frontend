@@ -1,8 +1,8 @@
 <script lang="ts">
 import { T,useTask } from '@threlte/core'
-import { interactivity, Float, Sky } from '@threlte/extras'
+import { Float, Sky } from '@threlte/extras'
 import { BoxGeometry, Mesh, MeshStandardMaterial, Vector3 } from 'three'
-import {  CollisionGroups  } from '@threlte/rapier'
+import {  Collider, CollisionGroups  } from '@threlte/rapier'
 import { spring } from 'svelte/motion'
 import Player from '$lib/DDD/Player.svelte'
 import OldportGround from './OldportGround.svelte'
@@ -26,12 +26,12 @@ let playerMesh: Mesh
     })
     if (!positionHasBeenSet) positionHasBeenSet = true
   })
-  interactivity()
   
 </script>
 
 <Sky turbidity={0.65} elevation={85} rayleigh={0.17} />
 <T.AmbientLight intensity={0.3} /> 
+
 <Float floatIntensity={1} floatingRange={[0, 1]} >
     <T.Mesh position.y={1.2} position.z={-0.75}>
         <T.BoxGeometry />

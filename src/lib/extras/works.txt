@@ -82,3 +82,24 @@ function test() {
     //const dispatch = createEventDispatcher()
 
     //dispatch('ScenarioSwitch', {id: id})
+
+
+
+//// extras from 3d building importing
+
+			<!-- <T.Mesh geometry={gltf.nodes[mesh_list_two[0]].geometry} 
+				position={mesh_list_coord_two[0].split(',').map(Number)}
+                    on:pointerenter={() => enterMesh(mesh)} 
+                    on:pointerleave={() => leaveMesh()}>
+					<T.MeshStandardMaterial color={$activeMesh === mesh ? '#99ff99' : '#ffffff'} />
+				</T.Mesh> -->
+			<!-- <T.Mesh geometry={gltf.nodes[mesh_list[100]].geometry} 
+					position={gpt}
+                    on:pointerenter={() => enterMesh(mesh_list[10])} 
+                    on:pointerleave={() => leaveMesh()}>
+					<T.MeshStandardMaterial color={$activeMesh === mesh_list[0] ? '#99ff99' : '#ffffff'} />
+				</T.Mesh> -->
+
+	//import { writable } from 'svelte/store';
+
+	//color={$activeMesh === mesh ? '#99ff99' : '#ffffff'}
