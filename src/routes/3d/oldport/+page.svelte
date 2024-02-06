@@ -10,8 +10,6 @@
         page.set("3D")
     })
     
-    
-    
 </script>
 <section> 
     <div class="logo">

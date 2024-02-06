@@ -1,7 +1,7 @@
 <script>
     import { fly } from 'svelte/transition';
 </script>
-<span in:fly|global={{duration:150}} out:fly|global={{duration:150}}  class="guide_btn">TEST</span>
+<button in:fly|global={{duration:150}} out:fly|global={{duration:150}}  class="guide_btn">TEST</button>
 
 <style>
     @import "@fontsource/poppins";

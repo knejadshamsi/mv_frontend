@@ -2,12 +2,13 @@
 import { T,useTask } from '@threlte/core'
 import { Float, Sky } from '@threlte/extras'
 import { BoxGeometry, Mesh, MeshStandardMaterial, Vector3 } from 'three'
-import {  Collider, CollisionGroups  } from '@threlte/rapier'
+import {  Collider, CollisionGroups, Debug  } from '@threlte/rapier'
 import { spring } from 'svelte/motion'
 import Player from '$lib/DDD/Player.svelte'
 import OldportGround from './OldportGround.svelte'
 import OldportBuildings from './OldportBuildings.svelte'
 import OldportRoads from './OldportRoads.svelte'
+
 
 let playerMesh: Mesh
   let positionHasBeenSet = false
@@ -28,6 +29,12 @@ let playerMesh: Mesh
   })
   
 </script>
+
+<!-- <T.GridHelper args={[50]} /> -->
+<!-- <Debug
+  depthTest={false}
+  depthWrite={false}
+/> -->
 
 <Sky turbidity={0.65} elevation={85} rayleigh={0.17} />
 <T.AmbientLight intensity={0.3} /> 

@@ -1,12 +1,12 @@
 <script lang="ts">
     import { RigidBody as RapierRigidBody, Ray } from '@dimforge/rapier3d-compat'
     import { T, useTask, useThrelte } from '@threlte/core'
-    import { RigidBody, CollisionGroups, Collider } from '@threlte/rapier'
+    import { RigidBody, CollisionGroups, Collider,useRapier, useRigidBody  } from '@threlte/rapier'
     import { onDestroy } from 'svelte'
-    import { PerspectiveCamera, Vector3, _SRGBAFormat, Raycaster } from 'three'
+    import { PerspectiveCamera, Vector3, _SRGBAFormat } from 'three'
     import PointerLockControls from './PointerLockControls.svelte'
   
-    export let position: [x: number, y: number, z: number] = [0, 0, 0]
+    export let position: [x: number, y: number, z: number] | number[] = [0, 0, 0]
     let colposition: {x: number, y: number, z: number} = {x:0, y:0, z:0}
 
     let radius = 0.3
@@ -30,10 +30,9 @@
     let isRunning = false; 
 
     let framecount = 0;
-    let frameinterval = 90
+    let frameinterval = 20
   
     const t = new Vector3()
-    const forwardVector = new Vector3(0, 0, -1);
   
     const lockControls = () => lock()
   
@@ -44,9 +43,27 @@
     onDestroy(() => {
       renderer.domElement.removeEventListener('click', lockControls)
     })
+
+
     function ColliderUpdate() {
+      const forwardVector = new Vector3(0, 0, -1);
       const forward =  forwardVector.applyQuaternion(cam.quaternion).normalize()
       colposition = { x: position[0] + forward.x * 10, y: position[1] + forward.y * 10, z: position[2] + forward.z * 10,}
+    }
+
+    function testing() {
+      const rap_world = useRapier()
+      const forwardVector = new Vector3(0, 0, -1)
+      const direction =  forwardVector.applyQuaternion(cam.quaternion).normalize()
+      const correct_pos = new Vector3(position[0],position[1],position[2])
+      const ray = new Ray(correct_pos,direction)
+      const hit = rap_world.world.queryPipeline.castRay(,ray, 1000, true, null);
+      
+      if (hit) {
+      console.log(`Hit object at point`);
+      } else {
+        console.log("No hit")
+      }
     }
 
     useTask(() => {
@@ -66,11 +83,11 @@
       const pos = rigidBody.translation()
       position = [pos.x, pos.y, pos.z]
 
-      framecount = framecount +1
-      if (framecount === frameinterval) {
-        ColliderUpdate()
-        framecount = 0
-      }
+      // framecount = framecount +1
+      // if (framecount === frameinterval) {
+      //   ColliderUpdate()
+      //   framecount = 0
+      // }
 
     })
   
@@ -102,6 +119,7 @@
         default:
           break
       }
+      testing()
     }
   
     function onKeyUp(e: KeyboardEvent) {
@@ -127,6 +145,7 @@
     }
     
   function eventhndle(event) {
+    console.log("fired!")
     console.log(event)
     console.log("for targetRigidBody",event.targetRigidBody.userData["id"])
     console.log("for targetCollider",event.targetCollider.userData["id"])
@@ -180,13 +199,16 @@
       </CollisionGroups>
     </RigidBody>
   </T.Group>
-
+<!-- 
   <T.Group position={[colposition['x'],colposition['y'],colposition['z']]}>
     <Collider
       on:sensorenter={eventhndle}
       sensor
       shape={'cuboid'}
-      args={[1, 1, 1]}
+      args={[1, 2, 1]}
     />
-
-</T.Group>
+     <T.Mesh position.y={1.2} position.z={-0.75}>
+      <T.BoxGeometry />
+      <T.MeshStandardMaterial color="#0059BA" />
+  </T.Mesh>
+</T.Group> -->
