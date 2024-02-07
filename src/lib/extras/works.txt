@@ -103,3 +103,33 @@ function test() {
 	//import { writable } from 'svelte/store';
 
 	//color={$activeMesh === mesh ? '#99ff99' : '#ffffff'}
+
+
+////// extras from raycasting attemps
+
+    // function testing() {
+    //   const rap_world = useRapier()
+    //   const forwardVector = new Vector3(0, 0, -1)
+    //   const direction =  forwardVector.applyQuaternion(cam.quaternion).normalize()
+    //   const correct_pos = new Vector3(position[0],position[1],position[2])
+    //   const ray = new Ray(correct_pos,direction)
+    //   const hit = rap_world.world.queryPipeline.castRay(,ray, 1000, true, null);
+      
+    //   if (hit) {
+    //   console.log(`Hit object at point`);
+    //   } else {
+    //     console.log("No hit")
+    //   }
+    // }
+
+    // function testing() {
+    //   const raycaster = new Raycaster();
+    //   const pointer = new Vector2(0, 0);
+    //   const { scene, camera } = useThrelte();
+    //   raycaster.setFromCamera(pointer, camera);
+    //   const intersects = raycaster.intersectObjects( scene.children );
+    //   const el = intersects[0]["object"]["userData"]["id"]
+    //   console.log(intersects);
+    //   console.log(el)
+    //   activeMesh.set(el)
+    // }

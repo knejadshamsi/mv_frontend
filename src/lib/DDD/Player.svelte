@@ -3,8 +3,9 @@
     import { T, useTask, useThrelte } from '@threlte/core'
     import { RigidBody, CollisionGroups, Collider,useRapier, useRigidBody  } from '@threlte/rapier'
     import { onDestroy } from 'svelte'
-    import { PerspectiveCamera, Vector3, _SRGBAFormat } from 'three'
+    import { PerspectiveCamera, Vector3, _SRGBAFormat, Raycaster, Vector2  } from 'three'
     import PointerLockControls from './PointerLockControls.svelte'
+    import {activeMesh} from '$lib/LibStores'
   
     export let position: [x: number, y: number, z: number] | number[] = [0, 0, 0]
     let colposition: {x: number, y: number, z: number} = {x:0, y:0, z:0}
@@ -45,28 +46,29 @@
     })
 
 
-    function ColliderUpdate() {
-      const forwardVector = new Vector3(0, 0, -1);
-      const forward =  forwardVector.applyQuaternion(cam.quaternion).normalize()
-      colposition = { x: position[0] + forward.x * 10, y: position[1] + forward.y * 10, z: position[2] + forward.z * 10,}
-    }
+    // function ColliderUpdate() {
+    //   const forwardVector = new Vector3(0, 0, -1);
+    //   const forward =  forwardVector.applyQuaternion(cam.quaternion).normalize()
+    //   colposition = { x: position[0] + forward.x * 10, y: position[1] + forward.y * 10, z: position[2] + forward.z * 10,}
+    // }
 
-    function testing() {
-      const rap_world = useRapier()
-      const forwardVector = new Vector3(0, 0, -1)
-      const direction =  forwardVector.applyQuaternion(cam.quaternion).normalize()
-      const correct_pos = new Vector3(position[0],position[1],position[2])
-      const ray = new Ray(correct_pos,direction)
-      const hit = rap_world.world.queryPipeline.castRay(,ray, 1000, true, null);
-      
-      if (hit) {
-      console.log(`Hit object at point`);
-      } else {
-        console.log("No hit")
-      }
-    }
+    // const raycaster = new Raycaster();
+    // const pointer = new Vector2(0, 0);
+    // const { scene, camera } = useThrelte()
+    // let frame = 0
+    // const interval = 30
 
     useTask(() => {
+      // frame++
+      // if (frame === interval) {
+      //   raycaster.setFromCamera(pointer, $camera);
+      //   const intersects = raycaster.intersectObjects( scene.children );
+      //   const el = intersects[0]["object"]["userData"]["id"]
+      //   activeMesh.set(el)
+      //   frame = 0
+      //   console.log($activeMesh)
+      // }
+
       if (!rigidBody) return
       const currentSpeed = isRunning ? runSpeed : speed;
       // get direction
@@ -119,7 +121,7 @@
         default:
           break
       }
-      testing()
+      // testing()
     }
   
     function onKeyUp(e: KeyboardEvent) {
