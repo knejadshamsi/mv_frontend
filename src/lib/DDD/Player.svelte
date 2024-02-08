@@ -3,12 +3,12 @@
     import { T, useTask, useThrelte } from '@threlte/core'
     import { RigidBody, CollisionGroups, Collider,useRapier, useRigidBody  } from '@threlte/rapier'
     import { onDestroy } from 'svelte'
-    import { PerspectiveCamera, Vector3, _SRGBAFormat, Raycaster, Vector2  } from 'three'
+    import { PerspectiveCamera, Vector3, _SRGBAFormat, Raycaster, Vector2, Mesh, EdgesGeometry, LineSegments, LineBasicMaterial  } from 'three'
     import PointerLockControls from './PointerLockControls.svelte'
-    import {activeMesh} from '$lib/LibStores'
+    import { writable, type Writable } from 'svelte/store';
   
     export let position: [x: number, y: number, z: number] | number[] = [0, 0, 0]
-    let colposition: {x: number, y: number, z: number} = {x:0, y:0, z:0}
+    //let colposition: {x: number, y: number, z: number} = {x:0, y:0, z:0}
 
     let radius = 0.3
     let height = 1.7
@@ -46,29 +46,41 @@
     })
 
 
-    // function ColliderUpdate() {
-    //   const forwardVector = new Vector3(0, 0, -1);
-    //   const forward =  forwardVector.applyQuaternion(cam.quaternion).normalize()
-    //   colposition = { x: position[0] + forward.x * 10, y: position[1] + forward.y * 10, z: position[2] + forward.z * 10,}
-    // }
 
-    // const raycaster = new Raycaster();
-    // const pointer = new Vector2(0, 0);
-    // const { scene, camera } = useThrelte()
-    // let frame = 0
-    // const interval = 30
+  let activeMeshid : Writable<string> | Writable<undefined> = writable("none");
+	let activeMesh: Mesh | undefined = undefined;
+  const { scene, camera } = useThrelte()
+  let raycaster = new Raycaster()
+	
+	function checkIntersections() {
+    
+		raycaster.setFromCamera(new Vector2(0, 0), $camera)
+		const intersects = raycaster.intersectObjects( scene.children )
+
+    if(activeMesh && activeMesh.material.color) {
+      activeMesh.material.color.set(0xffffff)
+    }
+		if(intersects.length > 0) {
+    		activeMesh = intersects[0].object;
+        if (activeMesh) {
+          if (activeMesh["userData"]["id"] === "ground" || activeMesh["userData"]["id"] === "roads") {
+			      activeMesh = undefined;
+				    activeMeshid.set(undefined)
+			    } else {
+				    activeMesh.material.color.set(0x99ff99);
+				    let el = intersects[0]["object"]["userData"]["id"]
+				    activeMeshid.set(el)
+			    }   
+      }
+			
+  	} else {
+    	activeMesh = undefined;
+			activeMeshid.set(undefined)
+  	}
+    console.log(activeMesh)
+	}
 
     useTask(() => {
-      // frame++
-      // if (frame === interval) {
-      //   raycaster.setFromCamera(pointer, $camera);
-      //   const intersects = raycaster.intersectObjects( scene.children );
-      //   const el = intersects[0]["object"]["userData"]["id"]
-      //   activeMesh.set(el)
-      //   frame = 0
-      //   console.log($activeMesh)
-      // }
-
       if (!rigidBody) return
       const currentSpeed = isRunning ? runSpeed : speed;
       // get direction
@@ -80,16 +92,9 @@
       t.y = linVel.y
       // finally set the velocities and wake up the body
       rigidBody.setLinvel(t, true)
-  
       // when body position changes update position prop for camera
       const pos = rigidBody.translation()
       position = [pos.x, pos.y, pos.z]
-
-      // framecount = framecount +1
-      // if (framecount === frameinterval) {
-      //   ColliderUpdate()
-      //   framecount = 0
-      // }
 
     })
   
@@ -121,7 +126,7 @@
         default:
           break
       }
-      // testing()
+      checkIntersections()
     }
   
     function onKeyUp(e: KeyboardEvent) {
@@ -145,19 +150,13 @@
           break
       }
     }
-    
-  function eventhndle(event) {
-    console.log("fired!")
-    console.log(event)
-    console.log("for targetRigidBody",event.targetRigidBody.userData["id"])
-    console.log("for targetCollider",event.targetCollider.userData["id"])
-   
-  }
+
   </script>
   
   <svelte:window
     on:keydown|preventDefault={onKeyDown}
     on:keyup={onKeyUp}
+    on:mousemove={checkIntersections}
   />
   
   <T.Group position.y={0.9}>
@@ -201,16 +200,3 @@
       </CollisionGroups>
     </RigidBody>
   </T.Group>
-<!-- 
-  <T.Group position={[colposition['x'],colposition['y'],colposition['z']]}>
-    <Collider
-      on:sensorenter={eventhndle}
-      sensor
-      shape={'cuboid'}
-      args={[1, 2, 1]}
-    />
-     <T.Mesh position.y={1.2} position.z={-0.75}>
-      <T.BoxGeometry />
-      <T.MeshStandardMaterial color="#0059BA" />
-  </T.Mesh>
-</T.Group> -->

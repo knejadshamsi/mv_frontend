@@ -133,3 +133,93 @@ function test() {
     //   console.log(el)
     //   activeMesh.set(el)
     // }
+
+
+    ///// extra code from raycasting buildings
+    // const raycaster = new Raycaster();
+    	//raycaster.setFromCamera(pointer, $camera);
+
+	let frame = 0
+    const interval = 50
+  	useTask(() => {
+      	frame = frame + 1
+      	if (frame === interval) {
+			let raycaster = new Raycaster()
+			raycaster.setFromCamera(pointer, $camera)
+        	const intersects = raycaster.intersectObjects( scene.children )
+			if(activeMesh) activeMesh.material.color.set(0xffffff)
+
+			if(intersects.length > 0) {
+    			activeMesh = intersects[0].object;
+				console.log(activeMesh["uuid"])
+				if (activeMesh["userData"]["id"] === "ground" || activeMesh["userData"]["id"] === "roads") {
+					activeMesh = undefined;
+					activeMeshid.set(undefined)
+				} else {
+					activeMesh.material.color.set(0x99ff99);
+					let el = intersects[0]["object"]["userData"]["id"]
+					activeMeshid.set(el)
+				}
+  			} else {
+    			activeMesh = undefined;
+				activeMeshid.set(undefined)
+  			}
+        frame = 0
+      }
+	})
+
+
+/// Player.svelte codes:
+
+    // function ColliderUpdate() {
+    //   const forwardVector = new Vector3(0, 0, -1);
+    //   const forward =  forwardVector.applyQuaternion(cam.quaternion).normalize()
+    //   colposition = { x: position[0] + forward.x * 10, y: position[1] + forward.y * 10, z: position[2] + forward.z * 10,}
+    // }
+
+    // const raycaster = new Raycaster();
+    // const pointer = new Vector2(0, 0);
+    // const { scene, camera } = useThrelte()
+    // let frame = 0
+    // const interval = 30
+
+
+    within   useTask
+
+     // frame++
+      // if (frame === interval) {
+      //   raycaster.setFromCamera(pointer, $camera);
+      //   const intersects = raycaster.intersectObjects( scene.children );
+      //   const el = intersects[0]["object"]["userData"]["id"]
+      //   activeMesh.set(el)
+      //   frame = 0
+      //   console.log($activeMesh)
+      // }
+
+          // framecount = framecount +1
+      // if (framecount === frameinterval) {
+      //   ColliderUpdate()
+      //   framecount = 0
+      // }
+
+      <!-- 
+  <T.Group position={[colposition['x'],colposition['y'],colposition['z']]}>
+    <Collider
+      on:sensorenter={eventhndle}
+      sensor
+      shape={'cuboid'}
+      args={[1, 2, 1]}
+    />
+     <T.Mesh position.y={1.2} position.z={-0.75}>
+      <T.BoxGeometry />
+      <T.MeshStandardMaterial color="#0059BA" />
+  </T.Mesh>
+</T.Group> -->
+
+  function eventhndle(event) {
+    console.log("fired!")
+    console.log(event)
+    console.log("for targetRigidBody",event.targetRigidBody.userData["id"])
+    console.log("for targetCollider",event.targetCollider.userData["id"])
+   
+  }

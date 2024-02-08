@@ -19,19 +19,19 @@ Command: npx @threlte/gltf@2.0.1 oldport_Roads.glb --transform
   {#await gltf}
     <slot name="fallback" />
   {:then gltf}
-    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway.geometry} material={gltf.materials.areas_footway} />
-    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_1.geometry} material={gltf.materials.areas_footway} />
-    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_2.geometry} material={gltf.materials.areas_footway} />
-    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_3.geometry} material={gltf.materials.areas_footway} />
-    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_4.geometry} material={gltf.materials.areas_footway} />
-    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_5.geometry} material={gltf.materials.areas_footway} />
-    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_6.geometry} material={gltf.materials.areas_footway} />
-    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_7.geometry} material={gltf.materials.areas_footway} />
-    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_8.geometry} material={gltf.materials.areas_footway} />
-    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_9.geometry} material={gltf.materials.areas_footway} />
-    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_10.geometry} material={gltf.materials.areas_footway} />
-    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_11.geometry} material={gltf.materials.areas_footway} />
-    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_12.geometry} material={gltf.materials.areas_footway} />
+    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway.geometry} material={gltf.materials.areas_footway} userData = {{ id: "roads"}} />
+    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_1.geometry} material={gltf.materials.areas_footway} userData = {{ id: "roads"}} />
+    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_2.geometry} material={gltf.materials.areas_footway} userData = {{ id: "roads"}} />
+    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_3.geometry} material={gltf.materials.areas_footway}  userData = {{ id: "roads"}}/>
+    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_4.geometry} material={gltf.materials.areas_footway} userData = {{ id: "roads"}} />
+    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_5.geometry} material={gltf.materials.areas_footway} userData = {{ id: "roads"}} />
+    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_6.geometry} material={gltf.materials.areas_footway} userData = {{ id: "roads"}}/>
+    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_7.geometry} material={gltf.materials.areas_footway} userData = {{ id: "roads"}}/>
+    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_8.geometry} material={gltf.materials.areas_footway} userData = {{ id: "roads"}}/>
+    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_9.geometry} material={gltf.materials.areas_footway} userData = {{ id: "roads"}}/>
+    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_10.geometry} material={gltf.materials.areas_footway} userData = {{ id: "roads"}}/>
+    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_11.geometry} material={gltf.materials.areas_footway} userData = {{ id: "roads"}}/>
+    <T.Mesh geometry={gltf.nodes.map_10osm_areas_footway_12.geometry} material={gltf.materials.areas_footway} userData = {{ id: "roads"}}/>
   {:catch error}
     <slot name="error" {error} />
   {/await}
