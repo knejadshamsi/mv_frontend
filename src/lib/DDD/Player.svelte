@@ -3,7 +3,7 @@
     import { T, useTask, useThrelte } from '@threlte/core'
     import { RigidBody, CollisionGroups, Collider,useRapier, useRigidBody  } from '@threlte/rapier'
     import { onDestroy } from 'svelte'
-    import { PerspectiveCamera, Vector3, _SRGBAFormat, Raycaster, Vector2, Mesh, EdgesGeometry, LineSegments, LineBasicMaterial  } from 'three'
+    import { PerspectiveCamera, Vector3, _SRGBAFormat, Raycaster, Vector2, Mesh, EdgesGeometry, LineSegments, LineBasicMaterial, Material, MeshBasicMaterial, BackSide  } from 'three'
     import PointerLockControls from './PointerLockControls.svelte'
     import { writable, type Writable } from 'svelte/store';
   
@@ -49,36 +49,36 @@
 
   let activeMeshid : Writable<string> | Writable<undefined> = writable("none");
 	let activeMesh: Mesh | undefined = undefined;
+  let activeMeshClone: Mesh | undefined = undefined;
   const { scene, camera } = useThrelte()
   let raycaster = new Raycaster()
 	
 	function checkIntersections() {
-    
 		raycaster.setFromCamera(new Vector2(0, 0), $camera)
 		const intersects = raycaster.intersectObjects( scene.children )
 
-    if(activeMesh && activeMesh.material.color) {
-      activeMesh.material.color.set(0xffffff)
+    if (activeMeshClone !== undefined)  {
+      scene.remove(activeMeshClone)
+      if (activeMesh) activeMesh.visible = true
+      if (activeMeshClone.material) activeMeshClone.material.dispose()
+      if (activeMeshClone.geometry) activeMeshClone.geometry.dispose()
+      activeMeshClone = undefined
     }
+
 		if(intersects.length > 0) {
     		activeMesh = intersects[0].object;
-        if (activeMesh) {
-          if (activeMesh["userData"]["id"] === "ground" || activeMesh["userData"]["id"] === "roads") {
-			      activeMesh = undefined;
-				    activeMeshid.set(undefined)
-			    } else {
-				    activeMesh.material.color.set(0x99ff99);
+        if (activeMesh && activeMesh.userData && Object.keys(activeMesh.userData).length > 0) {
+            activeMeshClone = activeMesh.clone()
+            if (activeMeshClone) {
+              activeMeshClone.material = new MeshBasicMaterial({color:0x99ff99})
+              if (activeMesh) activeMesh.visible = false
+              scene.add(activeMeshClone)
+            }
 				    let el = intersects[0]["object"]["userData"]["id"]
 				    activeMeshid.set(el)
 			    }   
-      }
-			
-  	} else {
-    	activeMesh = undefined;
-			activeMeshid.set(undefined)
-  	}
-    console.log(activeMesh)
-	}
+        }
+}
 
     useTask(() => {
       if (!rigidBody) return

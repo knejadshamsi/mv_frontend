@@ -1,7 +1,7 @@
 <script>
     import { Group,  Mesh,  Raycaster, Vector2  } from 'three'
     import { T, forwardEventHandlers, useTask, useThrelte } from '@threlte/core'
-    import { useGltf,Edges } from '@threlte/extras'
+    import { useGltf, Edges } from '@threlte/extras'
 	import { RigidBody, Collider,CollisionGroups  } from '@threlte/rapier'
 	import {mesh_list} from '$lib/DDD/js/Oldport/geom_list'
     import {mesh_list_coord} from '$lib/DDD/js/Oldport/geom_list_coord'
@@ -25,18 +25,19 @@
 					<Collider shape={'cuboid'} args={[1,1,1]}/>
 				</CollisionGroups>
                 <T.Mesh geometry={gltf.nodes[mesh].geometry}  position={mesh_list_coord_two[i].split(',').map(Number)} userData = {{ id: mesh}}>
-					<T.MeshStandardMaterial color={'#ffffff'} />
-					<Edges color="black" />
+					<Edges color="black" ></Edges>
+						<T.MeshStandardMaterial color={'#ffffff'} />
 				</T.Mesh>
+				
             {/each}
 			{#each mesh_list as mesh, i}
 			<CollisionGroups groups={[1]}>
 			<Collider shape={'cuboid'} args={[1,1,1]}/>
 			</CollisionGroups>
-                <T.Mesh geometry={gltf.nodes[mesh].geometry} position={mesh_list_coord[i].split(',').map(Number)} userData = {{ id: mesh}}>
+			<T.Mesh geometry={gltf.nodes[mesh].geometry}  position={mesh_list_coord_two[i].split(',').map(Number)} userData = {{ id: mesh}}>
+				<Edges color="black" ></Edges>
 					<T.MeshStandardMaterial color={'#ffffff'} />
-					<Edges color="black" />
-				</T.Mesh>
+			</T.Mesh>
             {/each}
 	{:catch error}
 		<slot name="error" {error} />

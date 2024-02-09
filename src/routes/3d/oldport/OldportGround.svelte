@@ -21,7 +21,7 @@ Command: npx @threlte/gltf@2.0.1 groundv2.glb --transform
     <slot name="fallback" />
   {:then gltf}
    <AutoColliders shape={'cuboid'}>
-    <T.Mesh geometry={gltf.nodes.Terrain001.geometry} userData = {{ id: "ground"}} >
+    <T.Mesh geometry={gltf.nodes.Terrain001.geometry}>
       <T.MeshStandardMaterial color={'#808080'} />
     </T.Mesh>
   </AutoColliders>
