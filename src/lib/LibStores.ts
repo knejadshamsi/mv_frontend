@@ -12,4 +12,5 @@ export let metro_stations_check = writable(false)
 export let metro_lines_check = writable(false)
 export let bicycle_stations_check = writable(false)
 
-export let activeMesh = writable("none")
+export let meshList = writable([])
+export let dialog3d= writable(false)
