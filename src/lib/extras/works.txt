@@ -223,3 +223,69 @@ function test() {
     console.log("for targetCollider",event.targetCollider.userData["id"])
    
   }
+
+
+
+  
+
+
+
+
+		// if(intersects.length > 0) {
+    // 		activeMesh = intersects[0].object;
+    //     if (activeMesh && activeMesh.userData && Object.keys(activeMesh.userData).length > 0) {
+    //         activeMeshClone = activeMesh.clone()
+    //         if (activeMeshClone) {
+    //           activeMeshClone. userData = {id : activeMesh["userData"]["id"], cloned: true}
+    //           activeMeshClone.material = new MeshBasicMaterial({color:0x99ff99})
+
+    //           if (activeMesh) activeMesh.visible = false
+    //           activeMeshCloneid = activeMesh["userData"]["id"]
+    //           scene.add(activeMeshClone)
+    //           console.log(activeMeshClone)
+    //         }
+		// 		    let el = intersects[0]["object"]["userData"]["id"]
+		// 		    activeMeshid.set(el)
+		// 	    }   
+    //     }
+
+
+
+
+
+    //     if (activeMeshClone !== undefined && searchMesh(activeMeshCloneid) === false)  {
+    //   scene.remove(activeMeshClone)
+    //   if (activeMesh) activeMesh.visible = true
+    //   if (activeMeshClone.material) activeMeshClone.material.dispose()
+    //   if (activeMeshClone.geometry) activeMeshClone.geometry.dispose()
+    //   activeMeshClone = undefined
+    //}
+
+    function checkIntersections() {
+    raycaster.setFromCamera(new Vector2(0, 0), $camera)
+		const intersects = raycaster.intersectObjects(scene.children)
+    temp = intersects[0].object;
+    if($activeMeshid === temp.userData.id) return
+    activeMeshid.set(temp.userData.id)
+    
+    //if(searchMesh(temp.userData.id) === true ) return
+    
+    if (activeMesh) activeMesh.visible = true
+    activeMesh = temp
+    
+    if (activeMeshClone != undefined ) {
+      scene.remove(activeMeshClone)
+      if (activeMeshClone.material) activeMeshClone.material.dispose()
+      if (activeMeshClone.geometry) activeMeshClone.geometry.dispose()
+      activeMeshClone = undefined
+    }
+    
+    if (activeMesh.userData && Object.keys(activeMesh.userData).length > 0) {
+      activeMeshClone = activeMesh.clone()
+      activeMeshClone.userData = {id : $activeMeshid, cloned: true}
+      activeMeshClone.material = new MeshBasicMaterial({color:0x99ff99})
+      activeMesh.visible = false
+      scene.add(activeMeshClone)
+    }
+    
+  }

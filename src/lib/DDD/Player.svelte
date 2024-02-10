@@ -34,7 +34,6 @@
   const lockControls = () => lock()
   const { renderer } = useThrelte()
   renderer.domElement.addEventListener('click', lockControls)
-  
   onDestroy(() => {
     renderer.domElement.removeEventListener('click', lockControls)
   })
@@ -46,47 +45,43 @@
   const removeMesh = (itemToRemove:string) => {
     const new_list = $meshList.filter(item => item !== itemToRemove)
     meshList.set(new_list)
-    console.log($meshList)
   }
   const searchMesh = (item:string) => {
     return $meshList.includes(item)
   }
-  let activeMeshid : Writable<string> | Writable<undefined> = writable("none");
+  
 	let activeMesh: Mesh | undefined = undefined;
+  let activeMeshid : Writable<string> | Writable<undefined> = writable();
+
   let activeMeshClone: Mesh | undefined = undefined;
-  let activeMeshCloneid : string;
+
+
   const { scene, camera } = useThrelte()
   let raycaster = new Raycaster()
 	
 	function checkIntersections() {
-		raycaster.setFromCamera(new Vector2(0, 0), $camera)
-		const intersects = raycaster.intersectObjects( scene.children )
+    raycaster.setFromCamera(new Vector2(0, 0), $camera)
+		const intersects = raycaster.intersectObjects(scene.children)
+    if (intersects[0] && intersects[0].object.userData) {
+      if (Object.keys(intersects[0].object.userData).length > 0) {
+        if (searchMesh($activeMeshid) === false && activeMeshClone != undefined) {
+        if (activeMesh) activeMesh.visible = true
+        activeMesh = intersects[0].object
+        scene.remove(activeMeshClone)
+        if (activeMeshClone.material) activeMeshClone.material.dispose()
+        if (activeMeshClone.geometry) activeMeshClone.geometry.dispose()
+        activeMeshClone = undefined
+      }
+      activeMesh = intersects[0].object
+      activeMeshid.set(activeMesh?.userData.id)
 
-    if (activeMeshClone !== undefined && searchMesh(activeMeshCloneid) === false)  {
-      scene.remove(activeMeshClone)
-      if (activeMesh) activeMesh.visible = true
-      if (activeMeshClone.material) activeMeshClone.material.dispose()
-      if (activeMeshClone.geometry) activeMeshClone.geometry.dispose()
-      activeMeshClone = undefined
+      activeMeshClone = activeMesh.clone()
+      activeMeshClone.userData = {id : $activeMeshid, cloned: true}
+      activeMeshClone.material = new MeshBasicMaterial({color:0x99ff99})
+      activeMesh.visible = false
+      scene.add(activeMeshClone)
     }
-
-		if(intersects.length > 0) {
-    		activeMesh = intersects[0].object;
-        if (activeMesh && activeMesh.userData && Object.keys(activeMesh.userData).length > 0) {
-            activeMeshClone = activeMesh.clone()
-            if (activeMeshClone) {
-              activeMeshClone. userData = {id : activeMesh["userData"]["id"], cloned: true}
-              activeMeshClone.material = new MeshBasicMaterial({color:0x99ff99})
-
-              if (activeMesh) activeMesh.visible = false
-              activeMeshCloneid = activeMesh["userData"]["id"]
-              scene.add(activeMeshClone)
-              console.log(activeMeshClone)
-            }
-				    let el = intersects[0]["object"]["userData"]["id"]
-				    activeMeshid.set(el)
-			    }   
-        }
+    }
   }
 
   useTask(() => {
@@ -166,7 +161,7 @@
     switch (e.button) {
       case 0: {
         //Left button clicked
-        if (searchMesh($activeMeshid) === false) addToMesh($activeMeshid)
+        if (searchMesh($activeMeshid) === false && $activeMeshid != undefined && $dialog3d != true) addToMesh($activeMeshid)
         break
       }
       case 1: {
@@ -176,10 +171,13 @@
       case 2: {
         //Right button clicked
         removeMesh($activeMeshid)
-        scene.traverse((object)=> {
+        if ($activeMeshid != undefined) {
+          scene.traverse((object)=> {
           if(object.isMesh && object.userData.id === $activeMeshid) object.visible = true
           if(object.isMesh && object.userData.id === $activeMeshid && object.userData.cloned === true) object.parent.remove(object)
         })
+        }
+        
         break
         }
       default:
