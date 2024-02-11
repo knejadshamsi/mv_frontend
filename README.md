@@ -5,6 +5,7 @@ MOVE is a platform primarily designed to display various types of GeoJSON data, 
 
 ## Features
 Currently, MOVE's core functionality revolves around displaying GeoJSON data. Future updates are planned to enhance these capabilities significantly.
+It now supports 3d first person interactive environment with the ability to multi select buildings.
 
 ## Technology Stack
 MOVE is built using SvelteKit, alongside HTML and CSS. These technologies provide a robust and flexible foundation for the platform.
@@ -19,17 +20,11 @@ Once installed, you can run MOVE using the `npm run dev` command. This launches 
 Included in the project are sample data sets showcasing public transportation. These samples serve as a starting point for users to understand how MOVE displays GeoJSON data.
 
 ## Future Plans
-- Integration of a 3D interactive environment.
-- Extensive code refactoring for improved performance and scalability.
+- Integration of a 3D interactive environment. [done]
+- Extensive code refactoring for improved performance and scalability. [done]
 
 ## Contributing
 Currently, as MOVE is a personal project, there are no formal guidelines for contributions. However, interested contributors can refer to the project’s codebase and propose enhancements or fixes.
 
 ## Support
 For support and troubleshooting, users are advised to refer to the SvelteKit documentation. This will assist in addressing common issues related to the framework used in MOVE.
-
-## Licensing
-To Be Determined. The licensing model for MOVE will be updated in the future.
-
-## Note to Developers and Users
-As the platform evolves, your feedback and suggestions are invaluable. Feel free to explore MOVE, experiment with its features, and share your insights to shape its growth.
