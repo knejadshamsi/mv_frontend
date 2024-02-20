@@ -1,8 +1,12 @@
 <script>
     import { fly } from 'svelte/transition';
 </script>
-<button in:fly|global={{duration:150}} out:fly|global={{duration:150}}  class="guide_btn">TEST</button>
-
+<button in:fly|global={{duration:150}} out:fly|global={{duration:150}}  class="guide_btn">W,A,S,D to walk</button>
+<button in:fly|global={{duration:150}} out:fly|global={{duration:150}}  class="guide_btn">Shift to run</button>
+<button in:fly|global={{duration:150}} out:fly|global={{duration:150}}  class="guide_btn">Space to jump</button>
+<button in:fly|global={{duration:150}} out:fly|global={{duration:150}}  class="guide_btn">Left click to select</button>
+<button in:fly|global={{duration:150}} out:fly|global={{duration:150}}  class="guide_btn">Right click to deselect</button>
+<button in:fly|global={{duration:150}} out:fly|global={{duration:150}}  class="guide_btn">E to bring up a menu</button>
 <style>
     @import "@fontsource/poppins";
     @import "@fontsource/poppins/600.css";

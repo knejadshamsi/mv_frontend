@@ -6,22 +6,37 @@
     import {page} from '$lib/Interface/StateManagement'
     import {  onMount } from 'svelte';
     import {meshList,dialog3d} from '$lib/LibStores'
+    import { useProgress } from '@threlte/extras'
+    import { tweened } from 'svelte/motion'
+    import { fade } from 'svelte/transition'
+
+    const { progress } = useProgress()
+
+    const tweenedProgress = tweened($progress, {
+        duration: 800
+    })
+    $: tweenedProgress.set($progress)
 
     onMount(()=> { 
         page.set("3D")
     })
     
 </script>
-<section> 
+{#if $tweenedProgress < 0.6}
+<section out:fade> 
     <div class="logo">
         <img id="logo-test" src={oldport} alt="old port" />
     </div>
     <div class="dec">
         <span>OLD PORT</span>
         <p class="shrt_dec">The Old Port of Montreal, nestled along the St. Lawrence River, is a historic gem in the city's heart, blending its rich trading past with modern vibrancy. Renowned for its stunning skyline views, this cultural hub features attractions like the interactive Montreal Science Centre and the iconic Clock Tower. It's a year-round hotspot for activities ranging from zip-lining to ice-skating, alongside hosting diverse festivals. The Old Port, with its cobblestone streets and culinary delights, embodies Montreal's spirit, offering a unique mix of history and contemporary urban life.</p>
-        <div class="loading">LOADING....</div>
+        <div class="loading">LOADING...</div>
+        <div id="bar_con">
+        <div id="bar" style="width: {$tweenedProgress * 100}%"/>
+        </div>
     </div>
 </section>
+{/if}
 {#if $dialog3d}
 <section id="dialog_con">
    <div id="dialog">
@@ -51,7 +66,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: -1;
+        z-index: 3;
         display: flex;
         flex-direction: row;
         }
@@ -129,5 +144,12 @@
         background: none;
         border: none;
         cursor: pointer;
+    }
+    #bar_con{
+        width: 65ch;
+    }
+    #bar {
+        height: 0.5rem;
+        background: lightblue;
     }
 </style>
