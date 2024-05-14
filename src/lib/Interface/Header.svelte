@@ -9,8 +9,10 @@
 		<img src="{logo}" alt="MOVE's logo">
 	</button>
 	<div id="title" >
+		{#if $state != "Emissions"}
 		<span id="Abbreviation">MOVE</span>
 		<span id="full">Montreal's OSM Virtual Environment</span>
+		{/if}
 	</div>
 	
 </header>

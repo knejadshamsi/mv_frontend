@@ -5,7 +5,7 @@
 	import './styles.css'
 	import './visualization.css'
 	import { onNavigate } from '$app/navigation'
-	import {page} from '$lib/Interface/StateManagement'
+	import {page, state} from '$lib/Interface/StateManagement'
 	import DDDGuide from '$lib/DDD/Interface/DDDGuide.svelte'
 
 
@@ -26,9 +26,9 @@
 
 <div class="app">
 	<Menu />
-	{#if $page === "Map"}
-	<Toggles />
-	<SecondMenu />
+	{#if $page === "Map" && $state != "Emissions"}
+		<Toggles />
+		<SecondMenu />
 	{:else if $page === "3D"}
 	<DDDGuide />
 	{/if}

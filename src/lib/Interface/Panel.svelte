@@ -6,6 +6,7 @@
     <div id="Menu_list">
         <button class="Menu_btn" on:click={()=> {state.set("Simulation")}}>SIMULATION</button>
         <button class="Menu_btn" on:click={()=> {state.set("3D")}}>3D DEMO</button>
+        <button class="Menu_btn" on:click={()=> {state.set("Emissions")}}>ZERO/LOW DEMO</button>
         <!-- <button class="Menu_btn"></button> -->
     </div>
 </div>

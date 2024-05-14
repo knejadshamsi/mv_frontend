@@ -5,6 +5,7 @@
   import {map} from '$lib/LibStores'
   import SimVisualisation from '$lib/Simulation/SimVisualisation.svelte'
   import DDDVisuals from '$lib/DDD/Interface/DDDVisuals.svelte'
+  import Emissions from '$lib/Interface/Emissions.svelte'
 </script>
 
 <svelte:head>
@@ -24,6 +25,10 @@
 </MapLibre>
 
 </section>
+
+{#if $state ==="Emissions"}
+<Emissions />
+{/if}
 
 <style>
 	section {
