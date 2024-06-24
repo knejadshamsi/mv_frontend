@@ -9,7 +9,7 @@
 		<img src="{logo}" alt="MOVE's logo">
 	</button>
 	<div id="title" >
-		{#if $state != "Emissions"}
+		{#if ($state != "Emissions" && $state !="MapSelection")}
 		<span id="Abbreviation">MOVE</span>
 		<span id="full">Montreal's OSM Virtual Environment</span>
 		{/if}

@@ -26,7 +26,7 @@
 
 <div class="app">
 	<Menu />
-	{#if $page === "Map" && $state != "Emissions"}
+	{#if $page === "Map" && $state != "Emissions" && $state !="MapSelection"}
 		<Toggles />
 		<SecondMenu />
 	{:else if $page === "3D"}

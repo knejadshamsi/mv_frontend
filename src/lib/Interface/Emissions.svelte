@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {Em} from "$lib/Interface/StateManagement"
+    import {Em, state, selectedArea} from "$lib/Interface/StateManagement"
 
     let policyDuration = "One day";
     let severity = "Soft";
@@ -76,7 +76,7 @@
 
   $: selectedOutputs = Object.values(outputOptions).filter(Boolean).length;
   $: outputExplanation = generateOutputExplanation(outputOptions, selectedOutputs);
-  function generateOutputExplanation(options, count) {
+  function generateOutputExplanation(options, count:number) {
     let text = "";
 
     if (count > 0) {
@@ -115,7 +115,7 @@
     return text;
   }
 
-  function getProcessingTimeEstimate(count) {
+  function getProcessingTimeEstimate(count:number) {
     switch(count) {
       case 1:
         return "It will take a little bit to get the result ready for you.";
@@ -164,7 +164,7 @@
         <div class="content">
             <div class="content_headline">Area</div>
             <span class="content_disc">Specify the geographic region where the zero/low emission zone will be applied.</span>
-            <button id="select_area" class="form_btn">Select area</button>
+            <button id="select_area" class="form_btn" on:click={()=>state.set("MapSelection")}>Select area</button>
             <div class="content_headline">Severity</div>
             <span class="content_disc">Select the level of restrictions, from soft measures like time-based travel restrictions to hard measures like pedestrian-only zones.</span>
             <div class="content_selection">
