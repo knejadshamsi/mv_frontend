@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {Em, state, selectedArea} from "$lib/Interface/StateManagement"
+    import {Em, state, finalArea} from "$lib/Interface/StateManagement"
 
     let policyDuration = "One day";
     let severity = "Soft";
@@ -29,6 +29,8 @@
     const stepsManager = (action: string) => {
         if (action === "next") {
             if ($Em < 5) {Em.set($Em+1); stepName = stepNames[$Em - 1]}
+            if ($Em === 5) {state.set("Results")}
+            
         } else {
             if ($Em > 1) {Em.set($Em-1); stepName = stepNames[$Em - 1]}
         }
@@ -164,7 +166,11 @@
         <div class="content">
             <div class="content_headline">Area</div>
             <span class="content_disc">Specify the geographic region where the zero/low emission zone will be applied.</span>
+            {#if $finalArea.length >1}
+             <span id="area_selected"> Area selected. </span>
+            {:else}
             <button id="select_area" class="form_btn" on:click={()=>state.set("MapSelection")}>Select area</button>
+            {/if}
             <div class="content_headline">Severity</div>
             <span class="content_disc">Select the level of restrictions, from soft measures like time-based travel restrictions to hard measures like pedestrian-only zones.</span>
             <div class="content_selection">
@@ -278,7 +284,8 @@
             </div>
         </div>
         {/if}
-        <div class="next_pre" id="content_footer">{#if $Em != 1}<button id="pre" class="np_btn" on:click={()=>{stepsManager('pre')}}>Previous</button>{/if}<button id="next" class="np_btn" on:click={()=>{stepsManager('next')}}>{#if $Em === 5} GO{:else}Next{/if}</button></div>
+        <div class="next_pre" id="content_footer">{#if $Em != 1}<button id="pre" class="np_btn" on:click={()=>{stepsManager('pre')}}>Previous</button>{/if}
+            <button id="next" class="np_btn" on:click={()=>{stepsManager('next')}}>{#if $Em === 5} GO{:else}Next{/if}</button></div>
     </section>
 </div>
 
@@ -546,5 +553,10 @@
     .overview_content {
         margin-left: 1rem;
         font-size: 1.25rem;
+    }
+    #area_selected {
+        font-weight: 900;
+        font-size: 1.25rem;
+        color: var(--brand_main);
     }
 </style>

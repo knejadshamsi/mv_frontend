@@ -1,13 +1,14 @@
 <script lang="ts">
   import { MapLibre, NavigationControl, MapEvents, GeoJSON,LineLayer } from 'svelte-maplibre'
   import VisualisationLogic from '$lib/Local/Visualisation/VisualisationLogic.svelte'
-  import {state, selectedArea} from "$lib/Interface/StateManagement"
+  import {state, finalArea} from "$lib/Interface/StateManagement"
   import {map} from '$lib/LibStores'
   import SimVisualisation from '$lib/Simulation/SimVisualisation.svelte'
   import DDDVisuals from '$lib/DDD/Interface/DDDVisuals.svelte'
   import Emissions from '$lib/Interface/Emissions.svelte'
   import MapSelection from '$lib/Interface/MapSelection.svelte'
   import MapSelector from '$lib/Local/Visualisation/MapSelector.svelte'
+  import Results from '$lib/Local/Visualisation/Results.svelte'
   
 </script>
 
@@ -30,6 +31,23 @@
 <MapSelection />
 <MapSelector />
 {/if}
+{#if $finalArea.length >1} 
+<GeoJSON id="maine" data={{'type':'FeatureCollection','features':[{'type':'Feature','geometry':{'type':'LineString','coordinates':$finalArea}}]}}>
+    <LineLayer
+      layout={{ 'line-cap': 'round', 'line-join': 'round' }}
+      paint={{
+        'line-width': 5,
+        'line-dasharray': [5, 2],
+        'line-color': '#841526',
+        'line-opacity': 0.8,
+      }}
+    />
+  </GeoJSON>
+{/if}
+{#if $state === "Results"}
+<Results />
+{/if}
+
 </MapLibre>
 
 </section>
